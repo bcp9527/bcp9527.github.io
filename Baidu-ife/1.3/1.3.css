@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 .main,.left,.right,.middle{
     border: 1px solid #999999;
+=======
+div{
+    border:1px solid black;
+>>>>>>> origin/master
 }
 .main{
     background-color: #eeeeee;
