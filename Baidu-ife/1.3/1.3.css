@@ -1,0 +1,35 @@
+div{
+
+}
+.main{
+    background-color: #eeeeee;
+    border: 1px solid #999999;
+    height:auto;
+}
+.left{
+    background-color: white;
+    width: 200px;
+    float: left;
+    margin: 20px;
+}
+.left div{
+    float: left;
+}
+.left-left{
+    margin: 20px;
+}
+.middle{
+    margin: 0 160px 0 240px;
+    background-color: white;
+}
+.right{
+    text-align: center;
+    border:1px solid red;
+    background-color: white;
+    width: 120px;
+    margin: 20px;
+    float: right;
+}
+.foot{
+    clear: both;
+}
