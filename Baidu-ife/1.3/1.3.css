@@ -1,5 +1,5 @@
 div{
-
+    border:1px solid black;
 }
 .main{
     background-color: #eeeeee;
@@ -24,7 +24,6 @@ div{
 }
 .right{
     text-align: center;
-    border:1px solid red;
     background-color: white;
     width: 120px;
     margin: 20px;
