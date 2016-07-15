@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8" />
+	<title>css-4作业</title>
+<style type="text/css">
+	body,html{background-color: #eff0f4; margin: 0;padding: 0;}
+	.main{width: 100%; background-color: #eff0f4; }
+	.heading{height: 100px; background-color: #5fc0cd; clear:both; text-align: center; font-size: 24px;padding-left: 10px;padding-right: 10px;}
+	.heading span{line-height: 100px; color: white}
+	.row{background-color: white; margin: 10px 0 0 0; font-size: 24px;}
+	.close{float: left;}
+	.log{float: right;}
+	.button{width: 100%;height: 50px; background-color: #5fc0cd;margin: 10px 0; color: white; font-size: 24px;}
+	.foot{text-align: right; color: #5fc0cd;}
+	.phone,.password{background-color: white; width: 100%;height: 80px;margin-left: 100px; border:none; padding-left: 20px; margin-top: 10px;}
+	.img-phone{position: absolute;top: 140px;left: 20px; border-right: 2px solid #999;padding-right: 20px;}
+	.img-lock{position: absolute;top: 240px;left: 20px; border-right: 2px solid #999;padding-right: 20px;}
+</style>	
+
+</head>
+<body>
+<div class="main">
+	<div class="heading">
+		<span class="close">关闭</span><span>登录</span><span class="log">注册</span>
+	</div>
+	
+	<div>		
+		<div class="row">
+			<img src="iphone.png" class="img-phone">
+			<input type="text" placeholder="请输入手机号" class="phone"></input>
+		</div>
+		<div class="row">
+			<img src="locked.png" class="img-lock">
+			<input type="password" placeholder="请输入密码" class="password"></input>
+		</div>		
+	</div>
+
+	<input type="button" value="登录" class="button"></input>
+	<p class="foot">忘记密码？</p>
+</div>
+
+</body>
+</html>
