@@ -10,7 +10,7 @@ body,html{background-color: #eff0f4; margin: 0;padding: 0;}
 .row{background-color: #fff;margin-top: 30px;}
 .row img{width: 50px; border-right: 2px solid #999; margin:20px;padding-right: 20px;
     float: left;}
-.row input{width: 99%;  height:120px;border-style: none; font-size: 50px; position: }
+.row input{width: 99%;  height:120px;border-style: none; font-size: 50px; }
 /* 将input标签包含在form窗口内。调整合适的高度，form块右移出图片适应的空间。 */
 .row form{margin-left: 120px;}
 .button{width: 100%;height: 100px; background-color: #5fc0cd;margin-top:40px; color: white; font-size: 24px;}
