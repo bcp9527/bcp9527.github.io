@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e1bdca7-c290-4a96-b47e-364766379e95" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ITshu/css-4/index.html" afterPath="$PROJECT_DIR$/ITshu/css-4/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ITshu/css-4/styles.css" afterPath="$PROJECT_DIR$/ITshu/css-4/styles.css" />
     </list>
     <ignored path="bcp9527.github.io.iws" />
@@ -38,8 +36,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ITshu/css-4/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="228">
+              <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -233,12 +231,12 @@
       <option name="presentableId" value="Default" />
       <updated>1468645288625</updated>
       <workItem from="1468645289931" duration="2576000" />
-      <workItem from="1468678374376" duration="1136000" />
+      <workItem from="1468678374376" duration="1491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3712000" />
+    <option name="totallyTimeSpent" value="4067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1456" height="916" extended-state="6" />
@@ -324,8 +322,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ITshu/css-4/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="228">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
           <folding />
         </state>
       </provider>
