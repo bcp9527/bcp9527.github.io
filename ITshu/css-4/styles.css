@@ -1,0 +1,14 @@
+body,html{background-color: #eff0f4; margin: 0;padding: 0;}
+.main{width: 100%; background-color: #eff0f4; }
+.heading{height: 100px; background-color: #5fc0cd; clear:both; text-align: center; font-size: 24px;padding-left: 10px;padding-right: 10px;}
+.heading span{line-height: 100px; color: white}
+.close{float: left;}
+.log{float: right;}
+
+.row{background-color: #fff;margin-top: 10px;}
+.row img{width: 50px; border-right: 2px solid #999; margin:20px;padding-right: 20px;
+    float: left;}
+.row input{width: 100%; border:none; height:140px; font-size: 50px;}
+.row form{margin-left: 120px;}
+.button{width: 100%;height: 100px; background-color: #5fc0cd;margin: 10px 0; color: white; font-size: 24px;}
+.foot{text-align: right; color: #5fc0cd;}
