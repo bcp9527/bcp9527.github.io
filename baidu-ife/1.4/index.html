@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <style>
+        .main{height: 200px;width: 400px; position: absolute;top:50%; left:50%;margin-top: -100px;margin-left: -200px;background-color: #CCC;}
+        .left,.right{height: 50px;width: 50px;background-color: #fc0;}
+        /*test父窗口绝对定位上左各移动50%后再拉回半个父窗口尺寸。*/
+        .left{float: left; border-radius:0 0 100% 0;}
+        .right{float: right;margin-top: 150px; border-radius:100% 0 0 0;}
+        /*两个小窗口定位后设置边框圆弧，四个顺序依次坐上、右上、右下、坐下。100%或边长的尺寸可设置成半圆弧形*/
+    </style>
+</head>
+<body>
+<div class="main">
+
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+</body>
+</html>

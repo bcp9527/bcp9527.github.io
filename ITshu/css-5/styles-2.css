@@ -1,0 +1,24 @@
+body,html{margin:0; padding:0; min-width: 450px;}
+.find1,.find2{float: left;border: 1px solid #5fc0cd; height: 70px;width:140px; font-size: 32px;text-align: center;line-height: 70px;border-radius: 10px;position: absolute;left:50%;margin-top: 6px;}
+.find1{background-color: #51abb4;color:#ffffff; margin-left: -130px;}
+.find2{background-color: #ffffff;color:#5fc0cd;}
+.top{height: 85px; background-color: #5fc0cd; }
+.top img{float:right;margin-right: 30px ; margin-top: 23px;}
+.select,.main,.foot{font-size: 30px;  color:#999;}
+.select{width: 100%; height: 85px; text-align: right; padding-right: 30px;}
+.select img{position:relative;top:-5px; right: 0;}
+.select hr{display: inline; width: 1px;height: 50px; color: #f0f0f0;margin-left: 20px; opacity:0.6;}
+.select span{margin-right: 25%;}
+.item{height: 15%; border-top: 1px solid #f0f0f0; padding-left: 10%;}
+.itm span{position:relative;margin-left: 40px;}
+.show{float: right;margin-right: 30px;}
+.middle{margin-left: 35px;color:black;}
+.price{float: right; color:red;margin-right: 30px;}
+
+.foot{height: 100px;border-top: 1px solid #999;}
+.edit{height: 100px;width: 100px; border-radius: 50%;background-color:#5fc0cd; text-align:center;position: absolute;left:50%;margin-left: -48px;}
+.edit img{margin-top: 20px;}
+.home,.me{text-align: center;font-size: 24px;margin-top: 5px;}
+.home img,.me img{margin-bottom: 10px;}
+.home{float: left; position:relative; left:25%; top:10px;color:#5fc0cd;}
+.me{float:right;position:relative; right:25%; top:10px;}
