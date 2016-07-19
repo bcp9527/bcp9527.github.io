@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 620px;
+}
+
+.home, .jiangbei, .foot-left, .foot-right {
+    background-image: url(sprite/sprite.png);
+}
+
+.top {
+    height: 100px;
+    background-color: #29bde0;
+    text-align: center;
+    line-height: 100px;
+    font-size: 36px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.home {
+    width: 51px;
+    height: 42px;
+    background-position: -494px -56px;
+    position: absolute;
+    top: 29px;
+    left: 20px;
+}
+
+.more {
+    height: 40px;
+    width: 40px;
+    background-image: url(images/more.png);
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.content-top {
+    height: 624px;
+    background-color: #29bde0;
+    padding: 0 71px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.jiangbei {
+    height: 205px;
+    width: 351px;
+    background-position: -7px 0;
+    position: relative;
+    left: 50%;
+    margin-left: -175px;
+    margin-bottom: 20px;
+}
+
+.win {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    top: 135px;
+}
+
+.p1 {
+    font-size: 32px;
+    color: #ffc865;
+    margin-bottom: 60px;
+    text-align: left;
+    font-family: '微软雅黑';
+}
+
+.p2 {
+    display: block;
+    clear: both;
+    font-size: 24px;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.p3 {
+    font-size: 24px;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.p3 span {
+    display: block;
+    float: left;
+    margin: 0 50px 15px 0;
+}
+
+.list div {
+    height: 165px;
+    background-color: #fff;
+    padding: 0 100px 0 76px;
+    font-size: 24px;
+    color: #999;
+    border-top: 1px solid #dedede;
+}
+
+.date {
+    font-size: 32px;
+    color: black;
+    line-height: 55px;
+}
+
+.dates {
+    line-height: 45px;
+}
+
+.list span {
+    float: right;
+    font-size: 16px;
+    color: #bdbdbd;
+    position: relative;
+    top: -27px;
+}
+
+.foot {
+    height: 130px;
+    width: 100%;
+    background: url(images/touming.png);
+    position: fixed;
+    bottom: 0;
+}
+
+.foot-left, .foot-right {
+    height: 86px;
+    width: 271px;
+    line-height: 86px;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.foot-left {
+    background-position: -278px -292px;
+    float: left;
+    position: relative;
+    left: 24px;
+    top: 27px;
+}
+
+.foot-right {
+    background-position: -7px -292px;
+    float: right;
+    position: relative;
+    right: 24px;
+    top: 27px;
+}
