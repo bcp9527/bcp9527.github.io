@@ -122,6 +122,11 @@ body {
     top: -27px;
 }
 
+.bottom{
+    height: 130px;
+    width: 100%;
+}
+
 .foot {
     height: 130px;
     width: 100%;
