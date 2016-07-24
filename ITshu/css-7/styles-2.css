@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 1200px;
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.logo-txt {
+    height: 49px;
+    width: 109px;
+    background-image: url("images/logo-txt.png");
+    float: left;
+    margin-top: 25px;
+}
+
+.show-1, .left i {
+    background-image: url("images/sprite.png");
+}
+
+.show {
+    height: 248px;
+    width: 100%;
+    background-color: #f1a750;
+}
+
+.show-1 {
+    height: 248px;
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+}
+
+.body {
+    width: 1200px;
+    height: 1416px;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    position: relative
+}
+
+.body-show {
+    line-height: 82px;
+}
+
+.body-show span {
+    color: #26a26f;
+}
+
+.left {
+    width: 304px;
+    height: 702px;
+    background-color: #fff;
+    float: left;
+    text-align: center;
+}
+
+.left h3 {
+    line-height: 62px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 34px;
+}
+
+.left li {
+    list-style: none;
+    line-height: 48px;
+    text-align: left;
+    position: relative;
+    left: 110px;
+    color: #26a26f;
+    font-weight: bold;
+}
+
+.left li:hover {
+    color: #f9a372;
+}
+
+.left i:hover {
+    background-position: -1229px -123px;
+}
+
+.left i {
+    display: block;
+    float: left;
+    height: 14px;
+    width: 14px;
+    background-position: -1229px -109px;
+    position: relative;
+    top: 17px;
+    margin-right: 10px;
+}
+
+.right {
+    width: 872px;
+    height: 1102px;
+    background-color: #fff;
+    float: right;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    line-height: 30px;
+}
+
+.right-top {
+    width: 872px;
+    height: 160px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 40px;
+}
+
+.tudou {
+    height: 160px;
+    width: 200px;
+    background-image: url("images/tudou.png");
+    float: left;
+}
+
+.right-top p {
+    display: block;
+    height: 130px;
+    width: 600px;
+    float: right;
+    margin: 22px 59px 0 0;
+    text-align: left;
+}
+
+.tudou-1 {
+    display: block;
+    width: 743px;
+    text-align: left;
+    margin-left: 70px;
+}

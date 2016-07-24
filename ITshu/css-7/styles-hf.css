@@ -1,0 +1,117 @@
+.tel, .qq, .weixin, .weibo, .copyright, .erweima {
+    background-image: url("images/sprite.png")
+}
+
+.heading {
+    height: 40px;
+    text-align: center;
+}
+
+.navi {
+    width: 100%;
+    background-color: #29b078;
+    text-align: center;
+}
+
+.foot {
+    width: 100%;
+    background-color: #26a26f;
+    text-align: center;
+}
+
+.navi {
+    height: 100px;
+}
+
+.heading-1, .navi-1, .foot-1 {
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+}
+
+.tel {
+    height: 14px;
+    width: 173px;
+    position: relative;
+    top: 13px;
+    background-position: -1034px -505px;
+}
+
+.qq, .weixin, .weibo {
+    height: 28px;
+    width: 29px;
+    float: right;
+    margin-left: 12px;
+    position: relative;
+    top: -6px;
+}
+
+.qq {
+    background-position: -1202px -186px;
+}
+
+.weixin {
+    background-position: -1202px -214px;
+}
+
+.weibo {
+    background-position: -1202px -248px;
+}
+
+.navi-1 li {
+    position: relative;
+    left: 30px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    list-style: none;
+    float: right;
+    color: #fff;
+    font-size: 18px;
+    font-family: '微软雅黑';
+}
+
+.foot {
+    height: 202px;
+    clear: both;
+    color: #fff;
+}
+
+.copyright {
+    height: 30px;
+    width: 485px;
+    background-position: -230px -548px;
+    position: relative;
+    left: 357px;
+    top: 172px;
+}
+
+.foot-2 {
+    float: right;
+    margin: 36px;
+    font-size: 18px;
+}
+
+.erweima {
+    height: 92px;
+    width: 92px;
+    background-position: -343px -450px;
+    margin-top: 10px;
+}
+
+.foot-3, .foot-4 {
+    float: left;
+    height: 176px;
+    width: 357px;
+    text-align: left;
+    line-height: 50px;
+}
+
+.caochuan {
+    display: inline-block;
+    height: 40px;
+    width: 96px;;
+    border-bottom: 1px solid #fff;
+}

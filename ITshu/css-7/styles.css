@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 1200px;
+    width: 100%;
+    background-color: #fafafa;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.left, .right, .dian-1, .dian-2, .dian-3, .rocket, .gaoxiao, .renmai, .touxiang-1, .touxiang-2, .num-1, .num-2, .num-3, .num-4, .num-5,
+.num-6, .num-7, .num-8, .jiantou, .show-dian-1, .show-dian-2, .show-dian-3, .show-dian-4 {
+    background-image: url("images/sprite.png")
+}
+
+.show-1, .body-1 {
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+}
+
+.show {
+    height: 602px;
+    width: 100%;
+    background-image: url(images/bg.png);
+    background-size: 1920px 602px;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: '黑体';
+    font-weight: bold;
+}
+
+.show-1 {
+    height: 602px;
+    text-align: center;
+}
+
+.left, .right {
+    height: 47px;
+    width: 27px;
+}
+
+.left {
+    background-position: -1202px -109px;
+    position: relative;
+    top: 253px;
+    left: -69px;
+}
+
+.right {
+    background-position: -1202px -62px;
+    position: relative;
+    top: 206px;
+    left: 1242px;
+}
+
+.dian-1, .dian-2, .dian-3 {
+    height: 16px;
+    width: 16px;
+    background-position: -1229px -80px;
+    float: left;
+    margin-right: 9px;
+    position: relative;
+    top: 200px;
+    left: -450px;
+}
+
+.show-1 .span-1 {
+    float: right;
+    margin: 250px 90px 0 0;
+    font-size: 40px;
+}
+
+.show-1 .span-2 {
+    float: left;
+    margin: 260px 0 0 60px;
+    font-size: 82px;
+}
+
+.show-1 .span-3 {
+    float: left;
+    font-size: 48px;
+}
+
+.body {
+    height: 2077px;
+    width: 100%;
+}
+
+.body-1 {
+    height: 2077px;
+    float: left;
+    overflow: hidden;
+}
+
+.share {
+    width: 100%;
+    height: 274px;
+    margin-top: 160px;
+}
+
+.body-1-1, .body-1-2, .body-1-3, .body-1-4 {
+    height: 239px;
+    padding-top: 30px;
+    width: 286px;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+
+.body-1-3 {
+    border-right: 1px dashed #dedede;
+}
+
+.body-1-4 {
+    margin-left: 50px;
+    text-align: left;
+}
+
+.body-1-4 span {
+    color: #29b078;
+    position: relative;
+    top: -16px;
+    left: 24px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.body-1-1 p, .body-1-2 p, .body-1-3 p {
+    font-weight: bold;
+    font-size: 22px;
+    color: #000;
+}
+
+.body-1-1 span, .body-1-2 span, .body-1-3 span {
+    display: block;
+    margin: 29px 45px 0 45px;
+}
+
+.rocket {
+    width: 43px;
+    height: 62px;
+    background-position: -1202px 0;
+    position: relative;
+    left: 50%;
+    margin-left: -20px;
+    margin-bottom: 34px;
+}
+
+.gaoxiao {
+    width: 60px;
+    height: 50px;
+    background-position: -1086px -450px;
+    position: relative;
+    left: 50%;
+    margin-left: -25px;
+    margin-bottom: 46px;
+}
+
+.renmai {
+    width: 52px;
+    height: 55px;
+    background-position: -1034px -450px;
+    position: relative;
+    left: 50%;
+    margin-left: -27px;
+    margin-bottom: 41px;
+}
+
+.touxiang-1, .touxiang-2 {
+    width: 13px;
+    height: 13px;
+    background-position: -1229px -96px;
+    margin-top: 50px;
+}
+
+.road {
+    height: 400px;
+    width: 1200px;
+    margin-bottom: 40px;
+}
+
+.road h1 {
+    text-align: center;
+    margin: 100px 0 48px 0;
+}
+
+.road span {
+    font-size: 14px;
+    line-height: 20px;
+    color: #9a9a9a;
+    float: right;
+    width: 140px;
+    margin-top: 16px;
+}
+
+.road-t1, .road-t2 {
+    position: relative;
+    top: 8px;
+}
+
+.road-t2, .road-t3 {
+    position: relative;
+    left: -70px;
+}
+
+.road-1, .road-2, .road-3, .road-4, .road-5, .road-6, .road-7, .road-8 {
+    width: 300px;
+    height: 74px;
+    float: left;
+    margin: 0 0 94px 0;
+    position: relative;
+}
+
+.num-1 {
+    background-position: -960px -450px;
+}
+
+.num-2 {
+    background-position: -735px -450px;
+}
+
+.num-3 {
+    background-position: -510px -450px;
+}
+
+.num-4 {
+    background-position: -810px -450px;
+}
+
+.num-5 {
+    background-position: -660px -450px;
+}
+
+.num-6 {
+    background-position: -585px -450px;
+}
+
+.num-7 {
+    background-position: -435px -450px;
+}
+
+.num-8 {
+    background-position: -885px -450px;
+}
+
+.num-1, .num-2, .num-3, .num-4, .num-5, .num-6, .num-7, .num-8 {
+    height: 74px;
+    width: 74px;
+    display: inline-block
+}
+
+.jiantou {
+    height: 31px;
+    width: 33px;
+    background-position: -1202px -155px;
+    float: right;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.stu {
+    width: 1200px;
+    height: 571px;
+    text-align: center;
+    margin-bottom: 54px;
+}
+
+.stu h2 {
+    color: #000;
+    margin-bottom: 29px;
+}
+
+.stu p {
+    display: block;
+    margin: 0 28px 28px 28px;
+    text-align: left;
+}
+
+.show1, .show2, .show3, .show4 {
+    width: 275px;
+    height: 374px;
+    float: left;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-family: '微软雅黑';
+    color: #999;
+    margin-top: 70px;
+}
+
+.show1, .show2, .show3 {
+    margin-right: 33px;
+}
+
+.show-img {
+    height: 108px;
+    width: 108px;
+    border-radius: 50%;
+    background-image: url(images/bw1.png);
+    position: relative;
+    left: 83px;
+    margin: 16px 0 42px 0;
+}
+
+.show-dian-1, .show-dian-2, .show-dian-3, .show-dian-4 {
+    float: left;
+    margin-right: 3px;
+    position: relative;
+    top: 70px;
+    left: 560px;
+}
+
+.show-dian-1 {
+    height: 18px;
+    width: 18px;
+    background-position: -1229px -135px;
+}
+
+.show-dian-2, .show-dian-3, .show-dian-4 {
+    height: 18px;
+    width: 18px;
+    background-position: -1229px -62px;
+}
+
+.company {
+    width: 1200px;
+    height: 370px;
+    text-align: center;
+}
+
+.company div {
+    height: 175px;
+    width: 1200px;
+    margin-top: 70px;
+    background-image: url("images/companys.png")
+}
+
+.body-2 {
+    width: 100%;
+    height: 132px;
+    background-color: #fff;
+    position: relative;
+    top: 1945px;
+}
+
+.links {
+    width: 1200px;
+    height: 132px;
+    background-color: #fff;
+    margin-top: -24px;
+    clear: both;
+    position: relative;
+    left: 50%;
+    margin-left: -600px;
+}
+
+.links h1 {
+    position: relative;
+    top: 22px;
+    font-size: 18px;
+    text-align: center
+}
+
+.links a {
+    display: inline-block;
+    width: 76px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    color: #999;
+    text-decoration: none;
+    position: relative;
+    top: 30px;
+    margin: 0 44px 6px 0;
+}
+
+.links a:hover {
+    border-bottom: 1px solid #29b078;
+}
+
+.links img {
+    position: relative;
+    top: -4px;
+}
+
