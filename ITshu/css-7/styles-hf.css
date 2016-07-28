@@ -59,8 +59,13 @@
 
 .navi-1 li {
     position: relative;
+<<<<<<< HEAD
     top: 2px;
     left: 150px;
+=======
+    top:2px;
+    left: 30px;
+>>>>>>> origin/master
     display: block;
     width: 100px;
     height: 96px;
@@ -75,6 +80,8 @@
 .navi-1 li:hover {
     border-bottom: 2px solid #fff;
 }
+
+.navi-1 li:hover{border-bottom: 2px solid #fff;}
 
 .foot {
     height: 202px;
