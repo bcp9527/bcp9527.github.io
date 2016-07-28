@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+}
+
+body {
+    min-width: 1200px;
+}
+
+.top, .navi, .body, .foot {
+    width: 100%;
+    overflow: hidden;
+}
+
+.top-1, .navi-1, .content, .foot-1 {
+    width: 1200px;
+    position: relative;
+    left: 50%;
+    margin-left: -600px;
+}
+
+.top {
+    background-color: #1d7ad9;
+    height: 40px;
+}
+
+.top-1 span {
+    font-size: 14px;
+    color: #fff;
+    line-height: 40px;
+}
+
+.top-1 div {
+    width: 52px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    float: right;
+    color: #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.top-1 div:hover {
+    width: 100px;
+    background-color: #fff;
+    color: #000;
+}
+
+.navi, .navi-1 {
+    height: 100px;
+    background-color: #f9f9f9;
+}
+
+.navi-1 div {
+    font-size: 16px;
+    padding: 13px 18px;
+    float: left;
+    margin-left: 60px;
+    margin-top: 29px;
+    background-color: #fff;
+    position: relative;
+    left: 610px;
+    border-radius: 5px;
+}
+
+.navi-1 div:hover {
+    background-color: #1d7ad9;
+    color: #fff;
+}
+
+.road {
+    height: 196px;
+    position: relative;
+}
+
+.p-show {
+    font-size: 22px;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    line-height: 18px;
+    padding-left: 15px;
+}
+
+.p-show span {
+    width: 5px;
+    height: 20px;
+    background-color: #1d7ad9;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+}
+
+.bgl-2 {
+    width: 633px;
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 48px;
+    right: 0;
+}
+
+.roads p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.roads div {
+    font-size: 16px;
+    color: #fff;
+}
+
+.roads {
+    width: 159px;
+    text-align: center;
+    float: left;
+    position: relative;
+    top: 40px;
+    left: 564px;
+    z-index: 1
+}
+
+.road-2, .road-3, .road-4 {
+    margin-bottom: 24px;
+    background-image: url("images/yuan.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.road-1 {
+    height: 24px;
+    width: 159px;
+    background-image: url("images/bgl-1.png");
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    background-position: center;
+}
+
+.roads-p1 {
+    color: orange
+}
+
+.boxs {
+    border: 1px solid #f3f3f3;
+    font-size: 18px;
+    background-color: #fbfcff;
+}
+
+.boxs span {
+    color: #1d7ad9;
+    font-weight: bold;
+    line-height: 45px;
+    margin-left: 28px;
+}
+
+.titles {
+    height: 45px;
+    background-color: #f3f3f3;
+}
+
+.bg-1, .bg-2, .bg-3 {
+    display: block;
+    float: left;
+    background-image: url("images/sprite.png")
+}
+
+.bg-1 {
+    height: 19px;
+    width: 23px;
+    background-position: -342px 0;
+    position: relative;
+    top: 13px;
+    left: 18px;
+}
+
+.bg-2 {
+    height: 24px;
+    width: 26px;
+    background-position: -135px 0;
+    position: relative;
+    top: 10px;
+    left: 18px;
+}
+
+.bg-3 {
+    height: 24px;
+    width: 19px;
+    background-position: -116px 0;
+    position: relative;
+    top: 10px;
+    left: 18px;
+}
+
+select {
+    width: 133px;
+    height: 43px;
+    border: 1px solid #f0f0f0;
+    float: right;
+    margin-right: 18px;
+    position: relative;
+    top: 50%;
+    margin-top: -21px;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    padding-left: 17px;
+    color: #999;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.bg-select {
+    width: 24px;
+    height: 28px;
+    background-image: url("images/sprite.png");
+    background-position: -92px 0;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    margin-top: -14px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    margin: 0 30px 0 16px;
+}
+
+.boxs label {
+    background-image: url("images/radio-2.png");
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+.boxs input:checked + label {
+    background-image: url("images/radio.png");
+}
+
+.boxs-1, .boxs-2, .boxs-3 {
+    margin-left: 34px;
+    position: relative;
+}
+
+.boxs-1 {
+    height: 88px;
+    line-height: 88px;
+}
+
+.boxs-2 {
+    height: 140px;
+}
+
+.boxs-2 input[type="text"] {
+    margin-top: 27px;
+}
+
+.boxs-2 p {
+    display: inline;
+    margin-left: 30px;
+}
+
+.boxs-2 i {
+    margin-right: 60px;
+}
+
+#length {
+    position: absolute;
+    right: 0;
+}
+
+input[type="text"] {
+    height: 30px;
+    width: 70px;
+}
+
+.boxs-3 {
+    height: 140px;
+    line-height: 140px;
+}
+
+.submit {
+    height: 286px;
+    background-color: #fff;
+    position: relative;
+}
+
+.submit p {
+    display: block;
+    width: 180px;
+    height: 46px;
+    border-radius: 5px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 46px;
+    background-color: #e15053;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -23px;
+    left: 50%;
+    margin-left: -90px;
+}
+
+.body {
+    margin-bottom: 54px;
+}
+
+.foot {
+    height: 240px;
+    border-top: 1px solid #000;
+    font-family: "宋体";
+    background-color: #f9f9f9;
+}
+
+.foot-1 {
+    height: 206px;
+    color: #999;
+}
+
+.name {
+    display: block;
+    font-size: 24px;
+    float: left;
+    margin-top: 65px;
+}
+
+.spans {
+    width: 280px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    left: 470px;
+}
+
+.spans a {
+    margin-right: 36px;
+    color: #999;
+    text-decoration: none;
+}
+
+.spans a:hover {
+    color: #1d7ad9;
+}
+
+.logo {
+    float: right;
+    width: 246px;
+    font-size: 14px;
+    line-height: 30px;
+    margin-top: 60px;
+}
+
+.logo i {
+    display: block;
+    height: 92px;
+    width: 92px;
+    background-image: url("images/sprite.png");
+    float: right;
+}
+
+.copyright {
+    height: 34px;
+    line-height: 34px;
+    background-color: #1d7ad9;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+}

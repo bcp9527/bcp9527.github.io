@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    min-width: 1200px;
+    overflow: hidden;
+}
+
+.jinengshu {
+    height: 52px;
+    width: 107px;
+    background-image: url("images/jinengshu.png");
+    float: left;
+    position: relative;
+    top: 24px;
+}
+
+.content {
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.job {
+    width: 1200px;
+    position: relative;
+    left: 50%;
+    margin-left: -600px;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+
+.job-1 {
+    width: 1200px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 80px;
+    border-bottom: 1px solid #999;
+}
+
+.job-1 span {
+    color: #29b078;
+}
+
+.job-2 {
+    height: 70px;
+    border-bottom: 1px solid #dedede;
+    font-size: 14px;
+}
+
+.job-2 span {
+    float: left;
+    color: #999;
+    margin-right: 15px;
+    line-height: 70px;
+}
+
+.job-2 li {
+    list-style: none;
+    float: left;
+    display: block;
+    height: 18px;
+    width: 60px;
+    margin: 26px 20px 0 0;
+    text-align: center;
+    color: #333;
+}
+
+.job-2 li:hover {
+    background-color: #29b078;
+    color: #fff;
+}
+
+.front, .back, .mobile, .yunwei {
+    width: 100%;
+    overflow: hidden;
+}
+
+.job-title {
+    width: 1200px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 70px;
+    border-bottom: 1px solid #dedede;
+}
+
+.items {
+    width: 387px;
+    height: 449px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    background-color: #fff;
+    float: left;
+    margin: 48px 11px 0 0;
+    overflow: hidden;
+}
+
+/* 鼠标滑过时的样式 */
+.items:hover .cover {
+    position: absolute;
+    margin-top: -449px;
+}
+
+.cover {
+    width: 327px;
+    height: 389px;
+    padding: 30px;
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    border-radius: 5px;
+    position: relative;
+}
+
+.cover p {
+    text-indent: 2em;
+    text-align: center;
+    line-height: 80px;
+}
+
+.img {
+    height: 139px;
+    width: 139px;
+    background-image: url("images/touxiang.png");
+    margin: 15px 10px;
+    float: left;
+}
+
+.items-t {
+    width: 214px;
+    float: right;
+    font-size: 14px;
+    margin: 10px 12px 0 0;
+}
+
+.items-t p {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.items-t span {
+    color: #333;
+}
+
+.items table {
+    width: 100%;
+    clear: both;
+    font-size: 12px;
+    color: #999;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #f0f0f0;
+    height: 39px;
+    padding-left: 10px;
+}
+
+.half td {
+    width: 50%;
+}
+
+.star-f {
+    float: left;
+    margin-right: 15px;
+}
+
+.price {
+    text-align: center;
+    width: 40%;
+}
+
+.star {
+    display: block;
+    width: 16px;
+    height: 15px;
+    background-image: url("images/star.png");
+    float: left;
+    margin-right: 12px;
+}
+
+.right {
+    float: right;
+    margin-right: 5px;
+}
+
+.color-r {
+    color: red;
+}
+
+.num {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+.td1 {
+    color: #000;
+    padding-left: 25px;
+}
+
+.span1 {
+    color: #000;
+}

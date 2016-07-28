@@ -3,10 +3,16 @@
     padding: 0;
 }
 
+.main {
+    min-width: 1200px;
+    overflow: hidden;
+}
+
 body {
     min-width: 1200px;
     width: 100%;
     background-color: #fafafa;
+	
 }
 
 h1 {
@@ -20,7 +26,7 @@ h1 {
 
 .show-1, .body-1 {
     width: 1200px;
-    position: absolute;
+    position: relative;
     left: 50%;
     margin-left: -600px;
 }
@@ -34,6 +40,7 @@ h1 {
     color: #fff;
     font-family: '黑体';
     font-weight: bold;
+	overflow:hidden;
 }
 
 .show-1 {
@@ -91,6 +98,7 @@ h1 {
 .body {
     height: 2077px;
     width: 100%;
+	overflow:hidden;
 }
 
 .body-1 {
@@ -350,6 +358,7 @@ h1 {
     background-color: #fff;
     position: relative;
     top: 1945px;
+	overflow:hidden;
 }
 
 .links {

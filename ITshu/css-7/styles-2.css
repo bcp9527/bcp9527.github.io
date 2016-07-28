@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+.main {
+    min-width: 1200px;
+    overflow: hidden;
+}
+
 body {
     min-width: 1200px;
     width: 100%;
@@ -33,6 +38,7 @@ body {
     position: absolute;
     left: 50%;
     margin-left: -600px;
+	overflow:hidden;
 }
 
 .body {
@@ -41,7 +47,8 @@ body {
     position: absolute;
     left: 50%;
     margin-left: -600px;
-    position: relative
+    position: relative;
+	overflow:hidden;
 }
 
 .body-show {
@@ -134,5 +141,4 @@ body {
     width: 743px;
     text-align: left;
     margin-left: 70px;
-    text-indent: 2em;
 }
