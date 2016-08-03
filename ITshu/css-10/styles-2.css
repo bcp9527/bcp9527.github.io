@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container{margin: 0; padding: 0; width: 100%; overflow: hidden}
+body {
+    width: 100%;
+    background-color: #fafafa;
+}
+@media screen and(min-width: 1200px) {
+
+    .body {
+        width: 1200px;
+        position: absolute;
+        left: 50%;
+        margin-left: -600px;
+        position: relative;
+        overflow:hidden;
+    }
+}
+
+@media screen and(max-width: 1199px) {
+    .body {
+        width: 100%;
+        overflow:hidden;
+    }
+}
+
+.navi-1 img{
+    position: absolute;
+    width: 10%;
+    top:25%;
+}
+
+.logo-txt {
+    height: 49px;
+    width: 20%;
+    background-image: url("images/logo-txt.png");
+    float: left;
+    margin-top: 25px;
+}
+
+.left i {
+    background-image: url("images/sprite.png");
+}
+.show img{
+    width: 100%;
+}
+
+
+
+.body-show {
+    line-height: 3em;
+}
+
+.body-show span {
+    color: #26a26f;
+}
+
+.left {
+    height: 702px;
+    background-color: #fff;
+    float: left;
+    text-align: center;
+}
+
+.left h3 {
+    line-height: 2em;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 1em;
+}
+
+.left li {
+    list-style: none;
+    line-height:3em;
+    text-align: left;
+    position: relative;
+    left: 30%;
+    color: #26a26f;
+    font-weight: bold;
+}
+
+.left li:hover {
+    color: #f9a372;
+}
+
+.left i:hover {
+    background-position: -1229px -123px;
+}
+
+.left i {
+    display: block;
+    float: left;
+    height: 14px;
+    width: 14px;
+    background-position: -1229px -109px;
+    position: relative;
+    top: 1em;
+    margin-right: 5%;
+}
+
+.right {
+    background-color: #fff;
+    text-align: center;
+    font-size: 1em;
+    color: #999;
+    line-height: 2em;
+}
+
+.right-top {
+    height: 15%;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 3em;
+}
+
+.tudou {
+    float: left;
+}
+
+.right-top p {
+    margin: 0 4em;
+    text-align: left;
+}
+
+.tudou-1 {
+    display: block;
+    text-align: left;
+    margin: 0 4em;
+}

@@ -1,0 +1,112 @@
+#gopng_erweima_outer {
+height: 92px;
+width: 92px;
+overflow: hidden;
+}
+#gopng_erweima {
+background: url(http://gopng/static/images/sprite.png) -0px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 0px;
+_margin-left: -0px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}
+#gopng_select_outer {
+height: 28px;
+width: 24px;
+overflow: hidden;
+}
+#gopng_select {
+background: url(http://gopng/static/images/sprite.png) -92px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 92px;
+_margin-left: -92px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}
+#gopng_Cut_outer {
+height: 24px;
+width: 19px;
+overflow: hidden;
+}
+#gopng_Cut {
+background: url(http://gopng/static/images/sprite.png) -116px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 116px;
+_margin-left: -116px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}
+#gopng_Ruler_outer {
+height: 24px;
+width: 26px;
+overflow: hidden;
+}
+#gopng_Ruler {
+background: url(http://gopng/static/images/sprite.png) -135px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 135px;
+_margin-left: -135px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}
+#gopng_bgl-1_outer {
+height: 24px;
+width: 159px;
+overflow: hidden;
+}
+#gopng_bgl-1 {
+background: url(http://gopng/static/images/sprite.png) -161px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 161px;
+_margin-left: -161px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}
+#gopng_radio_outer {
+height: 22px;
+width: 22px;
+overflow: hidden;
+}
+#gopng_radio {
+background: url(http://gopng/static/images/sprite.png) -320px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 320px;
+_margin-left: -320px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}
+#gopng_box_outer {
+height: 19px;
+width: 23px;
+overflow: hidden;
+}
+#gopng_box {
+background: url(http://gopng/static/images/sprite.png) -342px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 342px;
+_margin-left: -342px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}

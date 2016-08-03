@@ -1,0 +1,106 @@
+.tel, .qq, .weixin, .weibo,.erweima {
+    background-image: url("images/sprite.png")
+}
+
+.heading {
+    height: 40px;
+    width: 100%;
+}
+
+.navi {
+    width: 100%;
+    height: 100px;
+    background-color: #29b078;
+    text-align: center;
+	
+}
+.mavi-1{
+    position: relative;
+}
+.foot {
+    width: 100%;
+    background-color: #26a26f;
+}
+
+.tel {
+    height: 14px;
+    width: 173px;
+    position: relative;
+    top: 13px;
+    background-position: -1034px -505px;
+}
+
+.qq, .weixin, .weibo {
+    height: 28px;
+    width: 29px;
+    float: right;
+    margin-left: 12px;
+    position: relative;
+
+    top: -6px;
+}
+
+.qq {
+    background-position: -1202px -186px;
+}
+
+.weixin {
+    background-position: -1202px -214px;
+}
+
+.weibo {
+    background-position: -1202px -248px;
+}
+
+.navi-1 li {
+    position: relative;
+    top: 2px;
+    display: block;
+    height: 96px;
+    line-height: 96px;
+    float: right;
+    color: #fff;
+    font-size: 1em;
+    font-family: '΢���ź�';
+}
+
+.navi-1 li:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.foot {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+.copyright {
+    font-size: .5em;
+}
+
+.foot-2 {
+    float: right;
+    font-size: 1.3em;
+}
+
+.erweima {
+    height: 92px;
+    width: 92px;
+    background-position: -343px -450px;
+    margin-top: 1%;
+}
+
+.foot-3, .foot-4 {
+    height: 176px;
+    text-align: left;
+    line-height: 50px;
+}
+
+.caochuan {
+    display: inline-block;
+    height: 40px;
+    width: 96px;;
+    border-bottom: 1px solid #fff;
+}

@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container{margin: 0; padding: 0; width: 100%; overflow: hidden}
+
+body {
+    width: 100%;
+    background-color: #fafafa;
+	margin: 0;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+.dian-1, .dian-2, .dian-3, .rocket, .gaoxiao, .renmai, .touxiang-1, .touxiang-2, .num-1, .num-2, .num-3, .num-4, .num-5,
+.num-6, .num-7, .num-8, .jiantou, .show-dian-1, .show-dian-2, .show-dian-3, .show-dian-4 {
+    background-image: url("images/sprite.png")
+}
+
+@media screen and (min-width: 1200px) {
+    .body-1 {
+        width: 100%;
+        position: relative;
+        left: 50%;
+        margin-left: -600px;
+        overflow: hidden;
+    }
+    .road {
+        width:1200px;
+        overflow: hidden;
+    }
+    .stu {
+        width: 1200px;
+        text-align: center;
+        margin-bottom: 5%;
+        overflow: hidden;
+    }
+    .links {
+        width: 1200px;
+        background-color: #fff;
+        position: relative;
+        left: 50%;
+        margin-left: -600px;
+        overflow: hidden;
+    }
+    .company {
+        width: 1200px;
+        text-align: center;
+    }
+    .company ul{
+        width: 100%;
+        list-style: none;
+        text-align: center;
+    }
+    .company li{
+        float: left;
+        width: 20%;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .body-1 {
+        width: 100%;
+    }
+    .road {
+        width:100%;
+    }
+    .stu {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    .links {
+        width: 100%;
+        background-color: #fff;
+    }
+    .company {
+        width: 100%;
+        text-align: center;
+    }
+    .company ul{
+        width: 100%;
+        list-style: none;
+        text-align: center;
+    }
+    .company li{
+        float: left;
+    }
+}
+
+
+
+.show {
+    width: 100%;
+    color: #fff;
+    font-family: '黑体';
+    font-weight: bold;
+    position: relative;
+}
+.show img{
+    display: block;
+    width: 100%;
+}
+
+.left, .right {
+    position: absolute;
+    top:50%;
+    margin-top: -24px;
+}
+
+
+.left {
+    background-image: url("images/left.png");
+    left: 10%;
+}
+
+.right {
+    background-image: url("images/right.png");
+    right: 10%;
+}
+.dian{
+    position: absolute;
+    top:90%;
+    left: 50%;
+    margin-left: -38px;
+}
+.dian-1, .dian-2, .dian-3 {
+    height: 16px;
+    width: 16px;
+    background-position: -1229px -80px;
+    float: left;
+    margin-right: 9px;
+
+}
+
+
+.body {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+.share {
+    width: 100%;
+    margin-top: 160px;
+}
+
+.body-1-1, .body-1-2, .body-1-3, .body-1-4 {
+
+    float: left;
+    text-align: center;
+    font-size: 1em;
+    color: #9a9a9a;
+}
+
+.body-1-3 {
+    border-right: 1px dashed #dedede;
+}
+
+.body-1-4 {
+    text-align: left;
+    margin-left: 2%;
+}
+
+.body-1-4 span {
+    color: #29b078;
+    position: relative;
+    top: -16px;
+    left: 24px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.body-1-1 p, .body-1-2 p, .body-1-3 p {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #000;
+}
+
+.body-1-1 span, .body-1-2 span, .body-1-3 span {
+    display: block;
+    margin:5% 10% 0 10%;
+}
+
+.rocket {
+    width: 43px;
+    height: 62px;
+    background-position: -1202px 0;
+    position: relative;
+    left: 50%;
+    margin-left: -20px;
+    margin-bottom: 34px;
+}
+
+.gaoxiao {
+    width: 60px;
+    height: 50px;
+    background-position: -1086px -450px;
+    position: relative;
+    left: 50%;
+    margin-left: -25px;
+    margin-bottom: 46px;
+}
+
+.renmai {
+    width: 52px;
+    height: 55px;
+    background-position: -1034px -450px;
+    position: relative;
+    left: 50%;
+    margin-left: -27px;
+    margin-bottom: 41px;
+}
+
+.touxiang-1, .touxiang-2 {
+    width: 13px;
+    height: 13px;
+    background-position: -1229px -96px;
+    margin-top: 50px;
+}
+
+
+
+
+.road h1 {
+    text-align: center;
+    margin: 3% 0 5% 0;
+}
+
+.road span {
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #9a9a9a;
+    float: right;
+    width: 60%;
+    margin-top: 16px;
+}
+
+
+
+.road-1, .road-2, .road-3, .road-4, .road-5, .road-6, .road-7, .road-8 {
+
+    height: 74px;
+    float: left;
+    margin: 0 0 5% 0;
+    position: relative;
+}
+
+.num-1 {
+    background-position: -960px -450px;
+}
+
+.num-2 {
+    background-position: -735px -450px;
+}
+
+.num-3 {
+    background-position: -510px -450px;
+}
+
+.num-4 {
+    background-position: -810px -450px;
+}
+
+.num-5 {
+    background-position: -660px -450px;
+}
+
+.num-6 {
+    background-position: -585px -450px;
+}
+
+.num-7 {
+    background-position: -435px -450px;
+}
+
+.num-8 {
+    background-position: -885px -450px;
+}
+
+.num-1, .num-2, .num-3, .num-4, .num-5, .num-6, .num-7, .num-8 {
+    height: 74px;
+    width: 74px;
+    display: inline-block
+}
+
+.jiantou {
+    height: 31px;
+    width: 33px;
+    background-position: -1202px -155px;
+    float: right;
+    margin-top: 20px;
+}
+
+
+
+.stu h2 {
+    color: #000;
+    margin-bottom: 5%;
+}
+
+.stu p {
+    display: block;
+    margin: 0 3% 3% 3%;
+    text-align: left;
+}
+
+.show1, .show2, .show3, .show4 {
+    width: 275px;
+    height: 374px;
+    float: left;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1em;
+    font-family: '微软雅黑';
+    color: #999;
+    margin-top: 5%;
+}
+
+.show1, .show2, .show3 {
+    margin-right: 2.5%;
+}
+
+.show-img {
+    height: 108px;
+    width: 108px;
+    border-radius: 50%;
+    background-image: url(images/bw1.png);
+    position: relative;
+    left: 30%;
+    margin: 10% 0 20% 0;
+}
+
+.show-dian{
+    position: relative;
+    top: 20px;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.show-dian-1, .show-dian-2, .show-dian-3, .show-dian-4 {
+    float: left;
+    margin-right: 0.5%;
+
+}
+
+.show-dian-1 {
+    height: 18px;
+    width: 18px;
+    background-position: -1229px -135px;
+}
+
+.show-dian-2, .show-dian-3, .show-dian-4 {
+    height: 18px;
+    width: 18px;
+    background-position: -1229px -62px;
+}
+
+
+
+
+.body-2 {
+    width: 100%;
+    background-color: #fff;
+    margin: 40px 0 0 0;
+}
+
+
+
+.links h1 {
+    position: relative;
+    top: 22px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.links a {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    float: left;
+    color: #999;
+    text-decoration: none;
+    position: relative;
+    top: 5%;
+    margin: 0 5% 3% 0;
+}
+
+.links a:hover {
+    border-bottom: 1px solid #29b078;
+}
+
+.links img {
+    position: relative;
+    top: -4px;
+}
+
