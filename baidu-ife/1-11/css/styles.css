@@ -1,0 +1,423 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+}
+
+i {
+    display: block;
+    background-image: url("../images/sprite.png");
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.body {
+    overflow: hidden;
+}
+
+.top {
+    height: 114px;
+    width: 100%;
+    background-color: #91d4da;
+}
+
+@media screen and (min-width: 1000px) {
+    .top-1,
+    .body,
+    .foot {
+        width: 1000px;
+        position: relative;
+        left: 50%;
+        margin-left: -500px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .top-1,
+    .body,
+    .foot {
+        width: 100%;
+    }
+}
+
+.top-1 {
+    height: 114px;
+    line-height: 114px;
+    color: #fff;
+}
+
+.top-1 p {
+    text-align: center;
+    font-size: 3em;
+}
+
+.top-1 i {
+    float: left;
+    height: 54px;
+    width: 32px;
+    background-position: -532px -82px;
+    position: absolute;
+    left: 1.5em;
+    top: 30px;
+}
+
+.top-1 span {
+    font-size: 2em;
+    position: absolute;
+    left: 2em;
+}
+
+.body {
+    background-color: #f5f5f5;
+}
+
+.navi ul {
+    list-style: none;
+}
+
+.navi li {
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+    background-color: #fff;
+    width: 20%;
+    font-size: 2em;
+    color: #333;
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+}
+
+.navi li:hover {
+    cursor: pointer;
+    border-bottom: 6px solid #91d4da;
+    height: 114px;
+}
+
+@media screen and (max-width: 460px) {
+    .top-1 {
+        font-size: 0.5em;
+    }
+
+    .navi {
+        font-size: 0.5em;
+    }
+}
+
+.i-show {
+    width: 100%;
+}
+
+.label {
+    height: 300px;
+    background-color: #fff;
+}
+
+.label div {
+    text-align: center;
+}
+
+.label i {
+    height: 82px;
+    width: 60px;
+    background-position: -532px 0;
+    position: relative;
+    left: 50%;
+    margin-left: -30px;
+    top: 19px;
+}
+
+.labels {
+    width: 20%;
+    float: left;
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 50px;
+}
+
+.labels:hover {
+    cursor: pointer;
+    color: #0ff;
+}
+
+.labels div {
+    width: 120px;
+    height: 120px;
+    background-color: #01c7d6;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    margin-left: -60px;
+    margin-bottom: 44px;
+    margin-top: 44px;
+}
+
+@media screen and (max-width: 622px) {
+    .labels {
+        width: 50%;
+        padding: 0;
+    }
+
+    .labels div {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .labels {
+        width: 100%;
+    }
+}
+
+.item {
+    padding: 30px;
+    height: 320px;
+    background-color: #fff;
+    border-top: 1px solid #999;
+}
+
+.item div {
+    background-color: #fff;
+    height: 320px;
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+.item p {
+    font-size: 36px;
+    line-height: 80px;
+    font-weight: bold;
+}
+
+.item span {
+    font-size: 28px;
+    color: #999;
+}
+
+@media screen and (max-width: 720px) {
+    .item {
+        padding: 0;
+        border: none;
+    }
+
+    .item div {
+        width: 100%;
+    }
+}
+
+.bear-1,
+.bear-2 {
+    border-right: 1px solid #ccc;
+}
+
+.bear-1 i,
+.bear-2 i {
+    width: 144px;
+    height: 189px;
+    position: relative;
+    left: 50%;
+    margin-left: -72px;
+}
+
+.bear-1 i {
+    background-position: 0 -230px;
+}
+
+.bear-2 i {
+    background-position: -144px -230px;
+}
+
+.bear-3 i {
+    width: 210px;
+    height: 189px;
+    background-position: -288px -230px;
+    position: relative;
+    left: 50%;
+    margin-left: -105px;
+}
+
+@media screen and (min-width: 1000px) {
+    .item1 {
+        margin-top: 20px;
+        background-color: #fff;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .item1 div {
+        overflow: hidden;
+    }
+
+    .item1 p {
+        font-size: 36px;
+        line-height: 100px;
+        color: #999;
+        border-bottom: 2px solid #ccc;
+    }
+
+    .item1 i {
+        width: 246px;
+        height: 230px;
+        float: left;
+        margin: 15px;
+    }
+
+    .item1 span {
+        display: block;
+        margin: 17px 10px;
+        width: 320px;
+        height: 96px;
+        float: right;
+        line-height: 96px;
+        background-color: #f8f8f8;
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .item1 {
+        margin-top: 20px;
+        background-color: #fff;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .item1 div {
+        overflow: hidden;
+    }
+
+    .item1 p {
+        font-size: 36px;
+        line-height: 100px;
+        color: #999;
+        border-bottom: 2px solid #ccc;
+    }
+
+    .item1 i {
+        width: 246px;
+        height: 230px;
+        float: left;
+        margin: 5px;
+    }
+
+    .item1 span {
+        display: block;
+        margin: 10px;
+        width: 30%;
+        height: 96px;
+        float: right;
+        line-height: 96px;
+        background-color: #f8f8f8;
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 798px) {
+    .item1 i {
+        position: relative;
+        left: 50%;
+        margin-left: -133px;
+    }
+
+    .item1 span {
+        width: 100%;
+    }
+}
+
+.item2 {
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.item2 div {
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+
+.item2 i {
+    width: 286px;
+    height: 202px;
+    background-position: -246px 0;
+    float: left;
+    margin-right: 20px;
+}
+
+.item2 p {
+    font-size: 44px;
+    color: #333;
+}
+
+.item2 span {
+    font-size: 24px;
+    color: #999;
+    position: absolute;
+    bottom: 20px;
+}
+
+@media screen and (max-width: 550px) {
+    .item2 i {
+        position: relative;
+        left: 50%;
+        margin-left: -153px;
+    }
+
+    .item2 p {
+        float: left;
+    }
+
+    .item2 span {
+        position: relative;
+        top: 10px;
+        float: left;
+    }
+}
+
+.foot {
+    background-color: #f8f8f8;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.foot p {
+    font-size: 44px;
+    line-height: 100px;
+    color: #333;
+}
+
+.foot div {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foot i {
+    width: 286px;
+    height: 202px;
+    background-position: -246px 0;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 40px;
+}
+
+.foot span {
+    display: block;
+    font-size: 24px;
+    color: #999;
+}
+
+.bottom {
+    height: 134px;
+    background-color: #f8f8f8;
+}

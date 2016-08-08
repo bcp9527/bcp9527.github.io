@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baidu-1-7</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .content{width: 1280px; overflow: hidden; position: relative;left: 50%;margin-left: -640px;}
+        .main{min-width: 1280px;width: 1280px;position: relative;left: 50%;margin-left: -640px; overflow: hidden}
+        .books,.login,.start,.lists-1,.lists-2,.lists-3,.lists-4,.show2 div,.select-i,.show4-d i,.show4-jiantou,i{background-image: url("images/sprite.png")}
+        .top{height: 57px;width: 100%;}
+        .books{height: 31px;width: 31px;background-position: -52px -92px;float: left;margin: 13px 10px 0 56px;}
+        .top .s1{font-family: '黑体';float: left;line-height: 57px;font-size: 21px;}
+        .top .s2,.top .s3,.top .s4,.top .s5,.top .s6{font-family: "Microsoft YaHei";color: #999;font-size:14px;display: block;width: 65px;height: 53px;line-height: 53px;
+            float: left;margin-right:30px;text-align: center;position: relative;top:2px;left: 540px;}
+        .top .s2:hover,.top .s3:hover,.top .s4:hover,.top .s5:hover,.top .s6:hover{color: #ff0000;border-bottom: 2px solid #ff0000;}
+        .login{height: 17px;width: 47px;background-position: -441px -42px;float: right;margin: 20px 62px 0 0;}
+
+        .show{height: 690px;background-image: url("images/img-1.png");font-family: "Microsoft YaHei";color: #fff;position: relative;}
+        .show-1{height: 690px; background: rgba(0,0,0,0.3);}
+        .show p{font-size: 60px;line-height:60px;position: relative;top:230px;left: 116px;}
+        .show span{font-size: 21px; line-height: 37px;display: block;width:298px; position:relative;top:240px;left: 120px;}
+        .start{height: 65px;width: 331px;background-position: -91px 0; font-size: 30px;text-align: center;line-height: 65px;position:relative;top:294px;left: 120px;}
+
+        .list{height: 250px;}
+        .list-1{height: 250px;width: 320px;float: left;text-align: center;position: relative;font-size: 14px;color: #999;}
+        .list-1 span{display: block;width: 155px;position: relative;top:90px;left: 87px;}
+        .lists-1{height: 42px;width: 42px;background-position: -422px 0;position: relative;top:45px;left: 50%;margin-left: -21px;}
+        .lists-2{height: 40px;width: 35px;background-position: -499px 0;position: relative;top:45px;left: 50%;margin-left: -17px;}
+        .lists-3{height: 40px;width: 35px;background-position: -464px 0;position: relative;top:45px;left: 50%;margin-left: -17px;}
+        .lists-4{height: 40px;width: 41px;background-position: -534px 0;position: relative;top:45px;left: 50%;margin-left: -20px;}
+        .line{width: 2px;height: 50px;background-color: #bbb;position: relative;top:60px;left: 320px;}
+
+        .show2{height: 360px;background-color: #ededed;text-align: center;}
+        .show2 div{height: 92px;width: 91px;margin: 0 0 0 594px;position: relative;top:89px;}
+        .show2 span{font-family: '黑体';font-size: 54px;color: #999;line-height: 54px;position: relative;top:140px;}
+
+        .select{height: 342px;background-image: url("images/img-2.png");text-align: center;font-family: "Microsoft YaHei"; color: #fff; opacity: 1;position: relative;}
+        .select .p1{font-size: 21px;line-height: 21px;position:relative;top: 53px;}
+        .line{width: 30px; height: 2px;background-color: #fff;position:relative;top:65px; left:625px;}
+        .selects{position: absolute;top:172px; left:126px;}
+        .select .p2{font-size: 12px; position:relative;top: 83px;}
+        .select-1,.select-2,.select-3,.select-4{margin-right: 28px;}
+        .select-1,.select-2,.select-3{text-align: left;}
+        .select-bg{height: 18px;width: 18px;background-image: url("images/select-1.png");float: right;margin: 9px;}
+        .select-i{display:block;height: 8px;width: 12px;background-position: -554px -42px;float: left;position: relative;top:10px;left:10px;}
+        .select span{margin-left: 12px;}
+        .select-1,.select-3,.select-4{height: 36px;width: 236px;background-color: #fff;line-height: 36px;color: #999;float: left;}
+        .select-2{width: 236px;height: 208px;background-color: #fff;line-height: 36px;color: #999;float: left;border: 1px solid #be4e48;}
+        .select-list{height:172px;background-color: #e3e3e3;line-height: 27px;text-align: left;}
+        .select-list p{margin-left: 31px;}
+        .select-list div{background-color: #be4e48;color: #fff;}
+        .select-4{background-color: #be4e48;color: #fff;}
+
+        .show3{height: 631px; background-color: #f7f7f7; font-family: "Microsoft YaHei";}
+        .items{float: left;text-align: center;margin: 100px 36px 0 0;position: relative;left: 148px;}
+        .show3 p{font-size: 14px;line-height: 34px;}
+        .show3 span{font-size: 12px;color: #999;}
+        .show3-1{height: 340px;width: 220px;background-image: url("images/show3-1.png")}
+        .show3-2{height: 338px;width: 221px;background-image: url("images/show3-2.png")}
+        .show3-3{height: 339px;width: 220px;background-image: url("images/show3-3.png")}
+        .show3-4{height: 343px;width: 221px;background-image: url("images/show3-4.png")}
+        #big{font-size: 22px;}
+        #big span{font-size: 22px;color:#000;letter-spacing: 38px;}
+        .items2-span{line-height: 24px;}
+
+        .show4{
+            height: 564px;
+        }
+        .show4-l{
+            height: 564px;
+            width: 850px;
+            float: left;
+            background-image: url("images/img-4.png");
+        }
+
+        .show4-r{
+            width: 430px;
+            height: 564px;
+            background-color: #fff;
+            float: right;
+            position: relative;
+            text-align: center;
+        }
+        .show4-r h3{
+            margin-top: 165px;
+        }
+        .show4-r p{
+            margin: 30px 60px;
+            font-family: "宋体";
+            font-size: 12px;
+            line-height: 30px;
+            text-align: left;
+            color: #999;
+        }
+
+        .show4-r span{
+            color: #ff0000;
+        }
+        .show4-b{
+            width: 102px;
+            height: 34px;
+            border: 1px solid #ff0000;
+            color:  #ff0000;
+            line-height: 34px;
+            font-size: 12px;
+            position: relative;
+            top:7px;
+            left: 50%;
+            margin-left: -52px;
+        }
+        .show4-d i{
+            display: block;
+            height: 12px;
+
+            float: left;
+            margin-right: 12px;
+
+            position: relative;
+            top:36px;
+            left: 186px;
+        }
+        .oth{
+            width: 12px;
+            background-position: -586px -25px;
+        }
+        .first{
+            width: 11px;
+            background-position: -575px -25px;
+        }
+        .show4-jiantou{
+            height: 31px;
+            width: 26px;
+            background-position: -26px -92px;
+            position: relative;
+            top:266px;
+            left: 825px;
+        }
+        .show4-t{
+            width: 850px;
+            margin-top: 80px;
+            text-align: center;
+            color: #fff;
+            font-family: "Microsoft YaHei";
+        }
+        .show4-t .p1{
+            font-size: 48px;
+        }
+        .show4-t .p2{
+            font-size: 158px;
+            line-height: 158px;
+            margin-bottom: 20px;
+        }
+        .show4-t .p3{
+            font-size: 22px;
+
+        }
+        .show4-t .p4{
+            font-size: 22px;
+        }
+
+        .show5{
+            height: 521px;
+        }
+        .show5 div{
+            height: 355px;
+            float: left;
+            text-align: center;
+            font-family: "黑体";
+            font-size: 21px;
+            line-height: 30px;
+            padding-top: 166px;
+        }
+
+        .show5 i{
+            display: block;
+            height: 3px;
+            width: 30px;
+            position: relative;
+            left: 50%;
+            margin-left: -15px;
+            margin-top: 15px;
+            background-image: none;
+        }
+
+        .show5 span{
+            display: block;
+            height: 42px;
+            width: 168px;
+            text-align: center;
+            line-height: 42px;
+            position: relative;
+            left: 50%;
+            margin-left: -85px;
+            margin-top: 20px;
+        }
+
+
+        .show5-l{
+            height: 521px;
+            width: 426px;
+            background-color: #e74f4d;
+            color: #fff;
+        }
+
+        .show5-l i{
+            background-color: #fff;
+        }
+        .show5-l span{
+            color: #fff;
+            border: 1px solid #fff;
+
+        }
+
+        .show5-m{
+            height: 521px;
+            width: 423px;
+        }
+        .show5-m i{
+            background-color: #ccc;
+        }
+        .show5-m span{
+            color: #f00;
+            border: 1px solid #f00;
+        }
+
+        .show5-r{
+            height: 521px;
+            width: 431px;
+            float: right;
+            background-image: url("images/img-5.png");
+            position: relative;
+        }
+        .show5-r i{
+            display: block;
+            height: 31px;
+            width: 26px;
+            background-position: 0 -92px;
+            position: absolute;
+            top: 225px;
+            left: 14px;
+        }
+
+        .show6{
+            width: 311px;
+            text-align: center;
+            position: relative;
+            left: 50%;
+            margin-left: -160px;
+            margin-top: 110px;
+            margin-bottom: 106px;
+            font-family: "黑体";
+        }
+        .show6 p{
+            line-height: 40px;
+            font-size: 21px;
+        }
+        .show6 i{
+            display: block;
+            height: 2px;
+            width: 30px;
+            background-color: #e74f4d;
+            position: relative;
+            left: 50%;
+            margin-left: -15px;
+            margin-bottom: 10px;
+        }
+        .show6 span{
+            font-size: 12px;
+            color: #999;
+
+        }
+
+        .show7{
+            height: 284px;
+            width: 100%;
+            clear: both;
+        }
+        .show7 div{
+            float: left;
+        }
+        .show7-l{
+            width: 292px;
+            margin-left: 138px;
+            margin-right: 74px;
+        }
+        .show7-l div{
+            width: 292px;
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 50px;
+        }
+        .show7-l p{
+            font-family: "黑体";
+            font-size: 14px;
+            color: #333;
+        }
+        .show7 span{
+            font-family: "宋体";
+            font-size: 12px;
+            color: #999;
+        }
+        .show7-l i{
+            display: block;
+            height: 6px;
+            width: 41px;
+            background-position: -239px -65px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+
+        .show7-r{
+            width: 676px;
+            font-family: "宋体";
+            font-size: 12px;
+            color: #666;
+        }
+        .show7-r-i{
+            background-color: #ededed;
+            height: 41px;
+            width: 295px;
+            margin: 0 18px 14px 0;
+            padding-left: 16px;
+            line-height: 41px;
+        }
+
+        .show7-r-i input{
+            background-color: #ededed;
+            border: none;
+            height: 41px;
+            width: 230px;
+            float: right;
+            outline: none;
+        }
+        .show7-r-t textarea{
+            width: 622px;
+            height: 112px;
+            border: none;
+            background-color: #ededed;
+            outline: none;/* 去除点击后显示的亮框 */
+            padding-left: 16px;
+            padding-top: 8px;
+            resize: none;/*禁止自定义大小，去除右下角标志*/
+        }
+        .show7-r-b input{
+            width: 638px;
+            height: 41px;
+            border: none;
+            background-color: #ededed;
+            margin-top: 10px;
+            font-family: "黑体";
+            font-size: 14px;
+        }
+
+        .foot{
+            height: 416px;
+            margin-top: 165px;
+            background-color: #32353e;
+            color: #fff;
+            font-family: "黑体";
+            text-align: center;
+
+        }
+        .foot p{
+            position: relative;
+            top:100px;
+        }
+
+        .foot h3{
+            font-size: 21px;
+            line-height: 50px;
+
+        }
+        .foot-1{
+            width: 470px;
+            text-align: center;
+            position: relative;
+            left: 50%;
+            margin-left: -235px;
+            top:80px;
+        }
+        .foot-1 span{
+            font-family: "宋体";
+            font-size: 12px;
+            line-height: 18px;
+        }
+        .foot input{
+            width: 421px;
+            height: 41px;
+            padding-left: 10px;
+            border: none;
+            resize: none;
+        }
+        .input-a{
+            display: inline-block;
+            height: 42px;
+            width: 81px;
+            line-height: 41px;
+            background-color: #6f7278;
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .share{
+            position: relative;
+            top:140px;
+
+        }
+        .share i{
+            display: inline-block;
+            height: 25px;
+            margin-right: 20px;
+        }
+
+        .qq {
+            width: 24px;
+            background-position: -91px -65px;
+        }
+        .twitter {
+            width: 29px;
+            background-position: -144px -65px;
+        }
+        .weibo {
+            width: 29px;
+            background-position: -115px -65px;
+        }
+        .net{
+            width: 24px;
+            background-position: -575px 0;
+        }
+
+        .foot-bottom{
+            height: 56px;
+            background-color: #2f2f38;
+            position: relative;
+            top:200px;
+            font-family: "宋体";
+            font-size: 12px;
+            line-height: 56px;
+        }
+        .foot-bottom span{
+            float: left;
+            margin-left: 96px;
+        }
+        .foot-bottom a{
+            text-decoration: none;
+            color: #fff;
+            float: right;
+            margin-right: 96px;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="main">
+        <div class="top">
+            <div class="books"></div>
+            <span class="s1">新世界</span>
+            <span class="s2">首页</span>
+            <span class="s3">最新活动</span>
+            <span class="s4">项目介绍</span>
+            <span class="s5">爱心社区</span>
+            <span class="s6">关于我们</span>
+            <div class="login"></div>
+        </div>
+        <div class="show">
+            <div class="show-1">
+                <p>Time of new life</p>
+                <span>新时代，年轻的人们让我们一起体验新生活，享受新生活</span>
+                <div class="start">开始体验</div>
+            </div>
+
+        </div>
+        <div class="list">
+            <div class="list-1">
+                <div class="lists-1"></div>
+                <span>打造全新世界观，让你更爱你的生活</span>
+                <div class="line"></div>
+            </div>
+            <div class="list-1">
+                <div class="lists-2"></div>
+                <span>丰富多彩的公益活动，发挥新世界的主人公意识</span>
+                <div class="line"></div>
+            </div>
+            <div class="list-1">
+                <div class="lists-3"></div>
+                <span>时尚的新理念，超前体验位置的生活</span>
+                <div class="line"></div>
+            </div>
+            <div class="list-1">
+                <div class="lists-4"></div>
+                <span>完善的培养机制，培养你全新的世界观</span>
+            </div>
+
+        </div>
+        <div class="show2">
+            <div></div>
+            <span>关于新世界，你不知道的还有什么？</span>
+        </div>
+        <div class="select">
+            <p class="p1">查找新世界城市活动消息</p>
+            <div class="line"></div>
+            <p class="p2">每个城市都有不同的活动信息，请自主查询您所需要了解的城市</p>
+            <div class="selects">
+                <div class="select-1">
+                    <span>中国</span>
+                    <div class="select-bg"></div>
+                </div>
+                <div class="select-2">
+                    <span>省份</span>
+                    <div class="select-bg"></div>
+                    <div class="select-list">
+                        <div><i class="select-i"></i><p>北京市</p></div>
+                        <p>天津市</p>
+                        <p>河北省</p>
+                        <p>陕西省</p>
+                        <p>内蒙古自治区</p>
+                        <p>辽宁省</p>
+                    </div>
+
+                </div>
+                <div class="select-3">
+                    <span>城市</span>
+                    <div class="select-bg"></div>
+                </div>
+                <div class="select-4">搜索</div>
+            </div>
+
+
+        </div>
+        <div class="show3">
+            <div class="items">
+                <div class="show3-1"></div>
+                <p>北京活动</p>
+                <span>新社区大联盟</span>
+            </div>
+            <div class="items">
+                <p id="big"><span>上海活</span>动</p>
+                <span class="items2-span">夜上海新景观探索</span>
+                <div class="show3-2"></div>
+
+            </div>
+            <div class="items">
+                <div class="show3-3"></div>
+                <p>深圳活动</p>
+                <span>全新海岸线观点站</span>
+            </div>
+            <div class="items">
+                <div class="show3-4"></div>
+                <p>香港活动</p>
+                <span>奢侈消费大派送</span>
+            </div>
+        </div>
+        <div class="show4">
+            <div class="show4-l">
+                <div class="show4-jiantou"></div>
+                <div class="show4-t">
+                    <p class="p1">新世界</p>
+                    <p class="p2">TIME</p>
+                    <p class="p3">@新世界&nbsp;-&nbsp;北京</p>
+                    <p class="p4">2016.04.01</p>
+                </div>
+            </div>
+
+            <div class="show4-r">
+                <h3>新世界/<span>01</span></h3>
+                <p>新世界是个新世界社么鬼什么鬼新世界是个新世界社么鬼什么鬼新世界是个新世界社么鬼什么鬼新世界是个新世界社么鬼什么鬼新世界是个新世界社么鬼什么鬼社么鬼什么鬼社么鬼什么鬼社么鬼什么鬼</p>
+                <div class="show4-b">更多精彩</div>
+                <div class="show4-d">
+                    <i class="first"></i>
+                    <i class="oth"></i>
+                    <i class="oth"></i>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="show5">
+            <div class="show5-l">
+                <p class="p-t">新时代</p>
+                <p>关于爱生活的我们</p>
+                <i></i>
+                <span>查看更多</span>
+            </div>
+            <div class="show5-m">
+                <p class="p-t">新时代</p>
+                <p>关于爱生活的我们</p>
+                <i></i>
+                <span>查看更多</span>
+            </div>
+            <div class="show5-r">
+                <i ></i>
+            </div>
+        </div>
+        <div class="show6">
+            <p>成为我们的志愿者</p>
+            <i></i>
+            <span>新世界的大家庭需要没一个爱生活的人的加入，如果你够年轻，有梦想，有激情那就不要犹豫，快来加入我们，成为改变所有人生活的人</span>
+        </div>
+        <div class="show7">
+            <div class="show7-l">
+                <div>
+                    <p>新世界志愿者协议</p>
+                    <span>加入新世界志愿者的人员必须遵守中华人民共和国的相关法律法规，并且本着平等自愿的原则···</span>
+                    <i></i>
+                </div>
+                <div>
+                    <p>新世界志愿者权利</p>
+                    <span>新世界志愿者享受新世界内部所有资源共享的权利，并且享受所在四新世界活动的有限参与资格</span>
+                    <i></i>
+                </div>
+                <div>
+                    <p>更多条款</p>
+                    <i></i>
+                </div>
+
+            </div>
+            <div class="show7-r">
+                <div class="show7-r-i">
+                    姓名：<input type="text">
+                </div>
+                <div class="show7-r-i">
+                    年龄：<input type="text">
+                </div>
+                <div class="show7-r-i">
+                    联系方式：<input type="text">
+                </div>
+                <div class="show7-r-i">
+                    联系地址：<input type="text">
+                </div>
+                <div class="show7-r-t">
+                    <textarea cols="30" rows="10">请简单描述您梦想的生活：</textarea>
+                </div>
+                <div class="show7-r-b">
+                    <input type="submit" value="提交申请">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="foot-1">
+            <h3>联系我们</h3>
+            <span>为了更好的获取我们最新的产品咨询，您可以留下您的电子邮箱快速订阅我们的产品咨询也可以通过以下任何方式关注我们的动态</span>
+        </div>
+        <p><input type="text" placeholder="someone@email.com"><a class="input-a" href="#">提交</a></p>
+
+
+        <div class="share">
+            <a href="#"><i class="qq"></i></a>
+            <a href="#"><i class="weibo"></i></a>
+            <a href="#"><i class="twitter"></i></a>
+            <a href="#"><i class="net"></i></a>
+        </div>
+        <div class="foot-bottom">
+            <span>@2016新世界</span>
+            <a href="#">Back to top</a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

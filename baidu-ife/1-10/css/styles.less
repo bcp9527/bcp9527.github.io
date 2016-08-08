@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.main div {
+  width: 148px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    align-items: flex-start;
+  }
+
+  .d-4 {
+    order: -1;
+  }
+}
+
+.d-1 {
+  height: 118px;
+  border: 1px solid #f00;
+
+}
+
+.d-2 {
+  height: 98px;
+  border: 1px solid #f00;
+}
+
+.d-3 {
+  height: 38px;
+  border: 1px solid #f00;
+}
+
+.d-4 {
+  height: 198px;
+  border: 1px solid #00f;
+}

@@ -1,0 +1,182 @@
+@charset "utf-8";
+table {
+  font-family: "Microsoft YaHei";
+}
+.title {
+  background-color: #000;
+  color: #fff;
+}
+.ji {
+  background-color: #fff;
+}
+.ou {
+  background-color: #ccc;
+}
+.main {
+  color: #f00;
+}
+.text-in {
+  width: 100px;
+  position: relative;
+  left: 50%;
+  margin-left: -50px;
+  transition: transform 2s;
+}
+.text-in:focus {
+  transform: scale(2, 2);
+}
+.banners {
+  width: 400px;
+  height: 180px;
+  position: relative;
+  left: 50%;
+  margin-left: -200px;
+  overflow: hidden;
+}
+.banners div {
+  height: 100%;
+  width: 100%;
+}
+.banner-1 {
+  background-color: #0f0;
+}
+.banner-2 {
+  position: relative;
+  left: -400px;
+  top: -180px;
+  background-color: #00f;
+  animation: myfirst 4s ease-out infinite;
+}
+@keyframes myfirst {
+  0% {
+    left: -400px;
+    top: -180px;
+  }
+  33% {
+    left: -400px;
+    top: -180px;
+  }
+  34% {
+    left: -200px;
+    top: -180px;
+  }
+  66% {
+    left: -200px;
+    top: -180px;
+  }
+  67% {
+    left: 0;
+    top: -180px;
+  }
+  100% {
+    left: 0;
+    top: -180px;
+  }
+}
+@keyframes mysecond {
+  0% {
+    left: -200px;
+    top: -180px;
+  }
+  33% {
+    left: -200px;
+    top: -180px;
+  }
+  34% {
+    left: 0;
+    top: -180px;
+  }
+  66% {
+    left: 0;
+    top: -180px;
+  }
+  67% {
+    left: -400px;
+    top: -180px;
+  }
+  100% {
+    left: -400px;
+    top: -180px;
+  }
+}
+@keyframes mythird {
+  0% {
+    left: -400px;
+    top: -180px;
+  }
+  33% {
+    left: -400px;
+    top: -180px;
+  }
+  34% {
+    left: -200px;
+    top: -180px;
+  }
+  66% {
+    left: -200px;
+    top: -180px;
+  }
+  67% {
+    left: 0;
+    top: -180px;
+  }
+  100% {
+    left: 0;
+    top: -180px;
+  }
+}
+.banners input[type="radio"] {
+  display: none;
+}
+.banners label {
+  display: block;
+  float: left;
+  margin: 1px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+  top: -22px;
+  left: 334px;
+}
+.banners label:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#r-1:checked + label .banner-2 {
+  animation: myfirst 4s ease-out infinite;
+}
+#r-2:checked .banner-2 {
+  animation: mysecond 4s ease-out infinite;
+}
+#r-3:checked .banner-2 {
+  animation: mythird 4s ease-out infinite;
+}
+.banner2 {
+  width: 300px;
+  height: 170px;
+  position: relative;
+  left: 50%;
+  margin-left: -150px;
+  border: 1px solid red;
+  overflow: hidden;
+}
+.banner2 ul {
+  margin: 0;
+  padding: 0;
+  width: 900px;
+  height: 170px;
+  list-style: none;
+}
+.banner2 li {
+  float: left;
+  width: 300px;
+  height: 170px;
+  background-color: #ff0;
+}
+#r-4:checked + label {
+  color: red;
+  background-color: #f00;
+}

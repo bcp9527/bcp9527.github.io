@@ -1,0 +1,12 @@
+@charset "utf-8";
+body {
+  padding: 10px;
+}
+div {
+  padding: 10px;
+}
+.inner {
+  height: 50px;
+  border: 1px solid #999;
+  background-color: #eee;
+}

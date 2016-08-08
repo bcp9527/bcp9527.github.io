@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+	min-width:800px;
+}
+
+#main {
+    margin: 0;
+    padding: 0;
+    background-color: #dedede;
+}
+
+#div1, #div2, #div3, #div4, #form {
+    box-shadow: 2px 2px 1px #999;
+    margin: 20px;
+    background-color: white;
+    padding: 10px;
+}
+
+img {
+    margin-left: 1%
+}
+
+#heading {
+    border: 1px gray solid;
+
+    height: 60px;
+    background-color: #333;
+}
+
+#heading img {
+    margin-left: 30px;
+}
+
+#navi {
+    float: right;
+}
+
+.navi-list {
+    float: left;
+    position: relative;
+    top: 50%;
+    margin: auto 15px;
+    text-decoration: none;
+}
+
+.navi-list a:link {
+    text-decoration: none;
+    color: #999;
+}
+
+.navi-list a:active {
+    text-decoration: none;
+    color: #ffffff
+}
+
+.navi-list a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.navi-list a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+h2, h6 {
+    color: #999;
+}
+
+.content-list {
+    list-style: none;
+}
+
+#div3 {
+    overflow: hidden;
+}
+
+/*让父div根据子元素的活动自适应宽高。*/
+#div3 div {
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid black;
+    float: left;
+}
+
+#div3 img {
+    margin: 20px;
+}
+
+#div3 p {
+    text-align: center;
+}
+
+.table1 {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+.table1 th {
+    background-color: black;
+    color: white;
+}
+
+.table1 tr {
+}
+
+.table1 td {
+    margin: 0;
+    border: 1px solid #999;
+}
+
+.table-foot {
+    background-color: #999999;
+}
+
+.subtext {
+    width: 100%;
+}
+
+.text textarea {
+    width: 100%;
+    height: 100%;
+}
+
+.td-left {
+    text-align: right;
+}
+
+.submit {
+    display: block;
+    height: 50px;
+    margin-top: 40px;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+.subshow {
+    font-size: small;
+    color: #999999;
+}
+
+.cebian {
+    border-left: 3px solid #999999;
+    padding-left: 10px;
+}
+
+.body-left {
+    margin-right: 450px;
+}
+
+#form {
+    width: 400px;
+    float: right;
+    position: absolute;
+    top: 65px;
+    right: 0;
+}
+
+#footer {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+
