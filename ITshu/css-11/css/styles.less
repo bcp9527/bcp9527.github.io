@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.container{margin: 0;padding: 0;width: 100%;}
+body{
+  background-color: #fafafa;
+}
+.row{
+  margin: 0;
+  padding: 0;
+}
+
+.navi-1{
+  img{
+    position: absolute;
+    top:20%;
+    left: 20px;
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navi-1 img{
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .body{
+    width: 1200px;
+    position: relative;
+    left: 50%;
+    margin-left: -600px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .body{
+    width: 100%;
+  }
+}
+
+.job-1 {
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 80px;
+  border-bottom: 1px solid #999;
+}
+
+.job-1 span {
+  color: #29b078;
+}
+
+.job-2 {
+  width: 100%;
+  font-size: 1em;
+}
+
+
+
+.job-2 span {
+  float: left;
+  color: #999;
+  margin-right: 1em;
+  line-height: 5em;
+}
+
+.job-2 li {
+  list-style: none;
+  float: left;
+  display: block;
+  height: 1.5em;
+  width: 8em;
+  margin: 2em 0 0 0;
+  text-align: center;
+  color: #333;
+}
+
+.job-2 li:hover {
+  background-color: #29b078;
+  color: #fff;
+}
+
+.front {
+  border-top: 1px solid #ccc;
+}
+
+.front, .back, .mobile, .yunwei {
+  width: 100%;
+  overflow: hidden;
+}
+
+.job-title {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 5em;
+  border-bottom: 1px solid #dedede;
+}
+
+.items {
+  width: 387px;
+  height: 449px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  background-color: #fff;
+  float: left;
+  margin: 48px 11px 0 0;
+  overflow: hidden;
+  position: relative;
+  &:hover .cover {
+    visibility: visible;
+    height: 100%;
+    margin-top: -449px;
+    text-align: center;
+    padding: 50px;
+    p {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 40px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 360px){
+  .items{
+    height: 100%;
+    &:hover .cover{
+      margin-top: -570px;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .items{
+    width: 50%;
+    margin: 0 0 20px 0;
+  }
+}
+@media screen and (max-width: 790px) {
+  .items{
+    width: 100%;
+  }
+}
+
+/* ��껬��ʱ����ʽ */
+
+
+
+.cover {
+  visibility: hidden;
+  height: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, .8);
+  color: #fff;
+  border-radius: 5px;
+  position: absolute;
+}
+
+
+.img {
+  height: 139px;
+  width: 139px;
+  background-image: url("../images/touxiang.png");
+  margin: 15px 10px;
+  float: left;
+}
+
+.items-t {
+  width: 50%;
+  float: right;
+  font-size: 14px;
+  margin: 10px 12px 0 0;
+}
+
+@media screen and (max-width: 360px) {
+  .img{
+    position: relative;
+    left: 50%;
+    margin-left: -80px;
+  }
+  .items-t {
+    width: 90%;
+    position: relative;
+    left: 5%;
+    font-size: 14px;
+  }
+}
+
+.items-t p {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.items-t span {
+  color: #333;
+}
+
+.items table {
+  width: 100%;
+  clear: both;
+  font-size: 12px;
+  color: #999;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #f0f0f0;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.half td {
+  width: 50%;
+}
+
+.star-f {
+  float: left;
+  margin-right: 15px;
+}
+
+.price {
+  text-align: center;
+  width: 40%;
+}
+
+.star {
+  display: block;
+  width: 16px;
+  height: 15px;
+  background-image: url("../images/star.png");
+  float: left;
+  margin-right: 12px;
+}
+
+.right {
+  float: right;
+  margin-right: 5px;
+}
+
+.color-r {
+  color: red;
+}
+
+.num {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}
+
+.td1 {
+  color: #000;
+  padding-left: 25px;
+}
+
+.span1 {
+  color: #000;
+}
+

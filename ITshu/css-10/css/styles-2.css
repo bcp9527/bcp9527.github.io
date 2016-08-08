@@ -1,0 +1,142 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #fafafa;
+}
+.row {
+  margin: 0;
+  padding: 0;
+}
+.navi-1 img {
+  position: absolute;
+  top: 20%;
+  left: 20px;
+  width: 10%;
+}
+.body-show {
+  line-height: 82px;
+}
+.body-show span {
+  color: #26a26f;
+}
+@media screen and (max-width: 767px) {
+  .navi-1 img {
+    visibility: hidden;
+  }
+}
+.show {
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .body {
+    width: 1200px;
+    position: relative;
+    left: 50%;
+    margin-left: -600px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .body {
+    width: 100%;
+  }
+}
+.left {
+  width: 304px;
+  background-color: #fff;
+  float: left;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.left h3 {
+  line-height: 62px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 34px;
+}
+.left li {
+  list-style: none;
+  line-height: 48px;
+  text-align: left;
+  position: relative;
+  left: 110px;
+  color: #26a26f;
+  font-weight: bold;
+}
+@media screen and (max-width: 1199px) {
+  .left {
+    width: 100%;
+  }
+  .left li {
+    float: left;
+    width: 200px;
+  }
+}
+.left li:hover {
+  cursor: pointer;
+  color: #f9a372;
+}
+.left li:hover i {
+  background-position: -1229px -123px;
+}
+.left i {
+  display: block;
+  float: left;
+  height: 14px;
+  width: 14px;
+  background-image: url("../images/sprite.png");
+  background-position: -1229px -109px;
+  position: relative;
+  top: 17px;
+  margin-right: 10px;
+}
+.right {
+  width: 872px;
+  background-color: #fff;
+  float: right;
+  text-align: left;
+  font-size: 14px;
+  color: #999;
+  line-height: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .right {
+    width: 100%;
+  }
+}
+.right-top {
+  border-bottom: 1px solid #f0f0f0;
+}
+.right-top p {
+  margin-right: 10%;
+  margin-top: 20px;
+}
+.tudou {
+  width: 30%;
+  background-image: url("../images/tudou.png");
+  float: left;
+}
+@media screen and (max-width: 767px) {
+  .tudou {
+    width: 40%;
+    margin: 0 30%;
+  }
+  .right-top {
+    width: 100%;
+  }
+  .right-top p {
+    text-indent: 2em;
+    width: 80%;
+    position: relative;
+    left: 10%;
+  }
+}
+.right-top p {
+  height: 100%;
+}
+.tudou-1 p {
+  text-indent: 2em;
+  width: 80%;
+  margin-left: 10%;
+}

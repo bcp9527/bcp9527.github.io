@@ -1,0 +1,433 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.top,
+.navi,
+.body,
+.foot {
+    width: 100%;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1200px) {
+    .top-1,
+    .navi-1,
+    .content,
+    .foot-1 {
+        width: 1200px;
+        position: relative;
+        left: 50%;
+        margin-left: -600px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .top-1,
+    .navi-1,
+    .content,
+    .foot-1 {
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+.top {
+    background-color: #1d7ad9;
+    height: 40px;
+}
+
+.top-1 span {
+    font-size: 1em;
+    color: #fff;
+    line-height: 3em;
+}
+
+.top-1 div {
+    width: 4em;
+    height: 40px;
+    font-size: 1em;
+    text-align: center;
+    line-height: 3em;
+    float: right;
+    position: relative;
+    color: #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.top-1 div:hover {
+    width: 6em;
+    background-color: #fff;
+    color: #000;
+}
+
+.navi,
+.navi-1 {
+    background-color: #f9f9f9;
+    height: 100px;
+}
+
+.navi-1 span {
+    display: block;
+    float: right;
+    position: relative;
+    top: 2em;
+    margin-left: 50px;
+    font-size: 1em;
+    padding: 1em;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.navi-1 span:hover {
+    background-color: #1d7ad9;
+    color: #fff;
+}
+
+@media screen and (max-width: 520px) {
+    .navi-1 span {
+        font-size: 0.8em;
+        width: 25%;
+        margin: 0;
+    }
+}
+
+.road {
+    height: 160px;
+    width: 100%;
+    text-align: center;
+    float: right;
+}
+
+.p-show {
+    font-size: 1.5em;
+    text-align: left;
+    left: 0;
+    line-height: 22px;
+}
+
+.p-show span {
+    display: inline-block;
+    width: 5px;
+    height: 22px;
+    background-color: #1d7ad9;
+    border-radius: 5px;
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+}
+
+.roads p {
+    font-size: 1.5em;
+    color: #ccc;
+}
+
+.roads:hover {
+    cursor: pointer;
+}
+
+.roads:hover p {
+    color: #ff5a00;
+}
+
+.roads:hover .b-l {
+    background-color: #ff5a00;
+}
+
+@media screen and (min-width: 1200px) {
+    .roads {
+        width: 140px;
+        float: left;
+        position: relative;
+        left: 640px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .roads {
+        width: 25%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .roads p {
+        font-size: 14px;
+    }
+
+    .roads .b-l {
+        height: 5px;
+        width: 100%;
+        background-color: #999;
+        position: relative;
+        top: -70px;
+        z-index: -1;
+    }
+}
+
+@media screen and (min-width: 431px) {
+    .roads .b-l {
+        height: 5px;
+        width: 100%;
+        background-color: #999;
+        position: relative;
+        top: -80px;
+        z-index: -1;
+    }
+}
+
+.road-1,
+.road-2,
+.road-3,
+.road-4 {
+    font-size: 1em;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 2em;
+    background-image: url("../images/yuan.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.boxs {
+    border: 1px solid #f3f3f3;
+    font-size: 1.3em;
+    background-color: #fbfcff;
+}
+
+.boxs span {
+    color: #1d7ad9;
+    font-weight: bold;
+    line-height: 2.5em;
+    margin-left: 1.5em;
+}
+
+.titles {
+    height: 45px;
+    background-color: #f3f3f3;
+}
+
+.bg-1,
+.bg-2,
+.bg-3 {
+    display: block;
+    float: left;
+    background-image: url("../images/sprite.png");
+}
+
+.bg-1 {
+    height: 19px;
+    width: 23px;
+    background-position: -342px 0;
+    position: relative;
+    top: 13px;
+    left: 18px;
+}
+
+.bg-2 {
+    height: 24px;
+    width: 26px;
+    background-position: -135px 0;
+    position: relative;
+    top: 10px;
+    left: 18px;
+}
+
+.bg-3 {
+    height: 24px;
+    width: 19px;
+    background-position: -116px 0;
+    position: relative;
+    top: 10px;
+    left: 18px;
+}
+
+select {
+    width: 127px;
+    height: 36px;
+    border: 1px solid #f0f0f0;
+    float: right;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    padding-left: 1.2em;
+    color: #999;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+@media screen and (max-width: 390px) {
+    .b-selects {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 391px) {
+    .b-selects {
+        position: absolute;
+        right: 1em;
+        top: 50%;
+        margin-top: -1em;
+    }
+}
+
+.bg-select {
+    width: 24px;
+    height: 28px;
+    background-image: url("../images/sprite.png");
+    background-position: -92px 0;
+    position: relative;
+    top: 4px;
+    left: 100px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    margin-left: .5em;
+}
+
+.boxs label {
+    height: 1.4em;
+    font-weight: normal;
+    font-size: 1em;
+    padding-left: 1.5em;
+    background-image: url("../images/radio-2.png");
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.boxs input:checked + label {
+    background-image: url("../images/radio.png");
+}
+
+.boxs-1,
+.boxs-2,
+.boxs-3 {
+    margin-left: 2em;
+    padding: 2em 0;
+    position: relative;
+}
+
+.boxs-2 p {
+    display: inline;
+}
+
+input[type="text"] {
+    width: 5em;
+    margin-bottom: 2em;
+}
+
+.submit {
+    margin-top: 5em;
+    background-color: #fff;
+    position: relative;
+}
+
+.submit p {
+    display: block;
+    height: 46px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 2em;
+    text-align: center;
+    line-height: 46px;
+    background-color: #e15053;
+    color: #fff;
+}
+
+.foot {
+    border-top: 1px solid #000;
+    font-family: "����";
+    background-color: #f9f9f9;
+}
+
+.foot-1 {
+    color: #999;
+}
+
+.name {
+    font-size: 1.8em;
+    float: left;
+    margin-top: 1em;
+}
+
+.spans {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 3em;
+    margin: 1em 0 0 2em;
+}
+
+.spans a {
+    margin-right: 1.5em;
+    color: #999;
+    text-decoration: none;
+}
+
+.spans a:hover {
+    color: #1d7ad9;
+}
+
+.logo {
+    float: right;
+    width: 246px;
+    height: 140px;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        float: left;
+        margin-left: 2em;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .logo {
+        margin-left: 0;
+    }
+
+    .spans {
+        margin-left: 0;
+    }
+}
+
+.logo i {
+    display: block;
+    height: 92px;
+    width: 92px;
+    background-image: url("../images/sprite.png");
+    float: right;
+}
+
+.copyright {
+    line-height: 34px;
+    background-color: #1d7ad9;
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+}

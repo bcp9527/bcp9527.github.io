@@ -1,0 +1,147 @@
+@charset"utf-8";
+.container{margin: 0; padding: 0;width: 100%;}
+.row{
+  margin: 0;
+  padding: 0;
+}
+.tel, .qq, .weixin, .weibo,.erweima {
+  background-image: url("../images/sprite.png")
+}
+
+@media screen and (min-width: 1200px) {
+  .heading-1, .navi-1, .foot-1 {
+    width: 1200px;
+    position: relative;
+    left: 50%;
+    margin-left: -600px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .heading-1, .navi-1, .foot-1 {
+    width: 100%;
+  }
+}
+
+.tel {
+  height: 14px;
+  width: 173px;
+  float: left;
+  margin-top: 13px;
+  background-position: -1034px -505px;
+}
+
+.qq, .weixin, .weibo {
+  height: 28px;
+  width: 29px;
+  float: right;
+  margin-left: 5px;
+  margin-top: 6px;
+}
+
+
+
+.qq {
+  background-position: -1202px -186px;
+}
+
+.weixin {
+  background-position: -1202px -214px;
+}
+
+.weibo {
+  background-position: -1202px -248px;
+}
+
+.navi {
+  width: 100%;
+  height: 100px;
+  background-color: #29b078;
+}
+
+.navi-1{
+  height: 100px;
+  ul{
+    width: 100%;
+    height: 100px;
+
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    float: right;
+    color: #fff;
+    font-size: 18px;
+    font-family: '΢���ź�';
+
+    &:hover {
+      border-bottom: 5px solid #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navi-1 li{
+    width: 25%;
+  }
+}
+
+.foot {
+  background-color: #26a26f;
+  text-align: center;
+  width: 100%;
+  clear: both;
+  color: #fff;
+  a{
+    color: #fff;
+    text-underline: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .foot-3{
+    width: 80%;
+    margin-left: 10%;
+    line-height: 1em;
+  }
+  .foot-4{
+    width: 80%;
+    margin-left: 10%;
+  }
+  .foot-2{
+    clear: both;
+  }
+}
+
+.foot-2 {
+  float: right;
+  height: 176px;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.erweima {
+  height: 92px;
+  width: 92px;
+  background-position: -343px -450px;
+  margin-top: 10px;
+  position: relative;
+  left: 50%;
+  margin-left: -46px;
+}
+
+.foot-3, .foot-4 {
+  float: left;
+  text-align: left;
+  line-height: 3em;
+}
+
+
+
