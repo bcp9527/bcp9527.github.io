@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>baidu-2-14</title>
+</head>
+<body>
+
+<h3>污染城市列表</h3>
+<ul id="aqi-list">
+    <!--
+        <li>第一名：福州（样例），10</li>
+          <li>第二名：福州（样例），10</li> -->
+</ul>
+
+<script type="text/javascript">
+
+    var aqiData = [
+        ["北京", 90],
+        ["上海", 50],
+        ["福州", 10],
+        ["广州", 50],
+        ["成都", 90],
+        ["西安", 100]
+    ];
+
+    //根据数字从大到小顺序排序
+    aqiData.sort(function(a,b){
+        return b[1]-a[1];
+    });
+    var dataList=document.getElementById("aqi-list");
+    var newnode=document.createElement("li");
+    (function (){
+        for( var i=0; i< aqiData.length;i++){
+            if(aqiData[i][1]>=60){
+                var newnode=document.createElement("li");
+                newnode.innerHTML=aqiData[i];
+                dataList.appendChild(newnode);
+            }
+        }
+    })();
+</script>
+</body>
+</html>
