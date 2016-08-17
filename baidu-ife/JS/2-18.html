@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2-18</title>
+</head>
+<body>
+<div id="buttons">
+    <input type="text" id="input"/>
+    <input type="button" id="l-in" value="左侧入"/>
+    <input type="button" id="r-in" value="右侧入"/>
+    <input type="button" id="l-out" value="左侧出"/>
+    <input type="button" id="r-out" value="右侧出"/>
+</div>
+
+<div id="items"></div>
+
+
+<script>
+    var input = document.getElementById("input");//输入框
+    var box = document.getElementById("items");//内容框
+
+    //点击按钮添加删除操作
+    function changeItem(target) {
+	if(!input.value.match(/^[0-9]*$/)){
+        alert("对不起，只能用数字");
+        input.value="";
+        return;
+    }
+        var item = document.createElement("div");
+        item.className = "item";
+
+        item.style.cssText = "width:50px; height:50px; background-color:red;color:#fff;text-align:center; line-height:50px;float:left;margin-right:10px;";
+        item.onmouseover = function () {
+            this.style.cursor = "pointer";
+        };
+        item.innerHTML = input.value;
+
+
+        var name = target.getAttribute("id");//获取点击的按钮的ID
+        switch (name) {
+            case "l-in":
+                box.insertBefore(item, box.childNodes[0]);
+                break;
+            case "r-in":
+                box.appendChild(item);
+                break;
+            case "l-out":
+                if (box.firstChild != null) {
+                    alert("删除了" + box.firstChild.firstChild.nodeValue);
+                    box.removeChild(box.firstChild);
+                }
+                break;
+            case "r-out":
+                if (box.firstChild != null) {
+                    alert("删除了" + box.lastChild.firstChild.nodeValue);
+                    box.removeChild(box.lastChild);
+                }
+                break;
+        }
+    }
+
+    //点击方块添加删除操作
+    function delItem(target){
+        alert("删除了"+target.firstChild.nodeValue);
+        target.parentNode.removeChild(target);
+    }
+
+    function init() {
+        //点击按钮添加删除操作
+        document.getElementById("buttons").addEventListener('click', function (e) {
+            //e.target 监听到的事件目标，浏览器会显示大写的BUTTON
+            if (e.target.getAttribute("type").toLowerCase() === "button" ) {
+                //如果点击的事按钮，就执行删除操作，传入事件目标
+                changeItem(e.target);
+            };
+        });
+
+        //点击方块添加删除操作
+        document.getElementById("items").addEventListener('click', function (e) {
+            //e.target 监听到的事件目标，浏览器会显示大写的BUTTON
+            if (e.target.getAttribute("class").toLowerCase() === "item" ) {
+                //如果点击的事按钮，就执行删除操作，传入事件目标
+                delItem(e.target);
+            };
+        });
+
+    }
+    init();
+</script>
+</body>
+</html>
