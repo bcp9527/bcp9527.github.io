@@ -2,17 +2,17 @@
  * Created by Administrator on 2016/8/23.
  */
 
-//ÉèÖÃ
+//è®¾ç½®
 var set=document.getElementById("set");
 var items=document.getElementById("items");
 var num=document.getElementById("num");
 
 num.onkeyup=function(){
-    //ÓÃ»§ÊÖ¶¯ÊäÈëÈËÊıÊ±°´Å¥Ò²Òª¶¯Ì¬ÒÆ¶¯
+    //ç”¨æˆ·æ‰‹åŠ¨è¾“å…¥äººæ•°æ—¶æŒ‰é’®ä¹Ÿè¦åŠ¨æ€ç§»åŠ¨
     moveButton();
 }
 
-//µã»÷ÉèÖÃºóµÄ²Ù×÷
+//ç‚¹å‡»è®¾ç½®åçš„æ“ä½œ
 set.onclick=function (){
     var text=document.getElementById("num").value.trim();
     if(text.match(/\D/)){
@@ -24,7 +24,7 @@ set.onclick=function (){
     setItems(text);
 }
 
-//½«ÈËÎïÌí¼Óµ½ÁĞ±íÖĞ
+//å°†äººç‰©æ·»åŠ åˆ°åˆ—è¡¨ä¸­
 function setItems(n){
     var nodes=items.childNodes;
     var m=nodes.length;
@@ -36,15 +36,15 @@ function setItems(n){
     }
 }
 
-//´´½¨ÈËÎï
+//åˆ›å»ºäººç‰©
 function addItem(){
-    var job=["É±&nbsp;ÊÖ","Ò½&nbsp;Éú","¾Ñ»÷ÊÖ","¾¯&nbsp;²ì","·¨&nbsp;¹Ù"];
+    var job=["æ€&nbsp;æ‰‹","åŒ»&nbsp;ç”Ÿ","ç‹™å‡»æ‰‹","è­¦&nbsp;å¯Ÿ","æ³•&nbsp;å®˜"];
     var cols=["#ee9f1b","#29bde0","#cd23ba","#def03a","#005fb7"];
     var num=Math.floor(Math.random()*5);
     var block=document.createElement("i");
     block.style.cssText="display:inline-block; width:10px; height:10px; background-color:"+cols[num]+"; position:relative; top:-3px;";
     var item=document.createElement("span");
-    item.innerHTML=job[num]+"1ÈË";
+    item.innerHTML=job[num]+"1äºº";
     item.style.cssText="font-size:26px;margin-left:30px;";
     var box=document.createElement("div");
     box.style.cssText="width: 200px; height:44px; float:left; margin:32px 0 0 40px; color:#ccc";
@@ -58,7 +58,7 @@ var plus=document.getElementById("plus");
 
 minus.onclick=function(){
     if(num.value.trim()===""||parseInt(num.value.trim())===0){
-        console.log("ÕâÄÔ²Ğ£¬¶¼Ã»ÊıÁË»¹ÏëÍùÏÂ¼õ");
+        console.log("è¿™è„‘æ®‹ï¼Œéƒ½æ²¡æ•°äº†è¿˜æƒ³å¾€ä¸‹å‡");
         return;
     }else{
         num.value=parseInt(num.value)-1;
@@ -70,7 +70,7 @@ plus.onclick=function(){
     if(num.value.trim()===""){
         num.value=1;
     }else if(parseInt(num.value)===20){
-        console.log("ÕâÄÔ²Ğ£¬ÄãÄÜÕÒµ½ÄÇÃ´¶àÈËÒ»ÆğÍæ°¡£¿");
+        console.log("è¿™è„‘æ®‹ï¼Œä½ èƒ½æ‰¾åˆ°é‚£ä¹ˆå¤šäººä¸€èµ·ç©å•Šï¼Ÿ");
     } else{
         num.value=parseInt(num.value)+1;
     }
@@ -78,7 +78,7 @@ plus.onclick=function(){
 }
 
 
-//ÒÆ¶¯»¬¿é
+//ç§»åŠ¨æ»‘å—
 function moveButton(){
     var button=document.getElementById("button");
     var left=document.getElementById("underline-l");
