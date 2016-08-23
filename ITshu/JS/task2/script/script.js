@@ -81,11 +81,20 @@ plus.onclick=function(){
 //ÒÆ¶¯»¬¿é
 function moveButton(){
     var button=document.getElementById("button");
+    var left=document.getElementById("underline-l");
+    var right=document.getElementById("underline-r");
+
     var n=num.value;
     if(n!=""){
         button.style.left=34+parseInt(n)*19+"px";
-    }else{
+        left.style.width=parseInt(n)*19+"px";
+        right.style.width=446-parseInt(n)*19+"px";
+        right.style.left=32+parseInt(n)*19+"px";
+    }else if(n===0||n===""){
         button.style.left=34+"px";
+        left.style.width="0";
+        right.style.width=446+"px";
+        right.style.left=32+"px";
     }
 
 }

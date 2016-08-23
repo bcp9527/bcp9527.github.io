@@ -137,17 +137,17 @@ i:hover {
   bottom: 44px;
   left: 47px;
 }
-.set-num .underline-l {
+#underline-l {
   display: inline-block;
   width: 0;
   height: 3px;
-  background-color: #fcc671;
+  background-color: #ff5a00;
   position: absolute;
   top: 20px;
   left: 32px;
   z-index: 5;
 }
-.set-num .underline-r {
+#underline-r {
   display: inline-block;
   width: 446px;
   height: 3px;
