@@ -1,0 +1,96 @@
+#gopng_help_outer {
+height: 51px;
+width: 51px;
+overflow: hidden;
+}
+#gopng_help {
+background: url(http://gopng/static/images/sprite.png) -0px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 0px;
+_margin-left: -0px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}
+#gopng_back_outer {
+height: 41px;
+width: 25px;
+overflow: hidden;
+}
+#gopng_back {
+background: url(http://gopng/static/images/sprite.png) -51px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 51px;
+_margin-left: -51px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}
+#gopng_button_outer {
+height: 36px;
+width: 60px;
+overflow: hidden;
+}
+#gopng_button {
+background: url(http://gopng/static/images/sprite.png) -76px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 76px;
+_margin-left: -76px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}
+#gopng_minus_outer {
+height: 32px;
+width: 32px;
+overflow: hidden;
+}
+#gopng_minus {
+background: url(http://gopng/static/images/sprite.png) -136px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 136px;
+_margin-left: -136px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}
+#gopng_plus_outer {
+height: 32px;
+width: 32px;
+overflow: hidden;
+}
+#gopng_plus {
+background: url(http://gopng/static/images/sprite.png) -168px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 168px;
+_margin-left: -168px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}
+#gopng_pencil_outer {
+height: 14px;
+width: 14px;
+overflow: hidden;
+}
+#gopng_pencil {
+background: url(http://gopng/static/images/sprite.png) -200px -0px no-repeat;
+width: 100%;
+height: 100%;
+_background: none;
+_padding-left: 200px;
+_margin-left: -200px;
+_padding-top: 0px;
+_margin-top: -0px;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src="http://gopng/static/images/sprite.png");
+}
