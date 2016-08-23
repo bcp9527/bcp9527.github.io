@@ -143,7 +143,7 @@ i:hover {
   height: 3px;
   background-color: #ff5a00;
   position: absolute;
-  top: 20px;
+  top: 17px;
   left: 32px;
   z-index: 5;
 }
@@ -153,7 +153,7 @@ i:hover {
   height: 3px;
   background-color: #ffe6be;
   position: absolute;
-  top: 20px;
+  top: 17px;
   left: 32px;
   z-index: 5;
 }
@@ -175,7 +175,6 @@ i:hover {
   height: 36px;
   width: 60px;
   background-position: -76px 0;
-  margin-top: 2px;
   position: absolute;
   left: 34px;
   z-index: 10;
