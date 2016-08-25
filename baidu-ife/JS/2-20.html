@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2-20</title>
+</head>
+<body>
+<div id="buttons">
+    <ul>
+        <li>基于任务18</li>
+        <li>将新元素输入框从input改为textarea</li>
+        <li>允许一次批量输入多个内容，格式可以为数字、中文、英文等，可以通过用回车，
+            逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔</li>
+        <li>增加一个查询文本输入框，和一个查询按钮，当点击查询时，将查询词在各个元素内容中做模糊匹配，
+            将匹配到的内容进行特殊标识，如文字颜色等。举例，内容中有abcd，查询词为ab或bc，则该内容需要标识</li>
+    </ul>
+    <p><textarea placeholder="请输入文本内容，有效内容为中英文和数字，各项之间使用其他任意字符隔开。" name="text" id="words" cols="30" rows="10" style="resize: none"></textarea></p>
+    <input type="button" id="split" value="插入"/>
+    <input type="text" id="input" placeholder="请输入要查询的内容"/>
+    <input type="button" id="search" value="查询"/>
+</div>
+
+<div id="items"></div>
+
+
+<script>
+    var show= document.getElementById("split");
+    var items=document.getElementById("items");
+    var itemStyle="float:left; background-color:#f0f0f0; color:#333; padding:10px; margin-right:10px;"
+    var search=document.getElementById("search");
+    var input = document.getElementById("input");
+
+    //点击插入后的操作
+    show.onclick=init;
+    function init(){
+        var text=document.getElementById("words").value.trim();
+        var values=text.replace(/[^0-9a-zA-Z\u4e00-\u9fa5]+/g,"|").split("|");
+        console.log(values);
+
+        setData(values);
+    }
+
+    //设置插入的各个项的内容
+    function setData(arr){
+        if(document.getElementById("words").value.trim()==""){
+            alert("请输入有效内容");
+            document.getElementById("words").value="";
+            return;
+
+        }
+        for(var i=0; i<arr.length; i++){
+            createItem(arr[i]);
+        }
+    }
+
+    //新建要插入的项
+    function createItem(str){
+        var box=document.createElement("div");
+        box.innerHTML=str;
+        box.style.cssText=itemStyle;
+        items.appendChild(box);
+    }
+
+    //点击查询后的操作
+    search.onclick=function( ){
+        //获取所有item节点
+        var data=items.childNodes;
+        if(data.length==0){
+            alert("暂无可查询项");
+            input.value="";
+            return;
+        }
+        var key=input.value.trim();
+        if(key===""){
+            alert("请输入有效的查询关键词");
+            return;
+        }
+        for(var i=0; i<data.length;i++){
+            data[i].style.cssText=itemStyle;//如果多次查询的话需要先将上一次查询到的结果清空
+            console.log(data[i].innerHTML);
+            if(data[i].innerHTML.indexOf(key)>=0){
+                data[i].style.color="#0f0";
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

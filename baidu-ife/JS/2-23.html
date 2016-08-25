@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2-23</title>
+</head>
+<style>
+    div{
+        border:1px solid #000;
+        background-color: #fff;
+        padding: 10px;
+        margin: 10px;
+        float: left;
+        border-radius: 10px;
+    }
+
+    .button{
+        height: 41px;
+        background-color: #fb8764;
+        color:#fff;
+    }
+</style>
+<body>
+<div class="main">Super
+    <div class="sec">animal
+        <div class="thr">cat
+            <div class="fou">dog
+
+            </div>
+            <div class="fou">dog
+
+            </div>
+        </div>
+        <div class="thr">cat
+            <div class="fou">bird
+
+            </div>
+            <div class="fou">fish
+
+            </div>
+        </div>
+        <div>bear
+
+        </div>
+    </div>
+    <div class="sec">car
+        <div class="thr">benz
+            <div class="fou">audi
+                <div>bmw
+                </div>
+            </div>
+            <div class="fou">benz
+
+            </div>
+        </div>
+        <div class="thr">farrari
+            <div class="fou">ford
+
+            </div>
+            <div class="fou">kia
+
+            </div>
+        </div>
+    </div>
+    <div>
+        kia
+    </div>
+
+</div>
+<p id="buttons">
+    <input class="button" type="submit" id="show-l" value="前序遍历"/>
+    <input class="button" type="submit" id="show-m" value="另一种遍历"/>
+    <input type="text" id="input" placeholder="请输入要查询的内容"/>
+    <input class="button" id="search" type="submit" value="查询"/></p>
+<p id="show"></p>
+
+<script>
+    var nodes=document.getElementsByClassName("main")[0];
+    var timer=null;
+    var arr=[];
+    var show=document.getElementById("show");
+    var flag=false;
+
+    //console.log(nodes);
+    //    var btn_l=document.getElementById("show-l");
+    //    var btn_m=document.getElementById("show-m");
+    //    var btn_r=document.getElementById("show-r");
+    //init();
+
+    document.getElementById("buttons").addEventListener("click",function(e){
+
+        switch (e.target.getAttribute("id").toLowerCase()){
+            case "show-l":
+                reset();
+                preOrder(nodes,str);
+                console.log("-----前------");
+                changeColor();
+                break;
+            case "search":
+                reset();
+                preOrder(nodes);
+                if(flag){
+                    show.innerHTML="已找到查询的内容并将用红色标出";
+                    changeColor();
+                }else{
+                    show.innerHTML="未找到要查询的内容";
+                }
+                break;
+            case "show-r":
+                reset();
+                postOrder(nodes);
+                console.log("------后-----");
+                changeColor();
+                break;
+        }
+    });
+
+    //前序遍历
+    function preOrder(node){
+        var str=document.getElementById("input").value.trim();
+        if(!(node == null)){
+            if(str!=""&&node.innerHTML.indexOf(str)>=0){
+                flag=true;
+            }
+            arr.push(node);
+            var nn=node.children;
+            //前序遍历，依次遍历各个子节点
+            for(var i=0; i< nn.length; i++){
+                //arr.push(node);
+                preOrder(nn[i]);
+            }
+
+//            preOrder(node.firstElementChild);
+//            preOrder(node.lastElementChild);
+        }
+    }
+
+    //另一种遍历方式
+    function inOrder(node){
+        if(!(node == null)){
+
+        }
+    }
+
+
+    //重置，清空数组，初始化颜色
+    function reset(){
+        arr=[];
+        clearTimeout(timer);
+        var items=document.getElementsByTagName("div");
+        for(var i=0; i<items.length; i++){
+            items[i].style.backgroundColor="#fff";
+        }
+    }
+
+    function changeColor(){
+        var str=document.getElementById("input").value.trim();
+        var n= arr.shift();
+
+        if(n){
+            n.style.backgroundColor="orange";
+            console.log(n.getAttribute("class"));
+            timer=setTimeout(function(){
+
+                if(n.childNodes[0].nodeValue.indexOf(str)>=0){
+                    n.style.backgroundColor="#f00";
+                }else{
+                    n.style.backgroundColor="#fff";
+                }
+                changeColor();
+            },1000);
+        }
+        //node.style.backgroundColor="orange";
+
+    }
+
+</script>
+</body>
+</html>

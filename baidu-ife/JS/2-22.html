@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2-22</title>
+</head>
+<style>
+    div{
+        border:1px solid #000;
+        background-color: #fff;
+        padding: 10px;
+        margin: 10px;
+        float: left;
+        border-radius: 10px;
+    }
+
+    .button{
+        height: 41px;
+        background-color: #fb8764;
+        color:#fff;
+    }
+</style>
+<body>
+<div class="main">
+    <div class="sec">
+        <div class="thr">
+            <div class="fou">
+
+            </div>
+            <div class="fou">
+
+            </div>
+        </div>
+        <div class="thr">
+            <div class="fou">
+
+            </div>
+            <div class="fou">
+
+            </div>
+        </div>
+    </div>
+    <div class="sec">
+        <div class="thr">
+            <div class="fou">
+
+            </div>
+            <div class="fou">
+
+            </div>
+        </div>
+        <div class="thr">
+            <div class="fou">
+
+            </div>
+            <div class="fou">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<p id="buttons">
+    <input class="button" type="submit" id="show-l" value="前序遍历"/>
+    <input class="button"  type="submit" id="show-m" value="中序遍历"/>
+    <input class="button"  type="submit" id="show-r" value="后序遍历"/></p>
+
+<script>
+    var nodes=document.getElementsByClassName("main")[0];
+    var timer=null;
+    var arr=[];
+    //console.log(nodes);
+//    var btn_l=document.getElementById("show-l");
+//    var btn_m=document.getElementById("show-m");
+//    var btn_r=document.getElementById("show-r");
+
+    document.getElementById("buttons").addEventListener("click",function(e){
+
+        switch (e.target.getAttribute("id").toLowerCase()){
+            case "show-l":
+                reset();
+                preOrder(nodes);
+                console.log("-----前------");
+                changeColor();
+                break;
+            case "show-m":
+                reset();
+                inOrder(nodes);
+                console.log("------中-----");
+                changeColor();
+                break;
+            case "show-r":
+                reset();
+                postOrder(nodes);
+                console.log("------后-----");
+                changeColor();
+                break;
+        }
+    });
+
+    //前序遍历
+    function preOrder(node){
+        if(!(node == null)){
+            arr.push(node);
+            preOrder(node.firstElementChild);
+            preOrder(node.lastElementChild);
+        }
+    }
+
+    //中序遍历
+    function inOrder(node){
+
+        if(!(node == null)){
+            inOrder(node.firstElementChild);
+            arr.push(node);
+            inOrder(node.lastElementChild);
+        }
+    }
+
+    //后序遍历
+    function postOrder(node){
+        if(!(node == null)){
+            postOrder(node.firstElementChild);
+            postOrder(node.lastElementChild);
+            arr.push(node);
+        }
+    }
+
+    //重置，清空数组，初始化颜色
+    function reset(){
+        arr=[];
+        clearTimeout(timer);
+        var items=document.getElementsByTagName("div");
+        for(var i=0; i<items.length; i++){
+            items[i].style.backgroundColor="#fff";
+        }
+    }
+
+    function changeColor(){
+        var n= arr.shift();
+        if(n){
+            n.style.backgroundColor="orange";
+            console.log(n.getAttribute("class"));
+            timer=setTimeout(function(){
+                n.style.backgroundColor="#fff";
+                changeColor();
+            },1000);
+        }
+        //node.style.backgroundColor="orange";
+    }
+
+</script>
+</body>
+</html>

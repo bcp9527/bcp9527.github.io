@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2-21</title>
+</head>
+<body>
+<ul>
+    <li>基于任务20</li>
+    <li>要求遇到用户输入空格，逗号，回车时，都自动把当前输入的内容作为一个tag放在输入框下面。</li>
+    <li>Tag不能有重复的，遇到重复输入的Tag，自动忽视</li>
+    <li>每个Tag请做trim处理</li>
+    <li>最多允许10个Tag，多于10个时，按照录入的先后顺序，把最前面的删掉</li>
+    <li>当鼠标悬停在tag上时，tag前增加删除二字，点击tag可删除</li>
+    <li>通过一个Textarea进行兴趣爱好的输入，可以通过用回车，逗号（全角半角均可），
+        顿号，空格（全角半角、Tab等均可）等符号作为间隔</li>
+    <li>当点击“确认兴趣爱好”的按钮时，将textarea中的输入按照你设定的间隔符，拆解成一个个的爱好，显示在textarea下方</li>
+    <li>爱好不能重复，所以在下方呈现前，需要做一个去重</li>
+    <li>每个爱好内容需要做trim处理</li>
+    <li>最多允许10个兴趣爱好，多于10个时，按照录入的先后顺序，把最前面的删掉</li>
+</ul>
+
+<p>Tag:<input type="text" id="job" placeholder="请输入标签，以空格、回车或逗号结束"/></p>
+<div id="job-items"></div>
+
+
+<p><textarea placeholder="请输入文本内容，有效内容为中英文和数字，各项之间使用其他任意字符隔开。" name="text" id="words" cols="30" rows="10" style="resize: none"></textarea></p>
+<input type="button" id="split" value="确认兴趣爱好"/>
+
+
+<div id="items"></div>
+
+<script>
+    var show= document.getElementById("split");
+    var items=document.getElementById("items");
+    var itemStyle="font-size:24px; float:left; background-color:#8fceff; color:#fff; padding:10px; margin-right:10px;"
+    var itemStyle_2="font-size:24px; float:left; background-color:#fdcb82; color:#fff; padding:10px; margin-right:10px; margin-top:20px;"
+    var jobs=document.getElementById("job");
+    jobs.style.cssText="width: 240px; height: 50px; line-height:50px; resize: none; outline:none; border:1px solid #ff0099; border-radius:10px;";
+    var tags=document.getElementById("job-items");
+    tags.style.cssText="height:50px";
+
+
+    //按键监听
+    jobs.addEventListener("keyup",function(e){
+        //console.log(e.keyCode);
+
+        //按下了空格或回车
+        if(e.keyCode===13||e.keyCode===32){
+            console.log(jobs.value);
+            addTags(jobs.value);
+            jobs.value="";
+
+        }else if(e.keyCode===188){
+            //按下了中文或英文的逗号
+            var str=jobs.value.substr(0,(jobs.value.length-1));
+            console.log(str);
+            addTags(str);
+            jobs.value="";
+        }
+    });
+
+    //添加tag操作
+    function addTags(str){
+        var nodes=tags.childNodes;
+        var flag=true;
+        //去重
+        for(node in nodes){
+            if(nodes[node].innerHTML===str){
+                flag=false;
+                break;
+            }
+        }
+
+        //满足条件就添加tag
+        if(flag&&str.trim()!=""){
+            if(nodes.length<10){
+                createItem(str,tags);
+            }else{
+                tags.removeChild(tags.childNodes[0]);
+                createItem(str,tags);
+            }
+        }else{
+            jobs.value="";
+        }
+    }
+
+    //点击插入后的操作
+    show.onclick=init;
+    function init(){
+        var text=document.getElementById("words").value.trim();
+        var values=text.replace(/[^0-9a-zA-Z\u4e00-\u9fa5]+/g,"|").split("|");
+        //console.log(values);
+
+        setData(values);
+        document.getElementById("words").value="";
+    }
+
+    //设置插入的各个项的内容
+    function setData(arr){
+        if(document.getElementById("words").value.trim()==""){
+            alert("请输入有效内容");
+            document.getElementById("words").value="";
+            return;
+
+        }
+
+        for(var i=0; i<arr.length; i++){
+            //createItem(arr[i],items);
+            var flag=true;
+            var nodes=items.childNodes;
+            //去重
+            for(var j=0; j< nodes.length; j++){
+                if(nodes[j].innerHTML===arr[i]){
+                    flag=false;
+                    break;
+                }
+
+            }
+            //控制最多显示10项
+            if(nodes.length>=10){
+                items.removeChild(nodes[0]);
+            }
+
+            if(flag&&arr[i]!=""){
+                createItem(arr[i],items);
+            }
+
+        }
+    }
+
+    //新建要插入的项
+    function createItem(str,parent){
+        var box=document.createElement("div");
+        box.innerHTML=str;
+
+        if(parent===tags){//类型为tag时
+            box.style.cssText=itemStyle;
+
+            box.onmouseover=function(){
+                this.style.cursor = "pointer";
+                this.innerHTML="删除："+box.innerHTML;
+                this.style.backgroundColor="#f00";
+            }
+            box.onmouseout=function(){
+                this.innerHTML=str;
+                this.style.cssText=itemStyle;
+            }
+        }else{//类型为item时
+            box.style.cssText=itemStyle_2;
+            box.onmouseover=function(){
+                this.style.cursor = "pointer";
+                this.innerHTML="删除："+box.innerHTML;
+                this.style.backgroundColor="#f00";
+            }
+            box.onmouseout=function(){
+                this.innerHTML=str;
+                this.style.cssText=itemStyle_2;
+            }
+        }
+
+        //点击各项删除操作
+        box.addEventListener('click', function (e) {
+                delTag(e.target);
+        });
+        parent.appendChild(box);
+    }
+
+    //删除具体项
+    function delTag(target){
+        target.parentNode.removeChild(target);
+    }
+
+</script>
+</body>
+</html>

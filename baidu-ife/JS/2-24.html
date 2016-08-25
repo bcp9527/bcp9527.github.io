@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2-24</title>
+</head>
+<style>
+    div{
+        border:1px solid #000;
+        background-color: #fff;
+        padding: 10px;
+        margin: 10px;
+        float: left;
+        border-radius: 10px;
+    }
+
+    .button{
+        height: 41px;
+        background-color: #fb8764;
+        color:#fff;
+    }
+
+    ul{
+        clear: both;
+    }
+</style>
+<body>
+<div id="content" class="main">Super
+    <div class="sec">animal
+        <div class="thr">cat
+            <div class="fou">dog
+
+            </div>
+            <div class="fou">dog
+
+            </div>
+        </div>
+        <div class="thr">cat
+            <div class="fou">bird
+
+            </div>
+            <div class="fou">fish
+
+            </div>
+        </div>
+        <div>bear
+
+        </div>
+    </div>
+    <div class="sec">car
+        <div class="thr">benz
+            <div class="fou">audi
+                <div>bmw
+                </div>
+            </div>
+            <div class="fou">benz
+
+            </div>
+        </div>
+        <div class="thr">farrari
+            <div class="fou">ford
+
+            </div>
+            <div class="fou">kia
+
+            </div>
+        </div>
+    </div>
+    <div>
+        kia
+    </div>
+
+</div>
+<div>
+    <p id="buttons">
+        <input class="button" type="submit" id="show-l" value="前序遍历"/>
+        <input class="button" type="submit" id="del" value="删除"/>
+        <br/>
+        <input type="text" id="input" placeholder="请输入要查询的内容"/>
+        <input class="button" id="search" type="submit" value="查询"/>
+        <br/><br/>
+        <input type="text" id="input-2" placeholder="请输入要插入的内容"/>
+        <input class="button" id="insert" type="submit" value="插入"/></p>
+    <p id="show"></p>
+</div>
+<ul>
+    <li>基于任务23，添加节点的选择、增加与删除的功能</li>
+    <li>点击某个节点元素，则该节点元素呈现一个特殊被选中的样式</li>
+    <li>增加一个删除按钮，当选中某个节点元素后，点击删除按钮，则将该节点及其所有子节点删除掉</li>
+    <li>增加一个输入框及一个“添加”按钮当选中某个节点元素后，
+        点击增加按钮，则在该节点下增加一个子节点，节点内容为输入框中内容，插入在其子节点的最后一个位置</li>
+</ul>
+
+
+
+
+
+
+<script>
+    var nodes=document.getElementsByClassName("main")[0];//根节点
+    var timer=null;//定时器
+    var arr=[];//存储div列表的数组
+    var show=document.getElementById("show");//提示信息区
+    var flag=false;//是否进行搜索
+
+    //点击按钮的监听
+    document.getElementById("buttons").addEventListener("click",function(e){
+
+        switch (e.target.getAttribute("id").toLowerCase()){
+            case "show-l":
+                reset();
+                resetDiv();
+                preOrder(nodes);
+                console.log("-----前------");
+                changeColor();
+                break;
+            case "search":
+                reset();
+                resetDiv();
+                preOrder(nodes);
+                if(flag){
+                    show.innerHTML="已找到查询的内容并将用红色标出";
+                    changeColor();
+                }else{
+                    show.innerHTML="未找到要查询的内容";
+                }
+                break;
+            case "del":
+                reset();
+
+                delDiv();
+                break;
+            case "insert":
+                reset();
+
+                addDiv();
+                break;
+        }
+    });
+
+
+    //点击div的监听
+    document.getElementById("content").addEventListener("click", function(e){
+        resetDiv();
+        setDiv(e.target);
+
+    });
+
+    //设置div点击后的样式
+    function setDiv(target){
+        reset();
+        target.style.border="3px solid #0ff";
+        target.setAttribute("name","qqq");
+    }
+
+    //删除div
+    function delDiv(){
+        var item=document.getElementsByName("qqq")[0];
+        item.parentNode.removeChild(item);
+    }
+
+    //添加div
+    function addDiv(){
+        var text=document.getElementById("input-2").value.trim();
+        var divs=document.getElementsByTagName("div");
+        if(text===""){
+            show.innerHTML="请输入有效的文本内容";
+        }else{
+            var item=document.getElementsByName("qqq")[0];//找到插入点
+            var node=document.createElement("div");
+            node.innerHTML=text;
+            if(item&&divs.length>1){//当前有跟结点
+                item.appendChild(node);
+            }else if(nodes&&divs.length===1){//当前无跟结点
+                //在body最前添加div
+                document.getElementsByTagName("body")[0].insertBefore(node,document.getElementsByTagName("body")[0].childNodes[0]);
+                node.setAttribute("id","content");
+                node.setAttribute("class","main");
+                nodes=document.getElementsByClassName("main")[0];
+                node.addEventListener("click", function(e){
+                    resetDiv();
+                    setDiv(e.target);
+
+                });
+            }else{
+                show.innerHTML="请选择要插入的div位置";
+            }
+
+        }
+    }
+
+    //前序遍历
+    function preOrder(node){
+        var str=document.getElementById("input").value.trim();
+        if(!(node == null)){
+            if(str!=""&&node.childNodes[0].nodeValue.trim()===str){
+                flag=true;
+            }
+
+            arr.push(node);//将当前结点添加到数组中
+            var nn=node.children;
+            //前序遍历，依次遍历各个子节点
+            for(var i=0; i< nn.length; i++){
+                preOrder(nn[i]);
+            }
+        }
+    }
+
+    //重置点击后div的边框
+    function resetDiv(){
+        var nodes=document.getElementsByTagName("div");
+        for(var i=0; i<nodes.length; i++){
+            nodes[i].style.border="1px solid #000";
+            nodes[i].setAttribute("name","");
+        }
+    }
+
+    //重置，清空数组，初始化颜色
+    function reset(){
+        arr=[];
+        show.innerHTML="";
+        clearTimeout(timer);
+        var items=document.getElementsByTagName("div");
+        for(var i=0; i<items.length; i++){
+            items[i].style.backgroundColor="#fff";
+        }
+    }
+
+    function changeColor(){
+        var str=document.getElementById("input").value.trim();//查询的内容
+        var n= arr.shift();//取出数组中的第一个元素
+
+        if(n){
+            n.style.backgroundColor="orange";
+            console.log(n.childNodes[0].nodeValue.trim());
+            timer=setTimeout(function(){
+
+                if(str!=""&&n.childNodes[0].nodeValue.trim()===str){
+                    n.style.backgroundColor="#f00";//是搜索项，将其变为红色
+                }else{
+                    n.style.backgroundColor="#fff";//不是搜索项，将其变回白色
+                }
+                changeColor();
+            },1000);
+        }
+    }
+
+</script>
+</body>
+</html>
