@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>弹出层</title>
+    <style>
+        #show{
+            margin: 20px;
+            width: 200px;
+            height: 49px;
+            background-color: orangered;
+        }
+        #mask{
+            background-color: rgba(0,0,0,.6);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top:0;
+            left: 0;
+            z-index: 10;
+        }
+        #login{
+            width: 400px;
+            height: 270px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            background-color: #ccc;
+            position: fixed;
+            z-index: 20;
+        }
+        #login-title{
+            height: 50px;
+            width: 100%;
+            background-color: #999;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+        }
+        #login-title:hover{
+            cursor: move;
+        }
+        #login-title i{
+            display: block;
+            position: relative;
+            top:-40px;
+            left:360px;
+            height: 36px;
+            width: 36px;
+            background-image: url("wrong.png");
+        }
+        #login-title i:hover{
+            cursor: pointer;
+        }
+        #login-text input{
+            height: 50px;
+            width: 300px;
+            margin: 10px;
+            font-size: 24px;
+            padding-left: 10px;
+            background-color: cornflowerblue;
+        }
+        #login-button input{
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            border: 1px solid #999;
+            text-align: center;
+            line-height: 40px;
+            font-size: 24px;
+            margin-left: 10px;
+            margin-right: 0;
+        }
+        #login-button input:hover{
+            cursor: pointer;
+        }
+        #enter{
+            background-color: orange;
+        }
+        #signup{
+            background-color: orangered;
+        }
+        #help{
+            font-size: 1em;
+            color: #f90000;
+            text-decoration: none;
+        }
+        #help:link{
+            text-decoration:none;
+        }
+        #help:visited{
+            text-decoration:none;
+        }
+        #help:hover{
+            text-decoration:underline;
+        }
+        #help:active{
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <p><input type="button" id="show" value="Login"/></p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+    <p>发生的科技感的时光机的刷卡价格更好看几点睡</p>
+</div>
+
+<div id="mask" style="display: none">
+
+    <div id="login" style="display: none">
+        <div id="login-title">Login
+            <i id="close"></i>
+        </div>
+        <div id="login-text">
+            <input id="name" type="text" placeholder="Your name"/>
+            <input id="pwd" type="password" placeholder="Your password"/>
+        </div>
+
+        <div id="login-button">
+            <input id="enter" type="button" value="Login"/>
+            <input id="signup" type="button" value="Sign Up"/>
+            <a id="help" href="">遇到问题？</a>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    var show=document.getElementById("show");
+    var mask=document.getElementById("mask");
+    var login=document.getElementById("login");
+    var title=document.getElementById("login-title");
+
+    show.onclick=tanchu;
+
+    mask.addEventListener("click",function(e){
+        var id= e.target.getAttribute("id");
+        switch (id){
+            case "mask":
+            case "close":
+                hide();
+                break;
+        }
+    });
+    //弹出元素
+    function tanchu(){
+        mask.style.display="block";
+        login.style.display="block";
+        mid(login);
+    }
+
+    //隐藏元素
+    function hide(){
+        mask.style.display="none";
+        login.style.display="none";
+    }
+
+    //自动居中
+    var mid=function(el){
+        //屏幕宽度减去元素宽度的值后除2，设置为元素的左偏移量
+        el.style.left=(document.documentElement.clientWidth-el.offsetWidth)/2+"px";
+        el.style.top=(document.documentElement.clientHeight-el.offsetHeight)/2+"px";
+    };
+
+    //是否进行拖放
+    var dragFlag=false;
+    var mouseOffsetX=0;//记录鼠标偏移量
+    var mouseOffsetY=0;
+    title.addEventListener("mousedown",function(e){
+        var e=e||window.event;//IE兼容
+
+        //计算鼠标相对拖拽元素左上角的坐标
+        mouseOffsetX= e.pageX-login.offsetLeft;
+        mouseOffsetY= e.pageY-login.offsetTop;
+        dragFlag=true;
+    });
+    //拖动盒子
+    document.onmousemove=function(e){
+        var e=e|| window.event;
+
+        var mouseX= e.pageX;//鼠标当前位置
+        var mouseY= e.pageY;
+
+        var moveX=0;//弹出层的新位置
+        var moveY=0;
+
+        if(dragFlag){
+            moveX=mouseX-mouseOffsetX;
+            moveY=mouseY-mouseOffsetY;
+
+            var pageWidth=document.documentElement.clientWidth;
+            var pageHeight=document.documentElement.clientHeight;
+
+            var dialogWidth=login.offsetWidth;
+            var dialogHeight=login.offsetHeight;
+
+            var maxX=pageWidth-dialogWidth;
+            var maxY=pageHeight-dialogHeight;
+
+            moveX=Math.min(maxX,Math.max(0,moveX));
+            moveY=Math.min(maxY,Math.max(0,moveY));
+
+            login.style.left=moveX+"px";
+            login.style.top=moveY+"px";
+        }
+    };
+
+    document.onmouseup=function (){
+        dragFlag=false;
+    };
+
+
+
+</script>
+</body>
+</html>

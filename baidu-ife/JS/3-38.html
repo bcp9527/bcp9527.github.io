@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>UI组件之排序表格</title>
+    <style>
+        #table{
+            border-collapse: collapse;
+            float: left;
+        }
+        #table thead{
+            background-color: #333;
+            color: #fff;
+
+        }
+        #table thead:hover .sort{
+            display: block;
+        }
+        #table td{
+            border: 1px solid #999;
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            position: relative;
+        }
+        .sort{
+            width: 10px;
+            height: 30px;
+            position: absolute;
+            right: 12px;
+            top:2px;
+            display: none;
+        }
+        .sort i{
+            display: block;
+            width: 0;
+            height: 0;
+        }
+        .sort i{
+            cursor: pointer;
+        }
+        .up{
+            border-bottom: 10px solid #ccc;
+            border-top: 1px solid #333;
+            border-left: 10px solid #333;
+            border-right:10px solid #333;
+            margin-bottom: 5px;
+        }
+        .down{
+            border-bottom: 1px solid #333;
+            border-top: 10px solid #ccc;
+            border-left: 10px solid #333;
+            border-right:10px solid #333;
+        }
+        #write{
+            float: left;
+            width: 100px;
+            height: 30px;
+            background-color: orangered;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table id="table">
+        <thead>
+        <tr>
+            <td>姓名</td>
+            <td>语文<div id="cnSort" class="sort"><i class="up"></i><i class="down"></i></div></td>
+            <td>数学<div id="mathSort" class="sort"><i class="up"></i><i class="down"></i></div></td>
+            <td>英语<div id="enSort" class="sort"><i class="up"></i><i class="down"></i></div></td>
+            <td>总分<div id="allSort" class="sort"><i class="up"></i><i class="down"></i></div></td>
+        </tr>
+       </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+<input id="write" type="button" value="Write"/>
+<script>
+    var g=function(id){
+        return document.getElementById(id);
+    };
+    var sourse=[["小明",80,90,70],["小红",71,81,91],["小强",95,85,75],["小王",78,78,78]];
+
+    //create table-cell
+    function createTable(){
+        var item=document.createElement("tr");
+        item.innerHTML="<tr><td></td><td></td><td></td>"+
+        "<td></td><td></td></tr>";
+        item.setAttribute("class","sourse");
+        g("tbody").appendChild(item);
+    }
+
+    //write resouse
+    function writeSourse(arr){
+        g("tbody").innerHTML="";
+        for(var i=0; i<arr.length; i++){
+            createTable();
+            var items=document.getElementsByClassName("sourse");
+            for(var j=0; j<items[i].children.length-1; j++){
+                items[i].children[j].innerHTML=arr[i][j];
+            }
+            items[i].children[4].innerHTML=arr[i][1]+arr[i][2]+arr[i][3];
+        }
+    }
+
+    g("write").addEventListener("click",function(e){
+        writeSourse(sourse);
+    });
+
+    g("table").addEventListener("click",function(e){
+        var e=e||window.event;
+        var id= e.target.parentNode.getAttribute("id");
+        var clName= e.target.getAttribute("class");
+        switch (id){
+            case "cnSort":
+                sortSou(1,clName);
+                break;
+            case "enSort":
+                sortSou(3,clName);
+                break;
+            case "mathSort":
+                sortSou(2,clName);
+                break;
+            case "allSort":
+                sortSou(4,clName);
+                break;
+        }
+    });
+
+    //
+    function sortSou(n, clName){
+        if(n===4){//总分排序
+            if(clName==="up"){
+                sourse.sort(function(a,b){
+                    return (a[1]+a[2]+a[3])-(b[1]+b[2]+b[3]);
+                });
+
+            }else if(clName==="down"){
+                sourse.sort(function(a,b){
+                    return (b[1]+b[2]+b[3])-(a[1]+a[2]+a[3]);
+                });
+            }
+        }else{
+            if(clName==="up"){
+                sourse.sort(function(a,b){
+                    return a[n]-b[n];
+                });
+
+            }else if(clName==="down"){
+                sourse.sort(function(a,b){
+                    return b[n]-a[n];
+                });
+            }
+        }
+
+        //refresh data
+        writeSourse(sourse);
+    }
+</script>
+</body>
+</html>
