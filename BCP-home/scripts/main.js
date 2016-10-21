@@ -34,9 +34,7 @@ $(function(){
     //左侧边栏点击
     $("#floor li").on("click",function(){
         var num=parseInt($(this).find("a").text());
-        console.log(num);
         var itemH=$(".floor-item").eq(num-1).offset().top;
-        console.log(itemH);
         $("html,body").animate({scrollTop:itemH+"px"},1000);
 
     });
@@ -405,7 +403,6 @@ $(function(){
         var h=-($('.days-show ul').height())+3*ih;
         if(t<h){
             $('.days-show ul').animate({top:"0"});
-            console.log("111");
         }
     }
     $('.days-show').hover(
