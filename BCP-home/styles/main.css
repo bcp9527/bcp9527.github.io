@@ -1204,7 +1204,7 @@ img {
 .content-floor {
   position: fixed;
   margin-left: -38px;
-  top: 400px;
+  bottom: 200px;
   overflow: hidden;
   font-size: 14px;
 }
