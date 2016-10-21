@@ -1249,6 +1249,7 @@ img {
   height: 100%;
   background-color: #7a6e6e;
   position: fixed;
+  z-index: 1000;
   right: 0;
   top: 0;
 }
@@ -1380,6 +1381,9 @@ img {
 }
 .floor-list-off span {
   line-height: 18px;
+}
+.floors {
+  display: none;
 }
 .floor-item {
   background-color: #fff;
@@ -1605,6 +1609,64 @@ img {
   height: 40px;
   padding: 0 10px;
   border-left: 1px dotted #ccc;
+}
+.floor-imgs {
+  position: relative;
+  overflow: hidden;
+}
+.floor-imgs ul {
+  width: 2130px;
+  height: 317px;
+  position: absolute;
+}
+.floor-imgs ul li {
+  float: left;
+  font-size: 3rem;
+  text-align: center;
+  background-color: #00acac;
+}
+.floor-imgs ul li a {
+  display: block;
+  line-height: 317px;
+  width: 426px;
+}
+.floor-imgs span {
+  display: block;
+  width: 30px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: absolute;
+  top: 133px;
+}
+.floor-imgs span:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.floor-imgs .right {
+  right: 0;
+}
+.floor-imgs div {
+  position: absolute;
+  bottom: 10px;
+  left: 180px;
+}
+.floor-imgs div i {
+  display: block;
+  cursor: pointer;
+  float: left;
+  margin-right: 10px;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+.f-i-on {
+  background-color: #B1191A;
+}
+.f-i-off {
+  background-color: #ccc;
 }
 .days-discount > p {
   font-size: 1.2rem;
