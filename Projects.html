@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Projects</title>
     <style>
         html,body{
             width: 100%;
@@ -30,7 +30,7 @@
             float: left;
             overflow: auto;
         }
-        .title{text-align: center}
+        .title{text-align: center;background-color: #00BFFF;}
         ul{
             list-style: none;
             padding: 0 0 0 10px;
@@ -46,6 +46,10 @@
             background-color: #00BFFF;
         }
         a{
+            display: block;
+            text-align: center;
+            width: 100%;
+            height: 100%;
             text-decoration: none;
             color: orangered;
         }
@@ -57,25 +61,15 @@
         }
         .item-hide{
             display: none;
-            background-color: #00CED1;
-        }
-        .item-show{
-            background-color: #00BFFF;
         }
     </style>
 </head>
 <body>
 <div class="content">
     <div class="item-list">
-        <h1 class="title">Projects</h1>
+        <h1 class="title"><a href="http://bcp9527.github.io/">HOME</a></h1>
         <ul>
-            <li class="item-main">备用<span class="plus">+</span></li>
-            <ul class="items">
-                <li class="item"><a href="#" title="">备用1</a></li>
-                <li class="item"><a href="#" title="">备用2</a></li>
-                <li class="item"><a href="#" title="">备用3</a></li>
-            </ul>
-            <li class="item"><a href="#">仿电商网站</a></li>
+            <li class="item"><a href="BCP-home" target="iframe">仿电商网站</a></li>
             <li class="item-main">修真院<span class="plus">+</span></li>
             <ul class="items">
                 <li class="item-main">CSS<span class="plus">+</span></li>
@@ -149,7 +143,12 @@
                 <li>task1</li>
             </ul>
             <li class="item-main"><a href="https://codepen.io/bcp9527/" target="iframe">My CodePen</a></li>
-
+            <li class="item-main">备用<span class="plus">+</span></li>
+            <ul class="items">
+                <li class="item"><a href="#" title="">备用1</a></li>
+                <li class="item"><a href="#" title="">备用2</a></li>
+                <li class="item"><a href="#" title="">备用3</a></li>
+            </ul>
         </ul>
     </div>
     <div class="right">
@@ -165,11 +164,17 @@
         $('.item-main').click(function(){
             if($(this).next().hasClass('item-hide')){
                 $(this).next().removeClass('item-hide');
-                $(this).addClass('item-show').find('span').html('-');
+                $(this).find('span').html('-');
             }else{
                 $(this).next().addClass('item-hide');
-                $(this).removeClass('item-show').find('span').html('+');
+                $(this).find('span').html('+');
             }
+        });
+        $('a').click(function(){
+            $('li').css('backgroundColor','#00CED1');
+            $(this).parent().css('backgroundColor','#00BFFF').parent().prev().css('backgroundColor','#00BFFF').parent().prev().css('backgroundColor','#00BFFF');
+            //$(this).parent().parent().prev().css('backgroundColor','#00BFFF');
+            //$(this).parent().parent().parent().prev().css('backgroundColor','#00BFFF');
         });
     });
 </script>
