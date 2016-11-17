@@ -88,8 +88,7 @@ $(function(){
                 }else{
                     clearTimeout(timer);
                     itemLenght++;
-                    count=0;
-                    playerCount=0;
+                    count=playerCount=0;
                     $(this).animate({'opacity':'.5'},1000,function(){itemsLignt();});
                 }
             }else{//点击错误
@@ -112,9 +111,17 @@ $(function(){
         $('.count').html('MISS').css('color','red').animate({'opacity':'1'},1000,function(){
             $('.count').html('').css('color','#0f0');
             $('.items').addClass('clickable');
-            count=0;
-            playerCount=0;
+            count=playerCount=0;
             itemsLignt();
         });
     }
+
+    //停止游戏
+    $('.stop').click(function(){
+        clearTimeout(timer);
+        count=playerCount=0;
+        itemLenght= 1;
+        strict=false;
+        $('.count').html('');
+    });
 });

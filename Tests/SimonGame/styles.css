@@ -119,3 +119,10 @@
 .ctr-on{
     float: right;
 }
+.stop{
+    width: 100px;
+    margin: 0 auto;
+    background-color: #ccc;
+    text-align: center;
+    cursor: pointer;
+}
