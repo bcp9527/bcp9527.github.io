@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+        }
+        .right{
+            height: 100%;
+            margin-left: 202px;
+        }
+        .show{
+
+        }
+        .item-list{
+            height: 100%;
+            width: 200px;
+            background-color: #ccc;
+            border-right:2px solid orangered;
+            float: left;
+            overflow: auto;
+        }
+        .title{text-align: center}
+        ul{
+            list-style: none;
+            padding: 0 0 0 10px;
+            margin: 0;
+        }
+        li{
+            padding: 8px;
+            margin: 1px;
+            background-color: #00CED1;
+            border-radius: 5px;
+        }
+        li:hover{
+            background-color: #00BFFF;
+        }
+        a{
+            text-decoration: none;
+            color: orangered;
+        }
+        .item-main{
+            cursor: default;
+        }
+        .plus{
+            float: right;
+        }
+        .item-hide{
+            display: none;
+            background-color: #00CED1;
+        }
+        .item-show{
+            background-color: #00BFFF;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="item-list">
+        <h1 class="title">Projects</h1>
+        <ul>
+            <li class="item-main">备用<span class="plus">+</span></li>
+            <ul class="items">
+                <li class="item"><a href="#" title="">备用1</a></li>
+                <li class="item"><a href="#" title="">备用2</a></li>
+                <li class="item"><a href="#" title="">备用3</a></li>
+            </ul>
+            <li class="item"><a href="#">仿电商网站</a></li>
+            <li class="item-main">修真院<span class="plus">+</span></li>
+            <ul class="items">
+                <li class="item-main">CSS<span class="plus">+</span></li>
+                <ul class="items">
+                    <li class="item"><a href="ITshu/css-1/9.html" title="九宫格" target="iframe">T1</a></li>
+                    <li class="item"><a href="ITshu/css-1/9.html" title="注册Github" target="iframe">T2</a></li>
+                    <li class="item"><a href="ITshu/css-3/3.html" title="桌游精灵投票页游戏布局" target="iframe">T3</a></li>
+                    <li class="item"><a href="ITshu/css-4/index.html" title="制作网页登陆界面" target="iframe">T4</a></li>
+                    <li class="item"><a href="ITshu/css-5/index.html" title="制作个人主页及内容展示页" target="iframe">T5-1</a></li>
+                    <li class="item"><a href="ITshu/css-5/index-2.html" title="制作个人主页及内容展示页" target="iframe">T5-2</a></li>
+                    <li class="item"><a href="ITshu/css-6/index.html" title="制作桌游精灵投票页" target="iframe">T6-1</a></li>
+                    <li class="item"><a href="ITshu/css-6/index-2.html" title="制作桌游精灵投票页" target="iframe">T6-2</a></li>
+                    <li class="item"><a href="ITshu/css-6/index-3.html" title="制作桌游精灵投票页" target="iframe">T6-3</a></li>
+                    <li class="item"><a href="ITshu/css-7/index.html" title="修真院首页及推荐页" target="iframe">T7-1</a></li>
+                    <li class="item"><a href="ITshu/css-7/index-2.html" title="修真院首页及推荐页" target="iframe">T7-2</a></li>
+                    <li class="item"><a href="ITshu/css-8/index.html" title="IT修真院职业页" target="iframe">T8</a></li>
+                    <li class="item"><a href="ITshu/css-9/index.html" title="简单表单制作" target="iframe">T9</a></li>
+                    <li class="item"><a href="ITshu/css-10/index.html" title="T7响应式" target="iframe">T10-1</a></li>
+                    <li class="item"><a href="ITshu/css-10/index-2.html" title="T7响应式" target="iframe">T10-2</a></li>
+                    <li class="item"><a href="ITshu/css-11/index.html" title="T8响应式" target="iframe">T11</a></li>
+                    <li class="item"><a href="ITshu/css-12/index.html" title="T9响应式" target="iframe">T12</a></li>
+                </ul>
+                <li class="item-main">JS<span class="plus">+</span></li>
+                <ul class="items">
+                    <li class="item"><a href="ITshu/JS/task1.html" title="九宫格每一秒变换一次颜色" target="iframe">T1</a></li>
+                    <li class="item"><a href="ITshu/JS/task2/index.html" title="玩家创建过程" target="iframe">T2</a></li>
+                </ul>
+            </ul>
+
+            <li class="item-main">百度前端<span class="plus">+</span></li>
+            <ul class="items">
+                <li class="item-main">CSS<span class="plus">+</span></li>
+                <ul class="items">
+                    <li class="item"><a href="baidu-ife/1.2/1.1.html" title="零基础HTML编码" target="iframe">1-1</a></li>
+                    <li class="item"><a href="baidu-ife/1.2/1.1.html" title="零基础HTML及CSS编码（一）" target="iframe">1-2</a></li>
+                    <li class="item"><a href="baidu-ife/1.3/index.html" title="三栏式布局" target="iframe">1-3</a></li>
+                    <li class="item"><a href="baidu-ife/1.4/index.html" title="定位和居中问题" target="iframe">1-4</a></li>
+                    <li class="item"><a href="baidu-ife/1-5/index.html" title="零基础HTML及CSS编码（二）" target="iframe">1-5</a></li>
+                    <li class="item"><a href="baidu-ife/1-6/index.html" title="通过HTML及CSS模拟报纸排版" target="iframe">1-6</a></li>
+                    <li class="item"><a href="baidu-ife/1-7/index.html" title="实现常见的技术产品官网的主页" target="iframe">1-7</a></li>
+                    <li class="item"><a href="baidu-ife/1-8/index.html" title="响应式网格（栅格化）布局" target="iframe">1-8</a></li>
+                    <li class="item"><a href="baidu-ife/1-9/index.html" title="使用HTML/CSS实现一个复杂页面" target="iframe">1-9</a></li>
+                    <li class="item"><a href="baidu-ife/1-10/index.html" title="Flexbox布局练习" target="iframe">1-10</a></li>
+                    <li class="item"><a href="baidu-ife/1-11/index.html" title="移动web页面布局实践" target="iframe">1-11</a></li>
+                    <li class="item"><a href="baidu-ife/1-12/index.html" title="学习CSS3的新特性" target="iframe">1-12</a></li>
+                </ul>
+                <li class="item-main">JS<span class="plus">+</span></li>
+                <ul class="items">
+                    <li class="item"><a href="baidu-ife/JS/2-13.html" title="零基础JavaScript编码（一）" target="iframe">2-13</a></li>
+                    <li class="item"><a href="baidu-ife/JS/2-14.html" title="零基础JavaScript编码（二）" target="iframe">2-14</a></li>
+                    <li class="item"><a href="baidu-ife/JS/2-15.html" title="零基础JavaScript编码（三）" target="iframe">2-15</a></li>
+                    <li class="item"><a href="baidu-ife/JS/2-16.html" title="零基础JavaScript编码（四）" target="iframe">2-16</a></li>
+                    <li class="item"><a href="" title="零基础JavaScript编码（五）" target="iframe">2-17</a></li>
+                    <li class="item"><a href="baidu-ife/JS/2-18.html" title="基础JavaScript编码（一）" target="iframe">2-18</a></li>
+                    <li class="item"><a href="baidu-ife/JS/2-19.html" title="基础JavaScript编码（二）" target="iframe">2-19</a></li>
+                    <li class="item"><a href="baidu-ife/JS/2-20.html" title="基础JavaScript编码（三）" target="iframe">2-20</a></li>
+                    <li class="item"><a href="baidu-ife/JS/2-21.html" title="基础JavaScript编码（四）" target="iframe">2-21</a></li>
+                    <li class="item"><a href="baidu-ife/JS/2-22.html" title="JavaScript和树（一）" target="iframe">2-22</a></li>
+                    <li class="item"><a href="baidu-ife/JS/2-23.html" title="JavaScript和树（二）" target="iframe">2-23</a></li>
+                    <li class="item"><a href="baidu-ife/JS/2-24.html" title="JavaScript和树（三）" target="iframe">2-24</a></li>
+                    <li class="item"><a href="baidu-ife/JS/3-37.html" title="UI组件之浮出层" target="iframe">3-37</a></li>
+                    <li class="item"><a href="baidu-ife/JS/3-38.html" title="UI组件之排序表格" target="iframe">3-38</a></li>
+                </ul>
+            </ul>
+
+            <li class="item-main">练手<span class="plus">+</span></li>
+            <ul class="items">
+                <li>task1</li>
+                <li>task1</li>
+                <li>task1</li>
+                <li>task1</li>
+            </ul>
+            <li class="item-main"><a href="https://codepen.io/bcp9527/" target="iframe">My CodePen</a></li>
+
+        </ul>
+    </div>
+    <div class="right">
+        <iframe class="show" src="" frameborder="0" name="iframe" height="100%" width="100%"></iframe>
+    </div>
+
+</div>
+
+<script src="BCP-home/jquery-3.1.0.js"></script>
+<script>
+    $(function(){
+        $('.items').addClass('item-hide');
+        $('.item-main').click(function(){
+            if($(this).next().hasClass('item-hide')){
+                $(this).next().removeClass('item-hide');
+                $(this).addClass('item-show').find('span').html('-');
+            }else{
+                $(this).next().addClass('item-hide');
+                $(this).removeClass('item-show').find('span').html('+');
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
