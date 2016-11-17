@@ -1,0 +1,121 @@
+.wrap{
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    border: 20px solid #333;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 5px 5px #ccc;
+}
+.items{
+    width: 190px;
+    height: 190px;
+    border: 10px solid #333;
+    float: left;
+    opacity: .5;
+    cursor:pointer;
+}
+#t-l{
+    border-top: none;
+    border-left: none;
+    background-color: #00A74A;
+}
+#t-r{
+    border-top: none;
+    border-right: none;
+    background-color: #9F0F17;
+}
+#b-l{
+    border-left: none;
+    border-bottom: none;
+    background-color: #CCA707;
+}
+#b-r{
+    border-right: none;
+    border-bottom: none;
+    background-color: #094A8F;
+}
+.ctrs{
+    height: 220px;
+    width: 220px;
+    margin: 80px;
+    border: 10px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+    overflow: hidden;
+}
+.ctrs{
+    text-align: center;
+    font-weight: bolder;
+}
+.c-title{
+    font-size: 3em;
+    margin: 20px;
+}
+.btns>div{
+    float: left;
+    width: 60px;
+    text-align: center;
+}
+.btns p{
+    margin: 0;
+}
+.count-num{
+    margin-left: 20px;
+}
+.count{
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #333;
+    line-height: 30px;
+    text-align: center;
+    color: #0f0;
+}
+.start,.strict{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #222;
+    box-shadow: 0 2px 2px 2px #ccc;
+    cursor: pointer;
+    margin: 2px;
+}
+.btn-on{
+    position: relative;
+    top:2px;
+}
+.start{
+    background-color: #f00;
+}
+.strict-off{
+    background-color: #0c6e51;
+}
+.strict-on{
+    background-color: #0f0;
+}
+.ctr{
+    position: relative;
+    top:20px;
+}
+.ctr span{
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    background-color: #333;
+    margin-bottom: -5px;
+    padding: 2px;
+    cursor:pointer;
+}
+.ctr i{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #079eec;
+    border-radius: 2px;
+}
+.ctr-on{
+    float: right;
+}

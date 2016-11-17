@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="wrap">
+    <div id="t-l" class="items"></div>
+    <div id="t-r" class="items"></div>
+    <div id="b-l" class="items"></div>
+    <div id="b-r" class="items"></div>
+    <div class="ctrs">
+        <p class="c-title">Simon&copy;</p>
+        <div class="btns">
+            <div class="count-num">
+                <div class="count"></div>
+                <p>COUNT</p>
+            </div>
+            <div>
+                <span class="start"></span>
+                <p>START</p>
+            </div>
+            <div>
+                <span class="strict strict-off"></span>
+                <p>STRICT</p>
+            </div>
+        </div>
+        <p class="ctr">OFF <span><i class="btn"></i></span> ON</p>
+    </div>
+</div>
+<audio id="wrong">
+    <source src="wav/CLICK_05.WAV" type="audio/wav"/>
+</audio>
+<audio id="a-t-l">
+    <source src="wav/CLICK_04.WAV" type="audio/wav"/>
+</audio>
+<audio id="a-t-r">
+    <source src="wav/CLICK_03.WAV" type="audio/wav"/>
+</audio>
+<audio id="a-b-l">
+    <source src="wav/CLICK_02.WAV" type="audio/wav"/>
+</audio>
+<audio id="a-b-r">
+    <source src="wav/CLICK_01.WAV" type="audio/wav"/>
+</audio>
+
+<script src="../../BCP-home/jquery-3.1.0.js"></script>
+<script src="js.js"></script>
+</body>
+</html>
