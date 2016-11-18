@@ -119,9 +119,10 @@ $(function(){
     //停止游戏
     $('.stop').click(function(){
         clearTimeout(timer);
+        $('.count').stop().html('');
+        $('.items').stop().css('opacity','.5');
         count=playerCount=0;
         itemLenght= 1;
         strict=false;
-        $('.count').html('');
     });
 });
