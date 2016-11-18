@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>鼠标移动练习</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="main">
+    <h3>不要在style中设置canvas的尺寸，会出现坐标不准确的情况。</h3>
+    <p>canvas 元素有元素本身大小与元素绘图表面大小两套尺寸。
+        设置 width 和 height 时，实际上是同时修改了该元素本身大小和元素绘图表面大小；
+        而设置 css，只会改变元素本身大小，并不会改变元素绘图表面大小。
+        默认情况下元素本身大小与元素绘图表面大小都为 300 x 150。
+        当元素本身大小与元素绘图表面大小不一样大小时，浏览器会对绘图表面进行缩放。</p>
+    <h1>闪瞎你~~</h1>
+    <canvas id="content" width="600" height="400">
+
+    </canvas>
+    <h2><span id="mouseX"></span><span>-----</span><span id="mouseY"></span></h2>
+</div>
+<div class="main">
+    <h1>换个方式晃晕你~~</h1>
+    <canvas id="content2" width="600" height="400">
+
+    </canvas>
+</div>
+
+<script src="js.js"></script>
+</body>
+</html>

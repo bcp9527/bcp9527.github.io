@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: lime;
+}
+.main{
+    width: 602px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#content,#content2{
+    background-color: #ccc;
+    border: 1px solid #0f0;
+    position: relative;
+    margin: 0 auto;
+}
