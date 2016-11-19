@@ -19,7 +19,6 @@ html,body{
 .item-list{
     height: 100%;
     width: 200px;
-    background-color: #ccc;
     border-right:2px solid orangered;
     float: left;
     overflow: auto;
@@ -29,13 +28,16 @@ ul{
     list-style: none;
     padding: 2px 8px;
     margin: 0;
+    font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
 }
 li{
     padding: 8px;
     margin: 3px 0;
     background-color: #FFF;
+    box-shadow: 1px 1px 1px 1px #ddd;
     border-radius: 5px;
     text-align: center;
+    color: #264ec5;
 }
 .li-h{
     background-color: #00BFFF;
