@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>2-16</title>
 </head>
 <body>
 <div>
+    <ul>
+        <li>参考以下示例代码，用户输入城市名称和空气质量指数后，
+            点击“确认添加”按钮后，就会将用户的输入在进行验证后，添加到下面的表格中，新增一行进行显示</li>
+        <li>用户输入的城市名必须为中英文字符，空气质量指数必须为整数</li>
+        <li>用户输入的城市名字和空气质量指数需要进行前后去空格及空字符处理（trim）</li>
+        <li>用户输入不合规格时，需要给出提示（允许用alert，也可以自行定义提示方式）</li>
+        <li>用户可以点击表格列中的“删除”按钮，删掉那一行的数据</li>
+    </ul>
     <label>城市名称：<input id="aqi-city-input" type="text"></label><br>
     <label>空气质量指数：<input id="aqi-value-input" type="text"></label><br>
     <button id="add-btn">确认添加</button>

@@ -5,7 +5,8 @@
     <title>2-15</title>
 </head>
 <body>
-
+<h3>--读取页面上已有的source列表，从中提取出城市以及对应的空气质量</h3>
+<h3>--将数据按照某种顺序排序后，在resort列表中按照顺序显示出来</h3>
 <ul id="source">
     <li>北京空气质量：<b>90</b></li>
     <li>上海空气质量：<b>70</b></li>
@@ -38,9 +39,9 @@
         /*
          coding here
          */
-        var data=new Array();
-        for(var i=0; i<document.getElementsByTagName("li").length; i++){
-            data[i]=document.getElementsByTagName("li")[i].innerText.split("：");
+        var data=[];
+        for(var i=0; i<document.getElementById("source").children.length; i++){
+            data[i]=document.getElementById("source").children[i].innerText.split("：");
         }
         /*
          data = [
@@ -74,17 +75,15 @@
         var nums=["一","二","三","四","五","六","七"];
         var newList=document.getElementById("resort");
         //newList.style.listStyleType=none;
+        newList.innerHTML='';//再次点击时先将上一次输出的内容清空
         for(var i=0;i < data.length ;i++){
             var li=document.createElement("li");
             li.innerHTML="第"+nums[i]+"名："+data[i][0]+"：";
             var b=document.createElement("b");
             b.innerHTML=data[i][1];
             li.appendChild(b);
-
             newList.appendChild(li);
-
         }
-
     }
 
     function btnHandle() {
