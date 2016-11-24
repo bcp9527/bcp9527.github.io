@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2-36</title>
+    <style>
+        td{
+            margin: 0;
+            padding: 0;
+            width:49px;
+            height:49px;
+        }
+        #map{
+            float: left;
+        }
+        #map-2{
+            width: 501px;
+            height: 501px;;
+            border:2px solid #000;
+            margin-left: 50px;
+        }
+        #map-2 table{
+            border-collapse: collapse;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        #list-1 li,#list-2 li{
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        #list-1{
+            float: left;
+        }
+        #list-2{
+            height: 50px;
+            width: 550px;
+        }
+        #list-2 li{
+            float: left;
+        }
+        #block{
+            width: 50px;
+            height: 35px;
+            border-top: 15px solid #00f;
+            background-color: #f00;
+            position: absolute;
+            top:152px;
+            left: 152px;
+        }
+        #control{
+            padding-left: 50px;
+        }
+        #text{
+            margin: 0;
+            padding: 0;
+            height: 200px;
+            width: 200px;
+            background-color: #000;
+            color: #0f0;
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: bold;
+            resize: none;
+            border: none;
+            padding-left: 10px;
+        }
+        #list-3{
+            list-style: none;
+            width: 30px;
+            text-align: center;
+            height: 200px;
+            background-color: #ccc;
+            font-size: 16px;
+            color: #fff;
+            float: left;
+        }
+        #list-3 li{
+            height: 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="map" style="position: relative; height: 600px; width: 600px;">
+    <ul id="list-1" style="list-style: none">
+        <li></li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <ul id="list-2" style="list-style: none">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <div id="map-2">
+        <table border="1">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+        </table>
+    </div>
+    <div id="block">
+
+    </div>
+
+</div>
+<div id="control">
+    <p>
+        <input id="move" type="button" value="执行"/>
+        <input id="refresh" type="button" value="Refresh"/>
+    </p>
+
+    <textarea id="text" spellcheck="false"></textarea>
+<ul id="list-3">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</div>
+
+<script>
+    var handler={
+        "GO":"0",
+        "TUN LEF":"1",
+        "TUN RIG":"2",
+        "TUN BAC":"3",
+        "TRA LEF":"10",
+        "TRA TOP":"11",
+        "TRA RIG":"12",
+        "TRA BOT":"13",
+        "MOV LEF":"20",
+        "MOV TOP":"21",
+        "MOV RIG":"22",
+        "MOV BOT":"23"
+    };
+    var orders=[];//收集到的有效的命令
+    var num=0;//旋转角度
+
+    function init(){
+        var block=document.getElementById("block");
+        var control=document.getElementById("control");
+        control.addEventListener("click",function(e){
+            var v= e.target.getAttribute("id");
+            switch (v){
+                case "move":
+                        order();
+                    break;
+                case "refresh":
+                        clear();
+                    break;
+            }
+        });
+        getOrders();
+
+    }
+
+    function order(){
+        for(var i=0; i<orders.length; i++){
+            if(handler.hasOwnProperty(orders[i])){
+                move(handler[orders[i]]);
+            }else{
+                console.log("\""+orders[i]+"\" is not a right order!");
+                continue;
+            }
+        }
+    }
+
+    function move(n){
+        console.log("Read to go !"+n);
+        var block=document.getElementById("block");
+        switch (n){
+            case "0":
+                goMove(block);
+                break;
+            case "1":
+                transMove(270,block);
+                break;
+            case "2":
+                transMove(90,block);
+                break;
+            case "3":
+                transMove(180,block);
+                break;
+            case "10":
+                normalMove(block,52,502,"l",-1);
+//                if(block.offsetLeft>52){
+//                    var i=0;
+//                    var d=setInterval(function(){
+//                        block.style.left=block.offsetLeft-1+"px";
+//                        i++;
+//                        if(i===50){
+//                            clearInterval(d);
+//                        }
+//                    },20);
+//                }else{
+//                    console.log("已到边界！");
+//                }
+                break;
+            case "11":
+                normalMove(block,52,502,"t",-1);
+//                if(block.offsetTop>52){
+//                    var i=0;
+//                    var d=setInterval(function(){
+//                        block.style.top=block.offsetTop-1+"px";
+//                        i++;
+//                        if(i===50){
+//                            clearInterval(d);
+//                        }
+//                    },20);
+//                }else{
+//                    console.log("已到边界！");
+//                }
+//                break;
+            case "12":
+                normalMove(block,52,502,"l",1);
+//                if(block.offsetLeft<502){
+//                    var i=0;
+//                    var d=setInterval(function(){
+//                        block.style.left=block.offsetLeft+1+"px";
+//                        i++;
+//                        if(i===50){
+//                            clearInterval(d);
+//                        }
+//                    },20);
+//                }else{
+//                    console.log("已到边界！");
+//                }
+                break;
+            case "13":
+                normalMove(block,52,502,"t",1);
+//                if(block.offsetTop<502){
+//                    var i=0;
+//                    var d=setInterval(function(){
+//                        block.style.top=block.offsetTop+1+"px";
+//                        i++;
+//                        if(i===50){
+//                            clearInterval(d);
+//                        }
+//                    },20);
+//                }else{
+//                    console.log("已到边界！");
+//                }
+                break;
+            case "20":
+                num+=270;
+                num%=360;
+                block.style.transform="rotate("+num+"deg)";
+                transMove(270,block);
+                goMove(block);
+                break;
+            case "21":
+                transMove(0,block);
+                goMove(block);
+                break;
+            case "22":
+                transMove(90,block);
+                goMove(block);
+                break;
+            case "23":
+                transMove(180,block);
+                goMove(block);
+                break;
+        }
+    }
+
+    //响应GO命令
+    function goMove(block){
+        switch (num){
+            case 0:
+                if(block.offsetTop>52){
+                    var i=0;
+                    var d=setInterval(function(){
+                        block.style.top=block.offsetTop-1+"px";
+                        i++;
+                        if(i===50){
+                            clearInterval(d);
+                        }
+                    },20);
+                }else{
+                    console.log("已到边界！");
+                }
+                break;
+            case 90:
+                if(block.offsetLeft<502){
+                    var i=0;
+                    var d=setInterval(function(){
+                        block.style.left=block.offsetLeft+1+"px";
+                        i++;
+                        if(i===50){
+                            clearInterval(d);
+                        }
+                    },20);
+                }else{
+                    console.log("已到边界！");
+                }
+                break;
+            case 180:
+                if(block.offsetTop<502){
+                    var i=0;
+                    var d=setInterval(function(){
+                        block.style.top=block.offsetTop+1+"px";
+                        i++;
+                        if(i===50){
+                            clearInterval(d);
+                        }
+                    },20);
+                }else{
+                    console.log("已到边界！");
+                }
+                break;
+            case 270:
+                if(block.offsetLeft>52){
+                    var i=0;
+                    var d=setInterval(function(){
+                        block.style.left=block.offsetLeft-1+"px";
+                        i++;
+                        if(i===50){
+                            clearInterval(d);
+                        }
+                    },20);
+                }else{
+                    console.log("已到边界！");
+                }
+                break;
+        }
+    }
+
+    //旋转操作
+    function transMove(deg,block){
+        num+=deg;
+        num%=360;
+        block.style.transform="rotate("+num+"deg)";
+    }
+
+    //平移操作
+    function normalMove(block,min,max,F,n){
+        if(F==="l"){
+            if(block.offsetLeft>min&&block.offsetLeft<max){
+                var i=0;
+                var d=setInterval(function(){
+                    block.style.left=block.offsetLeft+n+"px";
+                    i++;
+                    if(i===50){
+                        clearInterval(d);
+                    }
+                },20);
+            }else{
+                console.log("已到边界！");
+            }
+        }else if(F==="t"){
+            if(block.offsetTop>min&&block.offsetTop<max){
+                var i=0;
+                var d=setInterval(function(){
+                    block.style.top=block.offsetTop+n+"px";
+                    i++;
+                    if(i===50){
+                        clearInterval(d);
+                    }
+                },20);
+            }else{
+                console.log("已到边界！");
+            }
+        }
+
+    }
+
+    //获取要执行的命令
+    function getOrders(){
+        var text=document.getElementById("text");
+
+        text.addEventListener("keyup",function(e){
+            if(e.keyCode===13){
+                var value=text.value.trim();
+                var vs=value.split("\n");
+                orders.push(vs[vs.length-1]);
+                showNum();
+                if(handler.hasOwnProperty(vs[vs.length-1])){
+
+                }
+            }
+        });
+    }
+
+    function showNum(){
+        var id=document.getElementById("list-3");
+        for(var i=0; i<orders.length; i++){
+            id.children[i].innerHTML=i+1;
+            if(!handler.hasOwnProperty(orders[i])){
+                id.children[i].style.backgroundColor="#f00";
+            }
+            //console.log(id.children[i]);
+        }
+    }
+
+    function clear(){
+        var id=document.getElementById("list-3");
+        orders=[];
+        document.getElementById("text").value="";
+        for(var i=0; i<id.children.length; i++){
+            id.children[i].innerHTML="";
+            id.children[i].style.backgroundColor="#ccc";
+        }
+    }
+
+    init()
+</script>
+</body>
+</html>

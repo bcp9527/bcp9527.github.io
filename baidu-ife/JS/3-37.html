@@ -41,16 +41,14 @@
             cursor: move;
         }
         #login-title i{
-            display: block;
-            position: relative;
-            top:-40px;
-            left:360px;
+            display: inline-block;
+            float: right;
             height: 36px;
             width: 36px;
-            background-image: url("wrong.png");
-        }
-        #login-title i:hover{
+            font-style:normal;
+            font-family: 微软雅黑;
             cursor: pointer;
+            color: #FFF;
         }
         #login-text input{
             height: 50px;
@@ -156,7 +154,7 @@
 
     <div id="login" style="display: none">
         <div id="login-title">Login
-            <i id="close"></i>
+            <i id="close">X</i>
         </div>
         <div id="login-text">
             <input id="name" type="text" placeholder="Your name"/>

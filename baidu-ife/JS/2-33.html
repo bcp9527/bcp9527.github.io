@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2-33</title>
+    <style>
+        td{
+            margin: 0;
+            padding: 0;
+            width:49px;
+            height:49px;
+        }
+        #map{
+            width: 600px;
+            height: 600px;
+            float: left;
+        }
+        #map-2{
+            width: 501px;
+            height: 501px;;
+            border:2px solid #000;
+            margin-left: 50px;
+        }
+        #map-2 table{
+            border-collapse: collapse;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        #list-1{
+            float: left;
+        }
+        #list-2{
+            height: 50px;
+            width: 550px;
+        }
+        #list-2 li{
+            float: left;
+        }
+        #control{
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        input{
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+        #block{
+            width: 50px;
+            height: 35px;
+            border-top: 15px solid #00f;
+            background-color: #f00;
+            position: absolute;
+            top:152px;
+            left: 152px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map" style="position: relative; height: 600px; width: 600px;">
+    <ul id="list-1" style="list-style: none">
+        <li></li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <ul id="list-2" style="list-style: none">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <div id="map-2">
+        <table border="1">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+        </table>
+    </div>
+    <div id="block">
+
+    </div>
+    <div id="control" style="">
+        <input id="text" type="text"/>
+        <input id="move" type="button" value="执行"/>
+        ||
+        <input type="button" value="上"/>
+        <input type="button" value="下"/>
+        <input type="button" value="左"/>
+        <input type="button" value="右"/>
+        <input type="button" value="旋转"/>
+    </div>
+</div>
+
+
+
+<div id="show" style="">
+    <p>实现一个类似棋盘的格子空间，每个格子用两个数字可以定位，
+        一个红正方形的DOM在这个空间内。</p>
+    <p>    正方形中的蓝色边表示这是他的正面，
+        有一个input输入框</p>
+    <p>在输入框中允许输入如下指令，按下按钮后，使得正方形做相应动作</p>
+    <p>GO：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）</p>
+    <p>TUN LEF：向左转（逆时针旋转90度）</p>
+    <p>TUN RIG：向右转（顺时针旋转90度）</p>
+    <p>TUN BAC：向右转（旋转180度</p>
+    <p>移动不能超出格子空间</p>
+    <strong>三种控制方法，输入命令点“执行”，按键盘方向键或直接点击右侧各个按钮控制目标</strong>
+</div>
+
+<script>
+    var num=0;//旋转角度
+    function init(){
+        var control=document.getElementById("control");
+        var block=document.getElementById("block");
+        control.addEventListener("click", function(e){
+            move(e.target,block,text);
+        });
+        window.addEventListener("keyup",function(e){
+            e.preventDefault();
+            switch (e.keyCode){
+                case 37:
+
+                    textCtrl("TUN LEF",block);
+                    break;
+                case 38:
+                    textCtrl("GO",block);
+                    break;
+                case 39:
+                    textCtrl("TUN RIG",block);
+                    break;
+                case 40:
+                    textCtrl("TUN BAC",block);
+                    break;
+            }
+        },false);
+    }
+
+    function move(target,block,text){
+        var text=document.getElementById("text").value.trim();
+        var str=target.getAttribute("value");
+        switch (str){
+            case "执行":
+                textCtrl(text,block);
+                break;
+            case "上":
+                if(block.offsetTop>52){
+                    block.style.top=block.offsetTop-50+"px";
+                }else{
+                    console.log("已到边界！");
+                }
+                break;
+            case "下":
+                if(block.offsetTop<502){
+                    var i=0;
+                    var d=setInterval(function(){
+                        block.style.top=block.offsetTop+1+"px";
+                        i++;
+                        if(i===50){
+                            clearInterval(d);
+                        }
+                    },20);
+
+
+                }else{
+                    console.log("已到边界！");
+                }
+                break;
+            case "左":
+                if(block.offsetLeft>52){
+                    block.style.left=block.offsetLeft-50+"px";
+                }else{
+                    console.log("已到边界！");
+                }
+                break;
+            case "右":
+                if(block.offsetLeft<502){
+                    block.style.left=block.offsetLeft+50+"px";
+                }else{
+                    console.log("已到边界！");
+                }
+                break;
+            case "旋转":
+                num+=90;
+                    if(num>=360){
+                        num%=360;
+                    }
+                block.style.transform="rotate("+num+"deg)";
+                break;
+        }
+    }
+
+    function textCtrl(text,block){
+
+        switch (text){
+            case "GO":
+                    switch (num){
+                        case 0:
+                            if(block.offsetTop>52){
+                                block.style.top=block.offsetTop-50+"px";
+                            }else{
+                                console.log("已到边界！");
+                            }
+                            break;
+                        case 90:
+                            if(block.offsetLeft<502){
+                                block.style.left=block.offsetLeft+50+"px";
+                            }else{
+                                console.log("已到边界！");
+                            }
+                            break;
+                        case 180:
+                            if(block.offsetTop<502){
+                                block.style.top=block.offsetTop+50+"px";
+                            }else{
+                                console.log("已到边界！");
+                            }
+                            break;
+                        case 270:
+                            if(block.offsetLeft>52){
+                                block.style.left=block.offsetLeft-50+"px";
+                            }else{
+                                console.log("已到边界！");
+                            }
+                            break;
+                    }
+                break;
+            case "TUN LEF":
+                num+=270;
+                if(num>=360){
+                    num%=360;
+                }
+                block.style.transform="rotate("+num+"deg)";
+                break;
+            case "TUN RIG":
+                num+=90;
+                if(num>=360){
+                    num%=360;
+                }
+                block.style.transform="rotate("+num+"deg)";
+                break;
+            case "TUN BAC":
+                num+=180;
+                if(num>=360){
+                    num%=360;
+                }
+                block.style.transform="rotate("+num+"deg)";
+                break;
+        }
+    }
+
+
+    init();
+
+</script>
+</body>
+</html>
