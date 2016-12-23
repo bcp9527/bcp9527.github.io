@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2-30</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .text{
+            height: 30px;
+            width: 250px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding-left: 10px;
+        }
+        #btn{
+            height: 30px;
+            width: 70px;
+            margin: 10px;
+            background-color: #1d7ad9;
+            color: #fff;
+            border: none;
+            float: right;
+            border-radius: 5px;
+        }
+
+        .title{
+            text-align: right;
+            width: 80px;
+            font-size: 20px;
+            font-family: "黑体";
+        }
+        .show{
+            padding-left: 10px;
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+<table id="form">
+    <tr>
+        <td class="title">名称</td>
+        <td><input type="text" id="name" class="text"/></td>
+    </tr>
+    <tr>
+        <td class="title"></td>
+        <td class="show" id="name-show" style="display: none">必填，长度为4~16个字符</td>
+    </tr>
+    <tr>
+        <td class="title">密码</td>
+        <td><input type="password" id="pwd" class="text"/></td>
+    </tr>
+    <tr>
+        <td class="title"></td>
+        <td class="show" id="pwd-show" style="display: none">必填，长度为8~16个字符</td>
+    </tr>
+    <tr>
+        <td class="title">密码确认</td>
+        <td><input type="password" id="pwda" class="text"/></td>
+    </tr>
+    <tr>
+        <td class="title"></td>
+        <td class="show" id="pwda-show" style="display: none">请再次输入密码</td>
+    </tr>
+    <tr>
+        <td class="title">邮箱</td>
+        <td><input type="text" id="email" class="text"/></td>
+    </tr>
+    <tr>
+        <td class="title"></td>
+        <td class="show" id="email-show" style="display: none">请输入有效的邮箱地址</td>
+    </tr>
+    <tr>
+        <td class="title">手机</td>
+        <td><input type="text" id="phone" class="text"/></td>
+    </tr>
+    <tr>
+        <td class="title"></td>
+        <td class="show" id="phone-show" style="display: none">请输入有效的手机号码</td>
+    </tr>
+    <tr>
+        <td class="title"></td>
+        <td><input type="submit" id="btn"/></td>
+    </tr>
+</table>
+
+<script>
+
+
+
+    //添加事件句柄
+    var nodes=document.getElementsByClassName("text");
+    for( var i=0; i<nodes.length; i++){
+        nodes[i].addEventListener("focus",function(e){
+            if(e.target.className==="text"){
+                showMsg(e.target);
+            }
+        });
+    }
+    for( var i=0; i<nodes.length; i++){
+        nodes[i].addEventListener("blur",function(e){
+            if(e.target.className==="text"){
+                checkValue(e.target);
+            }
+        });
+    }
+
+
+    //onfocus
+    function showMsg(target){
+        target.style.borderColor="#ccc";
+        var node=target.getAttribute("id");
+        document.getElementById(node+"-show").style.cssText="display:''; color:#999";
+        switch (node){
+            case "name":
+                document.getElementById(node+"-show").innerHTML="必填，长度为4~16个字符";
+                break;
+            case "pwd":
+                document.getElementById(node+"-show").innerHTML="必填，长度为8~16个字符";
+                break;
+            case "pwda":
+                document.getElementById(node+"-show").innerHTML="请再次输入密码";
+                break;
+            case "email":
+                document.getElementById(node+"-show").innerHTML="请输入有效的邮箱地址";
+                break;
+            case "phone":
+                document.getElementById(node+"-show").innerHTML="请输入有效的手机号码";
+                break;
+        }
+    }
+
+    //onblur
+    function checkValue(target){
+        var text=target.value;
+        var node=target.getAttribute("id");
+
+        if(text.trim()===""){
+            target.style.borderColor="#f00";
+            document.getElementById(node+"-show").style.color="#f00";
+            document.getElementById(node+"-show").innerHTML="输入格式不正确！";
+        }else{
+            switch (node){
+                case "name":
+                    var n=getArr(text.trim());
+                    if(n>=4&&n<=16){
+                        document.getElementById(node+"-show").style.display="none";
+                    }else{
+                        target.style.borderColor="#f00";
+                        document.getElementById(node+"-show").style.color="#f00";
+                        document.getElementById(node+"-show").innerHTML="输入格式不正确！";
+                    }
+                    break;
+                case "pwd":
+                    if(text.match(/[a-zA-Z0-9]\w{7,15}$/)){
+                        document.getElementById(node+"-show").style.display="none";
+                    }else{
+                        target.style.borderColor="#f00";
+                        document.getElementById(node+"-show").style.color="#f00";
+                        document.getElementById(node+"-show").innerHTML="输入格式不正确！";
+                    }
+                    break;
+                case "pwda":
+                    if(text===(document.getElementById("pwd").value)){
+                        document.getElementById(node+"-show").style.display="none";
+                    }else{
+                        target.style.borderColor="#f00";
+                        document.getElementById(node+"-show").style.color="#f00";
+                        document.getElementById(node+"-show").innerHTML="两次输入的密码不相同！";
+                    }
+                    break;
+                case "email":
+                    if(text.match(/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/)){
+                        document.getElementById(node+"-show").style.display="none";
+                    }else{
+                        target.style.borderColor="#f00";
+                        document.getElementById(node+"-show").style.color="#f00";
+                        document.getElementById(node+"-show").innerHTML="输入格式不正确！";
+                    }
+                    break;
+                case "phone":
+                    if(text.match(/^(13[0-9]|17[0-9]|15[0-9]|18[0-9])\d{8}$/)){
+                        document.getElementById(node+"-show").style.display="none";
+                    }else{
+                        target.style.borderColor="#f00";
+                        document.getElementById(node+"-show").style.color="#f00";
+                        document.getElementById(node+"-show").innerHTML="输入格式不正确！";
+                    }
+                    break;
+            }
+        }
+
+    }
+
+    var btn=document.getElementById("btn");
+    //sumit click
+    btn.onclick=function(){
+        var nodes=document.getElementsByClassName("text");
+        for( var i=0; i<nodes.length; i++){
+            if(nodes[i].value.trim()===""){
+                nodes[i].style.borderColor="#f00";
+                var id=nodes[i].getAttribute("id");
+                switch (id){
+                    case "name":
+                        document.getElementById(id+"-show").style.display="";
+                        document.getElementById(id+"-show").style.color="#f00";
+                        document.getElementById(id+"-show").innerHTML="输入格式不正确！";
+                        break;
+                    case "pwd":
+                        document.getElementById(id+"-show").style.display="";
+                        document.getElementById(id+"-show").style.color="#f00";
+                        document.getElementById(id+"-show").innerHTML="输入格式不正确！";
+                        break;
+                    case "pwda":
+                        document.getElementById(id+"-show").style.display="";
+                        document.getElementById(id+"-show").style.color="#f00";
+                        document.getElementById(id+"-show").innerHTML="输入格式不正确！";
+                        break;
+                    case "email":
+                        document.getElementById(id+"-show").style.display="";
+                        document.getElementById(id+"-show").style.color="#f00";
+                        document.getElementById(id+"-show").innerHTML="输入格式不正确！";
+                        break;
+                    case "phone":
+                        document.getElementById(id+"-show").style.display="";
+                        document.getElementById(id+"-show").style.color="#f00";
+                        document.getElementById(id+"-show").innerHTML="输入格式不正确！";
+                        break;
+                }
+            }
+        }
+
+        for( var j=0; j<nodes.length; j++){
+            if(nodes[j].style.borderColor==="rgb(255, 0, 0)"){
+                alert("提交失败！请查看相关项");
+                return;
+            }
+        }
+        alert("提交成功！");
+
+    }
+
+    //check Name
+    function getArr(str){
+        var n=0;
+        for (var i=0; i<str.length; i++){
+            if(str.charCodeAt(i)>0&&str.charCodeAt(i)<=128){
+                n++;
+            }else{
+                n+=2;
+            }
+        }
+        return n;
+    }
+</script>
+</body>
+</html>

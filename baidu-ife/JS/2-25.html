@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2-25</title>
+    <style>
+        *{margin: 0; padding: 0}
+        #main{
+            padding: 20px;
+            margin: 20px;
+            border:1px solid #ccc;
+            border-radius: 10px;
+        }
+        input{
+            height: 30px;
+            margin:10px;
+        }
+        ul{
+            list-style:none;
+            font-size: 18px;
+            margin-left: 20px;
+        }
+        li{
+            margin: 10px;
+            width: 100px;
+            padding-left: 20px;
+            border-bottom: 3px solid #0f0;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        li span{
+            margin-right: 20px;
+        }
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h2>列表</h2>
+        <div id="buttons">
+            <p><input type="text" id="input" placeholder="请输入要查询的内容"/><input type="submit" id="search" value="查询"/></p>
+        </div>
+        <div id="items">
+            <ul>
+                <li class="root"><span>+</span>根节点</li>
+                <ul id="list" class="hide">
+                    <li class="root"><span>+</span>JAVA</li>
+                    <ul class="hide">
+                        <li>JAVA1</li>
+                        <li>JAVA2</li>
+                        <li>JAVA3</li>
+                    </ul>
+                    <li class="root"><span>+</span>JS</li>
+                    <ul class="hide">
+                        <li>JS1</li>
+                        <li>JS2</li>
+                        <li>JS3</li>
+                    </ul>
+                    <li>AS</li>
+                </ul>
+            </ul>
+
+        </div>
+    </div>
+    <script src="2-25.js"></script>
+    <script>
+//        var root=document.getElementsByClassName("root");
+//        var list=document.getElementById("list");
+//        root.onclick=function(){
+//          if(list.style.display==="none"){
+//              list.style.display="";
+//          }else{
+//              list.style.display="none";
+//          }
+//        };
+
+        function eventHandler(){
+            var list=document.getElementById('items');
+            list.addEventListener('click', function(e){
+                var name= e.target.className;
+                if(name==='root'){
+                    var txt= e.target.childNodes[0];
+                    var el= e.target.nextElementSibling;
+                    //el.style.cssText='border: 1px solid red';
+                    el.className.toLowerCase()==='show'?(el.className='hide',txt.innerHTML='+'):(el.className='show',txt.innerHTML='-');
+                }
+            });
+        }
+        function init(){
+            eventHandler();
+        }
+        init();
+    </script>
+</body>
+</html>
