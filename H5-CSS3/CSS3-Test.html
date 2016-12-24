@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS3</title>
+    <style>
+        div{
+            width: 300px;
+            height: 100px;
+        }
+        .radius{
+            border-radius: 10px;
+            border: 2px solid #f0f;
+        }
+        .shadow{
+            box-shadow: 10px 10px 5px #ccc;
+            border: 2px solid #f0f;
+        }
+        .b-img{
+            width: 800px;
+            height: 600px;
+            border-image:url(images/p.jpg) 30 30 round;
+            -webkit-border-image:url(images/p.jpg) 30 30 round; /* Safari 5 and older */
+            -o-border-image:url(images/p.jpg) 30 30 round; /* Opera */
+        }
+        .b-img-2{
+            width: 800px;
+            height: 600px;
+            border-image:url(images/p.jpg) 30 30 stretch;
+            -webkit-border-image:url(images/p.jpg) 30 30 stretch; /* Safari 5 and older */
+            -o-border-image:url(images/p.jpg) 30 30 stretch; /* Opera */
+        }
+
+        #grad {
+            background: -webkit-linear-gradient(red, blue); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(red, blue); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(red, blue); /* Firefox 3.6 - 15 */
+            background: linear-gradient(red, blue); /* 标准的语法 */
+        }
+        #grad2 {
+            background: -webkit-linear-gradient(left, red , blue); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(right, red, blue); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(right, red, blue); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to right, red , blue); /* 标准的语法 */
+        }
+        #grad3 {
+            background: -webkit-linear-gradient(left top, red , blue); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(bottom right, red, blue); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(bottom right, red, blue); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to bottom right, red , blue); /* 标准的语法 */
+        }
+        #grad4 {
+            background: -webkit-linear-gradient(180deg, red, blue); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(180deg, red, blue); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(180deg, red, blue); /* Firefox 3.6 - 15 */
+            background: linear-gradient(180deg, red, blue); /* 标准的语法 */
+        }
+        #grad5 {
+            background: -webkit-linear-gradient(red 10%, green 85%, blue 90%); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(red 10%, green 85%, blue 90%); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(red 10%, green 85%, blue 90%); /* Firefox 3.6 - 15 */
+            background: linear-gradient(red 10%, green 25%, blue 90%); /* 标准的语法（必须放在最后） */
+        }
+        #grad6 {
+            background: -webkit-linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1)); /* Safari 5.1 - 6 */
+            background: -o-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /* Opera 11.1 - 12*/
+            background: -moz-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /* Firefox 3.6 - 15*/
+            background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* 标准的语法 */
+        }
+        #grad7 {
+            /* Safari 5.1 - 6.0 */
+            background: -webkit-repeating-linear-gradient(red, yellow 10%, green 20%);
+            /* Opera 11.1 - 12.0 */
+            background: -o-repeating-linear-gradient(red, yellow 10%, green 20%);
+            /* Firefox 3.6 - 15 */
+            background: -moz-repeating-linear-gradient(red, yellow 10%, green 20%);
+            /* 标准的语法 */
+            background: repeating-linear-gradient(red, yellow 10%, green 20%);
+        }
+        #grad8 {
+            background: -webkit-radial-gradient(red, green, blue); /* Safari 5.1 - 6.0 */
+            background: -o-radial-gradient(red, green, blue); /* Opera 11.6 - 12.0 */
+            background: -moz-radial-gradient(red, green, blue); /* Firefox 3.6 - 15 */
+            background: radial-gradient(red, green, blue); /* 标准的语法 */
+        }
+        #grad9 {
+            background: -webkit-radial-gradient(red 5%, green 15%, blue 60%); /* Safari 5.1 - 6.0 */
+            background: -o-radial-gradient(red 5%, green 15%, blue 60%); /* Opera 11.6 - 12.0 */
+            background: -moz-radial-gradient(red 5%, green 15%, blue 60%); /* Firefox 3.6 - 15 */
+            background: radial-gradient(red 5%, green 15%, blue 60%); /* 标准的语法 */
+        }
+    </style>
+</head>
+<body>
+<h1>边框</h1>
+<h2>圆角</h2>
+<div class="radius">
+</div>
+<h2>盒阴影</h2>
+<div class="shadow">
+</div>
+<h2>边界图片</h2>
+<p>平铺</p>
+<div class="b-img">
+</div>
+<p>拉伸</p>
+<div class="b-img-2">
+</div>
+<h1>圆角详解</h1>
+<h2>CSS3 border-radius - 指定每个圆角</h2>
+<ul>
+    <li>四个值: 第一个值为左上角，第二个值为右上角，第三个值为右下角，第四个值为左下角</li>
+    <li>三个值: 第一个值为左上角, 第二个值为右上角和左下角，第三个值为右下角</li>
+    <li>两个值: 第一个值为左上角与右下角，第二个值为右上角与左下角</li>
+    <li>一个值： 四个圆角值相同</li>
+</ul>
+<h2>也可用类似border-top-left-radius单独指定某个角的弧度</h2>
+<hr/>
+<h1>CSS3背景</h1>
+<h2>background-image属性</h2>
+<p>CSS3中可以通过background-image属性添加背景图片。
+    不同的背景图像和图像用逗号隔开，所有的图片中显示在最顶端的为第一张。</p>
+<i>background-image: url(img_flwr.gif), url(paper.gif);</i>
+<br/>
+<i>background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat; </i>
+
+<h2>background-size 属性</h2>
+<i>background-size指定背景图像的大小。CSS3以前，背景图像大小由图像的实际大小决定。
+    CSS3中可以指定背景图片，让我们重新在不同的环境中指定背景图片的大小。您可以指定像素或百分比大小。
+    你指定的大小是相对于父元素的宽度和高度的百分比的大小。</i>
+<h2>background-Origin属性</h2>
+<i>background-Origin属性指定了背景图像的位置区域。
+    content-box, padding-box,和 border-box区域内可以放置背景图像</i>
+
+<img src="images/css.png" alt="css"/>
+<h2>多个背景图片</h2>
+<p>background-image:url(img_flwr.gif),url(img_tree.gif);</p>
+<h2>background-clip属性</h2>
+<p>background-clip背景剪裁属性是从指定位置开始绘制</p>
+
+<h1>渐变（Gradients）</h1>
+<p>CSS3 渐变（gradients）可以让你在两个或多个指定的颜色之间显示平稳的过渡。
+    以前，你必须使用图像来实现这些效果。但是，通过使用 CSS3 渐变（gradients），
+    你可以减少下载的事件和宽带的使用。此外，渐变效果的元素在放大时看起来效果更好，因为渐变（gradient）是由浏览器生成的。
+    CSS3 定义了两种类型的渐变（gradients）：</p>
+<p>线性渐变（Linear Gradients）- 向下/向上/向左/向右/对角方向
+    径向渐变（Radial Gradients）- 由它们的中心定义</p>
+
+<h2>线性渐变</h2>
+<p>为了创建一个线性渐变，你必须至少定义两种颜色结点。颜色结点即你想要呈现平稳过渡的颜色。同时，你也可以设置一个起点和一个方向（或一个角度）。</p>
+<h6>语法：background: linear-gradient(direction, color-stop1, color-stop2, ...);</h6>
+<div id="grad">
+    默认从上到下
+</div>
+<div id="grad2">
+左-右
+</div>
+<div id="grad3">
+坐上到右下
+</div>
+<h2>使用角度</h2>
+<p>如果你想要在渐变的方向上做更多的控制，你可以定义一个角度，而不用预定义方向（to bottom、to top、to right、to left、to bottom right，等等）</p>
+<h6>语法：background: linear-gradient(angle, color-stop1, color-stop2);</h6>
+<p>角度是指水平线和渐变线之间的角度，逆时针方向计算。换句话说，0deg 将创建一个从下到上的渐变，90deg 将创建一个从左到右的渐变。</p>
+<h6>但是，请注意很多浏览器(Chrome,Safari,fiefox等)的使用了旧的标准，即 0deg 将创建一个从左到右的渐变，90deg 将创建一个从下到上的渐变。换算公式 90 - x = y 其中 x 为标准角度，y为非标准角度。</h6>
+<div id="grad4">
+    旋转180°和默认相同
+</div>
+<h2>使用多个颜色结点</h2>
+<div id="grad5">
+    多色渐变可设置比例
+</div>
+<h2>使用透明度（Transparency）</h2>
+<p>CSS3 渐变也支持透明度（transparency），可用于创建减弱变淡的效果。
+    为了添加透明度，我们使用 rgba() 函数来定义颜色结点。rgba() 函数中的最后一个参数可以是从 0 到 1 的值，它定义了颜色的透明度：0 表示完全透明，1 表示完全不透明。</p>
+<div id="grad6">
+    透明度渐变
+</div>
+<h2>重复的线性渐变</h2>
+<p>repeating-linear-gradient() 函数用于重复线性渐变：</p>
+<div id="grad7">
+    重复渐变
+</div>
+<h2>径向渐变</h2>
+<p>径向渐变由它的中心定义。
+    为了创建一个径向渐变，你也必须至少定义两种颜色结点。颜色结点即你想要呈现平稳过渡的颜色。
+    同时，你也可以指定渐变的中心、形状（原型或椭圆形）、大小。默认情况下，渐变的中心是 center（表示在中心点），
+    渐变的形状是 ellipse（表示椭圆形），渐变的大小是 farthest-corner（表示到最远的角落）。</p>
+<h6>语法：background: radial-gradient(center, shape size, start-color, ..., last-color);</h6>
+<h3>均匀分布：</h3>
+<div id="grad8">
+    径向渐变
+</div>
+<h3>不均匀分布：</h3>
+<div id="grad9">
+    径向渐变
+</div>
+<h2>设置形状</h2>
+<p>shape 参数定义了形状。它可以是值 circle 或 ellipse。其中，circle 表示圆形，ellipse 表示椭圆形。默认值是 ellipse。</p>
+<h6>background: radial-gradient(circle, red, yellow, green); /* 标准的语法 */</h6>
+<h2>不同尺寸大小关键字的使用</h2>
+<p>size 参数定义了渐变的大小。它可以是以下四个值：
+    closest-side、
+    farthest-side、
+    closest-corner、
+    farthest-corner</p>
+<h6>background: radial-gradient(60% 55%, farthest-side,blue,green,yellow,black);</h6>
+<h2>重复的径向渐变</h2>
+<p>repeating-radial-gradient() 函数用于重复径向渐变：</p>
+<h6>background: repeating-radial-gradient(red, yellow 10%, green 15%);</h6>
+<hr/>
+<h1>文本效果</h1>
+<img src="images/text.png" alt="text"/>
+<hr/>
+<h1>字体</h1>
+<h2>@font-face 规则</h2>
+<h4>@font-face
+    {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+    }</h4>
+
+<hr/>
+<h1>2D转换</h1>
+<h2>translate() 方法</h2>
+<p>translate()方法，根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动。</p>
+<h4>transform: translate(50px,100px);</h4>
+<h2>rotate() 方法</h2>
+<p>rotate()方法，在一个给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转。</p>
+<h4>transform: rotate(30deg);</h4>
+<h2>scale() 方法</h2>
+<p>scale()方法，该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数：</p>
+<h4>transform: scale(2,4);转变宽度为原来的大小的2倍，和其原始大小4倍的高度</h4>
+<h2>skew() 方法</h2>
+<p>skew()方法，该元素会根据横向（X轴）和垂直（Y轴）线参数给定角度：</p>
+<h4>transform: skew(30deg,20deg);绕X轴和Y轴周围20度30度的元素。</h4>
+<h2>matrix() 方法</h2>
+<p>matrix()方法和2D变换方法合并成一个。
+    matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能。</p>
+<img src="images/2d.png" alt="2d"/>
+<hr/>
+<h1>3D转换</h1>
+<img src="images/3d.png" alt="3d"/>
+<h1>过渡</h1>
+<img src="images/transition.png" alt="transition"/>
+<h1>动画</h1>
+<h2>@keyframes 规则</h2>
+<p>要创建CSS3动画，你将不得不了解@keyframes规则。
+    @keyframes规则是创建动画。 @keyframes规则内指定一个CSS样式和动画将逐步从目前的样式更改为新的样式。</p>
+<h4>语法：animation: myfirst 5s;</h4>
+<img src="images/animation.png" alt="animation"/>
+
+<h1>多列</h1>
+<img src="images/column.png" alt="colimn"/>
+<h1>用户界面</h1>
+<img src="images/ui.png" alt="ui"/>
+<hr/>
+<h1>弹性盒子</h1>
+<img src="images/flex.png" alt="flex"/>
+<hr/>
+<h1>多媒体查询</h1>
+<img src="images/media.png" alt="media"/>
+
+</body>
+</html>

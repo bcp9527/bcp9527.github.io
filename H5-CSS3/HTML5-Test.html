@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HTML-5</title>
+</head>
+<body>
+<h1>语义标签</h1>
+<ol><h2>H5新增的语义标签</h2>
+    <li>&lt;article&gt; 定义页面独立的内容区域</li>
+    <li>&lt;aside&gt;定义页面的侧边栏内容。</li>
+    <li>&lt;bdi&gt;	允许您设置一段文本，使其脱离其父元素的文本方向设置</li>
+    <li>&lt;command&gt;	定义命令按钮，比如单选按钮、复选框或按钮</li>
+    <li>&lt;details&gt;	用于描述文档或文档某个部分的细节</li>
+    <li>&lt;dialog&gt;	定义对话框，比如提示框</li>
+    <li>&lt;summary&gt;	标签包含 details 元素的标题</li>
+    <li>&lt;figure&gt;	规定独立的流内容（图像、图表、照片、代码等等）。</li>
+    <li>&lt;figcaption&gt;	定义 &lt;figure&gt; 元素的标题</li>
+    <li>&lt;footer&gt;	定义 section 或 document 的页脚。</li>
+    <li>&lt;header&gt;	定义了文档的头部区域</li>
+    <li>&lt;mark&gt;	定义带有记号的文本。</li>
+    <li>&lt;meter&gt;	定义度量衡。仅用于已知最大和最小值的度量。</li>
+    <li>&lt;nav&gt;	定义导航链接的部分。</li>
+    <li>&lt;progress&gt;	定义任何类型的任务的进度。</li>
+    <li>&lt;ruby&gt;	定义 ruby 注释（中文注音或字符）。</li>
+    <li>&lt;rt&gt;	定义字符（中文注音或字符）的解释或发音。</li>
+    <li>&lt;rp&gt;	在 ruby 注释中使用，定义不支持 ruby 元素的浏览器所显示的内容。</li>
+    <li>&lt;section&gt;	定义文档中的节（section、区段）。</li>
+    <li>&lt;time&gt;	定义日期或时间。</li>
+    <li>&lt;wbr&gt;	规定在文本中的何处适合添加换行符。</li>
+</ol>
+<ol>
+    <h2>移除的标签</h2>
+    <li>&lt;acronym&gt;</li>
+    <li>&lt;applet&gt;</li>
+    <li>&lt;basefont&gt;</li>
+    <li>&lt;big&gt;</li>
+    <li>&lt;center&gt;</li>
+    <li>&lt;dir&gt;</li>
+    <li>&lt;font&gt;</li>
+    <li>&lt;frame&gt;</li>
+    <li>&lt;frameset&gt;</li>
+    <li>&lt;noframes&gt;</li>
+    <li>&lt;strike&gt;</li>
+</ol>
+
+<h2>IE9以下兼容H5</h2>
+<h4>引入html5shiv包,必须放在head中</h4>
+<p>&lt;!--[if lt IE9]&gt;</p>
+<p>src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"</p>
+<p>&lt;![endif]--&gt;</p>
+<h4>初始化CSS</h4>
+/*html5*/
+<p>article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}</p>
+<h2>可以自己创建新标签，例如&lt;bcp&gt;</h2>
+<bcp>Hello</bcp>
+<hr/>
+<h1>H5新元素</h1>
+<img id="ii" src="images/h5-new.png" alt="h5-new"/>
+
+<hr/>
+<h2>Canvas</h2>
+<p>定义图像，比如图标和其他图像canvas元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成.
+    canvas 标签只是图形容器，您必须使用脚本来绘制图形。
+        你可以通过多种方法使用Canva绘制路径,盒、圆、字符以及添加图像。默认没有边框和内容</p>
+<canvas id="myCanvas" width="200" height="90"  style="border: 2px solid yellow;">
+    <script>
+        var c=document.getElementById("myCanvas");
+        var ctx= c.getContext('2d');
+        ctx.fillStyle="#f00";
+        ctx.fillRect(10,20,100,50);
+    </script>
+</canvas>
+<canvas id="myCanvas-2" width="300" height="100">
+    <script>
+        var c2=document.getElementById("myCanvas-2");
+        c2.style.border="1px solid red";
+        var ctx2= c2.getContext("2d");
+        ctx2.moveTo(10,10);
+        ctx2.lineTo(200,80);
+        ctx2.stroke();
+    </script>
+</canvas>
+<canvas id="myCanvas-3" width="300" height="100">
+    <script>
+        var c3=document.getElementById("myCanvas-3");
+        c3.style.border="1px solid red";
+        var ctx3= c3.getContext("2d");
+        ctx3.beginPath();
+        ctx3.arc(95,50,40,0,2*Math.PI);
+        ctx3.stroke();
+    </script>
+</canvas>
+<canvas id="myCanvas-4" width="200" height="90"  style="border: 2px solid yellow;">
+    <script>
+        var c=document.getElementById("myCanvas-4");
+        var ctx= c.getContext('2d');
+        ctx.font="30px Arial";
+        ctx.fillText("Hello World",10,50);
+    </script>
+</canvas>
+<canvas id="myCanvas-5" width="200" height="90"  style="border: 2px solid yellow;">
+    <script>
+        var c=document.getElementById("myCanvas-5");
+        var ctx= c.getContext('2d');
+        ctx.font="30px Arial";
+        ctx.strokeText("Hello World",10,50);
+    </script>
+</canvas>
+<h2>Canvas渐变</h2>
+<p>createLinearGradient(x,y,x1,y1) - 创建线条渐变
+    createRadialGradient(x,y,r,x1,y1,r1) - 创建一个径向/圆渐变</p>
+<canvas id="myCanvas-6" width="200" height="100"  style="border: 2px solid yellow;">
+    <script>
+        var c=document.getElementById("myCanvas-6");
+        var ctx= c.getContext('2d');
+        // Create gradient
+        var grd=ctx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+
+        // Fill with gradient
+        ctx.fillStyle=grd;
+        ctx.fillRect(10,10,150,80);
+    </script>
+</canvas>
+<canvas id="myCanvas-7" width="200" height="100"  style="border: 2px solid yellow;">
+    <script>
+        var c=document.getElementById("myCanvas-7");
+        var ctx= c.getContext('2d');
+        // Create gradient
+        var grd=ctx.createRadialGradient(75,50,5,90,60,100);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+
+        // Fill with gradient
+        ctx.fillStyle=grd;
+        ctx.fillRect(10,10,150,80);
+    </script>
+</canvas>
+<h2>将图像放在画布中</h2>
+<p><img id="girl" src="images/girl.gif" alt=""/></p>
+<p>多个Canvas同时绘制图片时需要区分变量名，否则会图像会重叠在最后一个Canvas中</p>
+
+<canvas id="myCanvas-8" width="200" height="200"  style="border: 2px solid yellow;">
+    <script>
+        var c=document.getElementById("myCanvas-8");
+        var ctx= c.getContext('2d');
+        var img=new Image();
+        img.src="images/p.jpg";
+        img.onload = function() {
+            ctx.drawImage(img,0,0);
+        }
+    </script>
+</canvas>
+<canvas id="myCanvas-9" width="500" height="300"  style="border: 2px solid yellow;">
+    <script>
+        var c=document.getElementById("myCanvas-9");
+        var ctx2= c.getContext('2d');
+        var img2=document.getElementById("ii");
+        img2.onload = function() {
+            ctx2.drawImage(img2,10,10);
+        }
+    </script>
+</canvas>
+<hr/>
+<h1>内联SVG</h1>
+<ul>
+    <h2>什么是SVG</h2>
+    <li>指可伸缩矢量图形 (Scalable Vector Graphics)</li>
+    <li>用于定义用于网络的基于矢量的图形</li>
+    <li>使用 XML 格式定义图形</li>
+    <li>图像在放大或改变尺寸的情况下其图形质量不会有损失</li>
+    <li>是万维网联盟的标准</li>
+</ul>
+<ul>
+    <h2>SVG优势</h2>
+    <li>图像可通过文本编辑器来创建和修改</li>
+    <li>图像可被搜索、索引、脚本化或压缩</li>
+    <li>可伸缩的</li>
+    <li>图像可在任何的分辨率下被高质量地打印</li>
+    <li>可在图像质量不下降的情况下被放大</li>
+</ul>
+<h3>实例：</h3>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+    <polygon points="100,10 40,180 190,60 10,60 160,180" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+</svg>
+<p>SVG 是一种使用 XML 描述 2D 图形的语言。
+    Canvas 通过 JavaScript 来绘制 2D 图形。
+    SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。
+    在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。
+    Canvas 是逐像素进行渲染的。在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。</p>
+<img src="images/Can-SVG.png" alt="Can-SVG"/>
+<hr/>
+<h1>MathML(基于XML的数学标记语言)</h1>
+<p><i>FF支持，Chrome不支持</i></p>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+
+    <mrow>
+        <msup><mi>a</mi><mn>2</mn></msup>
+        <mo>+</mo>
+
+        <msup><mi>b</mi><mn>2</mn></msup>
+        <mo>=</mo>
+
+        <msup><mi>c</mi><mn>2</mn></msup>
+    </mrow>
+
+</math>
+<br/>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+
+    <mrow>
+        <mrow>
+
+            <msup>
+                <mi>x</mi>
+                <mn>2</mn>
+            </msup>
+
+            <mo>+</mo>
+
+            <mrow>
+                <mn>4</mn>
+                <mo>⁢</mo>
+                <mi>x</mi>
+            </mrow>
+
+            <mo>+</mo>
+            <mn>4</mn>
+
+        </mrow>
+
+        <mo>=</mo>
+        <mn>0</mn>
+
+    </mrow>
+</math>
+<br/>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+
+    <mrow>
+        <mi>A</mi>
+        <mo>=</mo>
+
+        <mfenced open="[" close="]">
+
+            <mtable>
+                <mtr>
+                    <mtd><mi>x</mi></mtd>
+                    <mtd><mi>y</mi></mtd>
+                </mtr>
+
+                <mtr>
+                    <mtd><mi>z</mi></mtd>
+                    <mtd><mi>w</mi></mtd>
+                </mtr>
+            </mtable>
+
+        </mfenced>
+    </mrow>
+</math>
+<hr/>
+<h1>拖放（Drag和Drop）</h1>
+<p>拖放是一种常见的特性，即抓取对象以后拖到另一个位置。
+    在 HTML5 中，拖放是标准的一部分，任何元素都能够拖放。</p>
+<p><img src="images/drop.png" alt="drop"/></p>
+<div style="overflow: hidden">
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="float: left; width: 800px; height: 500px; padding: 20px; margin-right: 10px; border:1px solid red;">
+
+    </div>
+    <img id="drag1" src="images/002.jpg" alt="girl" draggable="true" ondragstart="drag(event)" width="800" height="500">
+</div>
+
+<script>
+    //拖动图片函数
+    function allowDrop(ev)
+    {
+        ev.preventDefault();
+    }
+
+    function drag(ev)
+    {
+        ev.dataTransfer.setData("Text",ev.target.id);
+    }
+
+    function drop(ev)
+    {
+        ev.preventDefault();
+        var data=ev.dataTransfer.getData("Text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+
+<h3>来回拖放图片</h3>
+<div style="overflow: hidden">
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="float: left; width: 600px; height: 350px; padding: 20px; margin-right: 10px; border:1px solid red;">
+        <img src="images/002.jpg" draggable="true" ondragstart="drag(event)" id="drag2" width="600" height="350"></div>
+    <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)" style="float: left; width: 600px; height: 350px; padding: 20px; border:1px solid red;"></div>
+</div>
+<hr/>
+<h1>地理定位-需经过用户同意</h1>
+<hr/>
+<h1>Video</h1>
+<h2>支持MP4、WebM、Ogg</h2>
+<div style="text-align:center">
+    <video width="320" height="240" controls>
+        <source src="media/001.mp4" type="video/mp4">
+        您的浏览器不支持Video标签。
+    </video>
+</div>
+<hr/>
+<div style="text-align:center">
+    <button onclick="playPause()">播放/暂停</button>
+    <button onclick="makeBig()">放大</button>
+    <button onclick="makeSmall()">缩小</button>
+    <button onclick="makeNormal()">普通</button>
+    <br>
+    <video id="video1" width="420">
+        <source src="media/001.mp4" type="video/mp4">
+        <source src="media/001.mp4" type="video/ogg">
+        您的浏览器不支持 HTML5 video 标签。
+    </video>
+</div>
+
+<script>
+    var myVideo=document.getElementById("video1");
+
+    function playPause()
+    {
+        if (myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    }
+
+    function makeBig()
+    {
+        myVideo.width=560;
+    }
+
+    function makeSmall()
+    {
+        myVideo.width=320;
+    }
+
+    function makeNormal()
+    {
+        myVideo.width=420;
+    }
+</script>
+<hr/>
+<h1>Audio</h1>
+<p>control 属性供添加播放、暂停和音量控件。 支持MP3、Ogg、Wav</p>
+<audio controls style="width: 400px; height: 20px;">
+    <source src="media/002.ogg" type="audio/ogg"/>
+    <source src="media/002.wav" type="audio/wav"/>
+    您的浏览器不支持audio
+</audio>
+<hr/>
+<h1>Input类型，各浏览器支持性不好，查询具体支持清理</h1>
+<h2>注意:并不是所有的主流浏览器都支持新的input类型，不过您已经可以在所有主流的浏览器中使用它们了。即使不被支持，仍然可以显示为常规的文本域。</h2>
+<p>颜色：<input type="color"/></p>
+<p>生日：<input type="date"/></p>
+<p>生日（日期和时间带时区）：<input type="datetime"/></p>
+<p>生日（日期和时间不带时区）：<input type="datetime-local"/></p>
+<p>验证E-mail：<input type="email"/></p>
+<p>生日（月和年）：<input type="month"/></p>
+<p>选择周：<input type="week"/></p>
+<p>数量（1-5）<input type="number" name="num" min="1" max="5"/>属性：min-最小值，max-最大值，step-数字间隔，如果设置为2，则阶加2，value-默认值</p>
+<p>非精确数值（滑块）：<input type="range" min="1" max="10"/>属性同上</p>
+<p>搜索框：<input type="search"/></p>
+<p>电话号码：<input type="tel"/></p>
+<p>选择时间：<input type="time"/></p>
+<p>URL：<input type="url"/></p>
+<hr/>
+<h1>表单元素</h1>
+<h2>datalist元素</h2>
+<p>datalist 元素规定输入域的选项列表。属性属性规定 form 或 input 域应该拥有自动完成功能。当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项：</p>
+<input list="browsers">
+
+<datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+</datalist>
+<h2>keygen元素</h2>
+<p>提供一种验证用户的可靠方法。用于表单的密钥对生成器字段。当提交表单时，会生成两个键，一个是私钥，一个公钥。
+    私钥（private key）存储于客户端，公钥（public key）则被发送到服务器。公钥可用于之后验证用户的客户端证书（client certificate）。</p>
+<form action="demo_keygen.asp" method="get">
+    用户名: <input type="text" name="usr_name"/>
+    加密: <keygen name="security"/>
+    <input type="submit"/>
+</form>
+<h2>output元素</h2>
+<p>用于不同类型的输出，比如计算或脚本输出</p>
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+    <input type="range" id="a" value="50">100 +
+    <input type="number" id="b" value="50">=
+    <output name="x" for="a b"></output>
+</form>
+<hr/>
+<h1>表单属性</h1>
+<h2>form/input  autocomplete属性</h2>
+<p>autocomplete 属性规定 form 或 input 域应该拥有自动完成功能。</p>
+<p>当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项。</p>
+<p>提示: autocomplete 属性有可能在 form元素中是开启的，而在input元素中是关闭的。</p>
+<p>注意: autocomplete 适用于 form 标签，以及以下类型的 input 标签：text, search, url, telephone, email, password, datepickers, range 以及 color。</p>
+<form action="demo-form.php" autocomplete="on">
+    First name:<input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    E-mail: <input type="email" name="email" autocomplete="off"><br>
+    <input type="submit">
+</form>
+<h2>novalidate属性</h2>
+<p>novalidate 属性的一个boolean 属性.</p>
+<p>novalidate 属性规定在提交表单时不应该验证 form 或 input 域。</p>
+<form action="demo-form.php" novalidate>
+    E-mail: <input type="email" name="user_email">
+    <input type="submit">
+</form>
+<h2>autofocus属性</h2>
+<p>autofocus 属性是一个 boolean 属性. 属性规定在页面加载时，域自动地获得焦点</p>
+First name:<input type="text" name="fname" autofocus>
+<h2>form属性</h2>
+<p>form 属性规定输入域所属的一个或多个表单。提示:如需引用一个以上的表单，请使用空格分隔的列表。</p>
+<form action="demo-form.php" id="form1">
+    First name: <input type="text" name="fname"><br>
+    <input type="submit" value="提交">
+</form>
+
+Last name: <input type="text" name="lname" form="form1">
+
+<h2>formaction属性</h2>
+<p>The formaction 属性用于描述表单提交的URL地址.The formaction 属性会覆盖form 元素中的action属性.注意: The formaction 属性用于 type="submit" 和 type="image".</p>
+<form action="demo-form.php">
+    First name: <input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    <input type="submit" value="提交"><br>
+    <input type="submit" formaction="demo-admin.php"
+           value="提交">
+</form>
+
+<h2>formenctype属性</h2>
+<p>formenctype 属性描述了表单提交到服务器的数据编码 (只对form表单中 method="post" 表单)
+    formenctype 属性覆盖 form 元素的 enctype 属性。
+    主要: 该属性与 type="submit" 和 type="image" 配合使用。</p>
+<form action="demo-post_enctype.php" method="post">
+    First name: <input type="text" name="fname"><br>
+    <input type="submit" value="提交">
+    <input type="submit" formenctype="multipart/form-data"
+           value="以 Multipart/form-data 提交">
+</form>
+
+<h2>formmethod属性</h2>
+<p>formmethod 属性定义了表单提交的方式。
+    formmethod 属性覆盖了 form 元素的的method 属性。
+    注意: 该属性可以与 type="submit" 和 type="image" 配合使用</p>
+
+<form action="demo-form.php" method="get">
+    First name: <input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    <input type="submit" value="提交">
+    <input type="submit" formmethod="post" formaction="demo-post.php"
+           value="使用 POST 提交">
+</form>
+
+<h2>formnocalidate属性</h2>
+<p>novalidate 属性是一个 boolean 属性.
+    novalidate属性描述了 input 元素在表单提交时无需被验证。
+    formnovalidate 属性会覆盖 form 元素的novalidate属性.
+    注意: formnovalidate 属性与type="submit一起使用</p>
+<form action="demo-form.php">
+    E-mail: <input type="email" name="userid"><br>
+    <input type="submit" value="提交"><br>
+    <input type="submit" formnovalidate value="不验证提交">
+</form>
+
+<h2>formtarget属性</h2>
+<p>formtarget 属性指定一个名称或一个关键字来指明表单提交数据接收后的展示。
+    The formtarget 属性覆盖 form元素的target属性.
+    注意: formtarget 属性与type="submit" 和 type="image"配合使用.</p>
+<form action="demo-form.php">
+    First name: <input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    <input type="submit" value="正常提交">
+    <input type="submit" formtarget="_blank"
+           value="提交到一个新的页面上">
+</form>
+<h2>height属性和width属性</h2>
+<p>height 和 width 属性规定用于 image 类型的 input 标签的图像高度和宽度。
+    注意: height 和 width 属性只适用于 image 类型的input标签。
+    提示:图像通常会同时指定高度和宽度属性。如果图像设置高度和宽度，图像所需的空间
+    在加载页时会被保留。如果没有这些属性， 浏览器不知道图像的大小，并不能预留 适当的空间。图片在加载过程中会使页面布局效果改变 （尽管图片已加载）</p>
+<input type="image" src="images/p.jpg" alt="Submit" width="48" height="48">
+<h2>list属性</h2>
+<p>list 属性规定输入域的 datalist。datalist 是输入域的选项列表。</p>
+<input list="browsers2">
+
+<datalist id="browsers2">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+</datalist>
+<h2>min和max属性</h2>
+<p>min、max 和 step 属性用于为包含数字或日期的 input 类型规定限定（约束）。
+    注意: min、max 和 step 属性适用于以下类型的 input 标签：date pickers、number 以及 range。</p>
+Enter a date before 1980-01-01:
+<input type="date" name="bday" max="1979-12-31">
+
+Enter a date after 2000-01-01:
+<input type="date" name="bday" min="2000-01-02">
+
+Quantity (between 1 and 5):
+<input type="number" name="quantity" min="1" max="5">
+<h2>multiple属性</h2>
+<p>multiple 属性是一个 boolean 属性.
+    multiple 属性规定input元素中可选择多个值。
+    注意: multiple 属性适用于以下类型的 input标签：email 和 file。: email, and file.</p>
+Select images: <input type="file" name="img" multiple>
+<h2>pattern属性</h2>
+<p>pattern 属性描述了一个正则表达式用于验证 input 元素的值。
+    注意:pattern 属性适用于以下类型的 input 标签: text, search, url, tel, email, 和 password.
+    提示： 是用来全局 title 属性描述了模式.</p>
+Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+<h2>placeholder属性</h2>
+<p>placeholder 属性提供一种提示（hint），描述输入域所期待的值。
+    简短的提示在用户输入值前会显示在输入域上。
+    注意: placeholder 属性适用于以下类型的 input 标签：text, search, url, telephone, email 以及 password</p>
+<input type="text" name="fname" placeholder="First name">
+<h2>required属性</h2>
+<p>required 属性是一个 boolean 属性.
+    required 属性规定必须在提交之前填写输入域（不能为空）。
+    注意:required 属性适用于以下类型的 input 标签：text, search, url, telephone, email, password, date pickers, number, checkbox, radio 以及 file。</p>
+Username: <input type="text" name="usrname" required>
+<h2>step属性</h2>
+<p>step 属性为输入域规定合法的数字间隔。
+    如果 step="3"，则合法的数是 -3,0,3,6 等
+    提示： step 属性可以与 max 和 min 属性创建一个区域值.
+    注意: step 属性与以下type类型一起使用: number, range, date, datetime, datetime-local, month, time 和 week.</p>
+<input type="number" name="points" step="3">
+<hr/>
+<h1>语义元素</h1>
+<p>无语义 元素实例: div 和 span - 无需考虑内容.
+语义元素实例: form, table, and img - 清楚的定义了它的内容.</p>
+<h2>section元素</h2>
+<p>section 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。
+    根据W3C HTML5文档: section 包含了一组内容及其标题</p>
+<section>
+    <h1>WWF</h1>
+    <p>The World Wide Fund for Nature (WWF) is....</p>
+</section>
+<h2>article元素</h2>
+<p>定义独立的内容</p>
+<article>
+    <h1>Internet Explorer 9</h1>
+    <p>Windows Internet Explorer 9(缩写为 IE9 )在2011年3月14日21:00 发布。</p>
+</article>
+<h2>nav元素</h2>
+<p>定义导航链接的部分。
+    nav 元素用于定义页面的导航链接部分区域，但是，不是所有的链接都需要包含在 nav 元素中!</p>
+<nav>
+    <a href="/html/">HTML</a> |
+    <a href="/css/">CSS</a> |
+    <a href="/js/">JavaScript</a> |
+    <a href="/jquery/">jQuery</a>
+</nav>
+<h2>aside元素</h2>
+<p>定义页面主区域内容之外的内容（比如侧边栏）。
+    aside 标签的内容应与主区域的内容相关.</p>
+<p>My family and I visited The Epcot center this summer.</p>
+
+<aside>
+    <h4>Epcot Center</h4>
+    <p>The Epcot Center is a theme park in Disney World, Florida.</p>
+</aside>
+<h2>header元素</h2>
+<p>描述了文档的头部区域
+    header元素注意用于定义内容的介绍展示区域.
+        在页面中你可以使用多个header 元素.</p>
+<article>
+    <header>
+        <h1>Internet Explorer 9</h1>
+        <p><time pubdate datetime="2011-03-15"></time></p>
+    </header>
+    <p>Windows Internet Explorer 9(缩写为 IE9 )是在2011年3月14日21:00发布的</p>
+</article>
+<h2>footer元素</h2>
+<i>描述了文档的底部区域.
+    footer 元素应该包含它的包含元素
+        一个页脚通常包含文档的作者，著作权信息，链接的使用条款，联系信息等
+        文档中你可以使用多个 footer元素.</i>
+<footer>
+    <p>Posted by: Hege Refsnes</p>
+    <p><time pubdate datetime="2012-03-01"></time></p>
+</footer>
+
+<h2>figure和figcaption元素</h2>
+<i>figure标签规定独立的流内容（图像、图表、照片、代码等等）。
+    figure元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响。
+        figcaption标签定义 figure 元素的标题.
+            figcaption元素应该被置于 "figure" 元素的第一个或最后一个子元素的位置。</i>
+<figure>
+    <figcaption>Fig1. - The Nice Girl.</figcaption>
+    <img src="images/002.jpg" alt="The Pulpit Rock" width="304" height="228">
+    <figcaption>Fig1. - The Nice Girl.</figcaption>
+</figure>
+<hr/>
+<h1>Web存储</h1>
+<i>使用HTML5可以在本地存储用户的浏览数据。</i>
+<i>早些时候,本地存储使用的是cookies。但是Web 存储需要更加的安全与快速. 这些数据不会被保存在服务器上，但是这些数据只用于用户请求网站数据上.它也可以存储大量的数据，而不影响网站的性能.</i>
+<i>数据以 键/值 对存在, web网页的数据只允许该网页访问使用</i>
+<h2>localStorage 和 sessionStorage</h2>
+<p>localStorage - 没有时间限制的数据存储。
+    sessionStorage - 针对一个 session 的数据存储</p>
+<i>在使用 web 存储前,应检查浏览器是否支持 localStorage 和sessionStorage:</i>
+<h3>if(typeof(Storage)!=="undefined")
+    {
+    // 是的! 支持 localStorage  sessionStorage 对象!
+    // 一些代码.....
+    }
+    else
+    {
+    // 抱歉! 不支持 web 存储。
+    }</h3>
+<h2>localStorage对象</h2>
+<i>localStorage 对象存储的数据没有时间限制。第二天、第二周或下一年之后，数据依然可用。</i>
+<p>使用 key="lastname" 和value="Smith" 创建一个 localStorage 键/值对 <br/>
+    检索键值为"lastname" 的值然后将数据插入 id="result"的元素中<br/>
+    提示: 键/值对通常以字符串存储，你可以按自己的需要转换该格式。</p>
+<h2>sessionStorage 对象</h2>
+<i>sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除。</i>
+<hr/>
+<h1>We bSQL</h1>
+<h2>核心方法</h2>
+<ol>
+    <li>openDatabase：这个方法使用现有的数据库或者新建的数据库创建一个数据库对象</li>
+    <li>transaction：这个方法让我们能够控制一个事务，以及基于这种情况执行提交或者回滚。</li>
+    <li>executeSql：这个方法用于执行实际的 SQL 查询</li>
+</ol>
+<h2>打开数据库</h2>
+<p>var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);</p>
+<p>对应参数：1、数据库名称
+    2、版本号
+    3、描述文本
+    4、数据库大小
+    5、创建回调。
+    第五个参数，创建回调会在创建数据库后被调用。</p>
+<h2></h2>
+<hr/>
+<h1>应用缓存</h1>
+<h2>应用程序缓存（Application Cache）优势：</h2>
+<ol>
+    <li>离线浏览 - 用户可在应用离线时使用它们</li>
+    <li>速度 - 已缓存资源加载得更快</li>
+    <li>减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
