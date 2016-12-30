@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>BCP</title>
+
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-size: 14px;
+        }
+        h1{
+            margin: 0;
+        }
+        header{
+            background: linear-gradient(gray,white);
+            font-family: monospace;
+            font-size:64px;
+            color:#005ea7;
+        }
+
+        .nav-content{
+            width: 100%;
+            display: flex;
+        }
+        .nav-content a{
+            text-align: center;
+            margin: 0 1px;
+            border-radius:5px;
+            background-color: #00BFFF;
+            flex:1;
+        }
+
+        @media screen and (min-width: 768px){
+            .container{
+                width: 80%;
+                padding: 0;
+                margin: 0 auto;
+            }
+
+            .nav-content a{
+                margin: 0 10px;
+            }
+        }
+
+
+
+
+
+
+        footer{
+            position: absolute;
+            bottom: 10%;
+        }
+
+        .hover------{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,1);
+            position: absolute;
+            z-index: 10000;
+            color:orangered;
+            font-size: 10rem;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="hover">
+
+</div>
+    <header>
+        <div class="content header-content">
+            <h1>BCP</h1>
+        </div>
+
+
+    </header>
+    <nav>
+        <div class="content nav-content">
+
+            <a href="html/show.html">产品展示</a>
+            <a href="html/server.html">专业服务</a>
+            <a href="html/partner.html">合作伙伴</a>
+            <a href="html/join.html">人才招聘</a>
+            <a href="html/contact.html">联系我们</a>
+            <a href="OA/main.html">公司内网</a>
+        </div>
+    </nav>
+    <div class="content body-content">
+        <canvas id="canvas" width="400" height="400" style="display: block; margin: 0 auto; border:1px solid red;"></canvas>
+    </div>
+    <footer>
+        <div class="content footer-content">
+            一堆没用的废话
+            <br/>
+            还有一堆没人关心的提示信息
+        </div>
+    </footer>
+
+<script src="script/test.js"></script>
+<script>
+
+    console.log((a+b+c));
+    var cas=document.getElementById('canvas');
+    var ctx=cas.getContext('2d');
+
+    ctx.lineWidth=10;
+    ctx.font='240px 黑体';
+    ctx.strokeText('BCP',30,300);
+
+//    window.onload=function(){
+//        var hover=document.getElementsByClassName('hover')[0];
+//        setTimeout(function(){
+//            hover.style.display='none';
+//        },3000);
+//    }
+
+</script>
+</body>
+</html>
