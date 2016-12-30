@@ -6,8 +6,8 @@ body,html{background-color: #eff0f4; margin: 0;padding: 0;}
 .log{float: right;}
 .row{background-color: #fff;margin-top: 30px;}
 .img-phone,.img-lock{width: 50px; border-right: 2px solid #edf0f1; margin:20px;padding-right: 10px;float:left;  }
-.row input{width: 100%;  height:80px;border-style: none; font-size:32px; }
+.row input{width: 100%;  height:80px;border-style: none; font-size:32px; outline: none; }
 /* 将input标签包含在form窗口内。调整合适的高度，form块设置overflow属性，使其待在行内。 */
 .row form{overflow: auto}/*使用margin、padding等方法时浏览器调试显示正常但是手机实测右边会多出一部分白色区域。*/
 .button{width: 100%;height: 100px; background-color: #5fc0cd;margin-top:40px; color: white; font-size: 24px;}
-.foot{text-align: right; color: #5fc0cd;}
+.foot{float: right; margin:10px; color: #5fc0cd; text-decoration: none;}
