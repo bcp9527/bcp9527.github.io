@@ -1,4 +1,9 @@
 
+html,body,ul,li{
+    margin: 0;
+    padding: 0;
+}
+
 .title{
     font-family: Georgia;
     text-indent: 2em;
@@ -10,7 +15,12 @@
     font-size: 14px;
     margin-left: 2em;
 }
+.lists{
+    list-style: none;
+    display: flex;
+}
 .list{
+    flex: 1;
     padding: 20px;
     color: #d2994f;
     text-align: center;
@@ -26,7 +36,7 @@
 .list a:hover{
     background-color: #00ffff;
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 768px){
     .title{
         text-indent: 0;
     }

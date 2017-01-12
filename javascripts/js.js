@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2016/11/17.
+ * Created by Stephen on 2016/11/17.
  */
 $(function(){
     var cols=['#00F','#0F0','#0FF','DAA520','#F00','#4B0082','#191970','#C71585','#F0F','#FF0'];
