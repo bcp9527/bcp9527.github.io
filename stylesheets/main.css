@@ -1,11 +1,18 @@
 
-html,body,ul,li{
+body,ul,li{
     margin: 0;
     padding: 0;
 }
-
+.wrap{
+    width: 80%;
+    margin: 0 auto;
+}
+.top{
+    overflow: hidden;
+}
 .title{
     font-family: Georgia;
+    margin: 20px 0;
     text-indent: 2em;
     font-size: 4em;
     font-weight: bold;
@@ -37,6 +44,9 @@ html,body,ul,li{
     background-color: #00ffff;
 }
 @media screen and (max-width: 768px){
+    .wrap{
+        width: 100%;
+    }
     .title{
         text-indent: 0;
     }
@@ -51,11 +61,11 @@ html,body,ul,li{
     width: 90%;
     margin: 0 5%;
     position: relative;
-    background-color: #fff;
     background-image: url("../images/0.gif");
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 80%;
+    background-position: center;
+    background-size: contain;
+
 }
 .items{
     display: block;
