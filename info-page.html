@@ -2,17 +2,14 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <title>个人简介</title>
     <style>
         body{
             background-color: #f0f0f0;
             font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
         }
-        ul,li{
-            list-style: none;
-            margin: 0 5px;
-            padding: 0 5px;
-        }
+
         h1,h3,h4{
             color: #094A8F;
         }
@@ -27,28 +24,42 @@
             font-size: large;
             color: orangered;
         }
-        @media screen and (min-width: 768px){
-            .wrap{
-                width: 80%;
-                margin: 0 auto;
-            }
-        }
         .wrap{
-            padding: 40px;
             overflow: hidden;
             border: 1px solid #ccc;
             background-color: #fff;
         }
-        .items{
-            list-style: circle;
+        @media screen and (min-width: 768px){
+            .wrap{
+                padding:20px;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            ul,li{
+                list-style: none;
+                margin: 0 5px;
+                padding: 0 5px;
+            }
         }
-        .item{
+        @media screen and (max-width: 767px){
+            .wrap{
+                padding: 0 10px 20px;
+
+            }
+            ul,li{
+                list-style: none;
+                margin: 0 ;
+                padding: 0 ;
+            }
+            h4{
+                margin: 10px 0;
+            }
         }
+
     </style>
 </head>
 <body>
 <div class="wrap">
-    <h1>Main Title</h1>
     <ul class="items">
         <li class="item">
             <h3>简要信息</h3>
@@ -94,7 +105,6 @@
         <li>
             <h3>劣势</h3>
             <div class="content">
-                <p>年龄偏大；但也不算很大吧？我感觉自己还很年轻。</p>
                 <p>无行业工作经验；不知这点是否看的很重，一直都是在自学练手。</p>
             </div>
         </li>

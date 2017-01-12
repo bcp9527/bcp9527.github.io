@@ -2,9 +2,9 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <title>联系方式</title>
     <style>
-
         @media screen and (min-width: 768px){
             .wrap{
                 width: 60%;
@@ -13,21 +13,25 @@
             i{
                 margin-left: 20%;
             }
+            .wcerweima,.qqerweima{
+                display: none;
+                width: 400px;
+            }
         }
-        .wrap{
-
-            overflow: hidden;
-
+        @media screen and (max-width: 767px){
+            .wcerweima,.qqerweima{
+                display: none;
+                width: 80%;
+            }
         }
+
         h3{
             line-height: 48px;
             border-bottom: 2px solid #f8f8f8;
             padding-left: 20px;
             color: orangered;
         }
-        .wcerweima,.qqerweima{
-            display: none;
-        }
+
         .qq:hover .qqerweima{
             display: block;
             position: absolute;
@@ -77,9 +81,9 @@
 <div class="wrap">
     <h3><i class="gmail" title="Gmail"></i>supercp0322@gmail.com</h3>
     <h3><i class="Qmail" title="Qmail"></i>304699357@qq.com</h3>
-    <h3 class="qq-wrap"><i class="qq" title="QQ"><img class="qqerweima" src="images/QQerweima.jpg" alt="QQ二维码" width="400px"/></i>BCP</h3>
-    <h3 class="wechat-wrap"><i class="wechat" title="WeChat"><img class="wcerweima" src="images/WCerweima.jpg" alt="微信二维码"/></i>Stephen</h3>
-    <h3><i class="weibo" title="Gmail"></i><a href="http://weibo.com/supercp/" target="_blank">呆头陈</a></h3>
+    <h3 class="qq-wrap"><i class="qq"><img class="qqerweima" src="images/QQerweima.jpg" alt="QQ二维码"/></i>BCP</h3>
+    <h3 class="wechat-wrap"><i class="wechat"><img class="wcerweima" src="images/WCerweima.jpg" alt="微信二维码"/></i>Stephen</h3>
+    <h3><i class="weibo" title="Gmail"></i>XXX</h3>
     <h3><i class="zhihu" title="zhihu"></i>XXX</h3>
     <h3><i class="douban" title="douban"></i>XXX</h3>
     <h3><i class="twitter" title="twitter"></i>XXX</h3>
