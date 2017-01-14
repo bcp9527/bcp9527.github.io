@@ -2,64 +2,71 @@
 <html>
 <head>
 <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 	<title>Task3</title>
 <style type="text/css">
 
 body{
-	margin: 0; padding: 0;
-	width: 100%;
-	background-color: #68CDD5;
+	margin: 0; padding: 0; background-color: #68CDD5;
 }
-.heading{
-	background-color: #22292c;
-	margin: auto;
-	color: white;
-	padding: 10px;
+.top{background-color: #000; color:#FFF; line-height: 48px; margin: 0;text-align: center}
+.top-left{height:48px;line-height: 48px; color: #FFF;font-size: 16px; position: absolute; left: 0; top:0;}
+.top-l-1{
+    font-size: 48px;
+    margin-left: 10px;
 }
-.span1{ position: absolute; top: -10px;left: 50%;font:bold; }
-.span2{position: absolute; top: 20px; left: 5%;}
-.dian{position: absolute; right: 10px;top: 20px; }
-.back{padding: 20px;}
-.logo1{text-align: center;margin: 10%;}
-.text{padding: 10%; font-size: xx-large;}
-.daoju{height: 10%; text-align: center; margin-top: 10%; font-size: x-large;}
-.daoju img{height: 85px;width: 85px;margin: 10px;}
-.daoju-left{float: left;margin-left: 30%;}
-.daoju-right{float:right; margin-right: 30%;}
-.foot{clear: both;}
+.top-l-2{
+    vertical-align: top;
+}
+.top-right{
+    height: 48px;
+    line-height: 48px;
+    position: absolute;
+    top:0;
+    right: 10px;
+}
+.top-point{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFF;
+    margin-right: 10px;
+    margin-top: 19px;
+    float: left;
+}
+.back{ cursor:pointer; position: absolute; top:58px; left: 10px;}
+.logo1{text-align: center;padding-top: 80px;}
+.logo1 img{max-width: 80%}
+.text{font-size:24px; margin: 10%}
+.daoju{height: 100px; text-align: center; margin-top: 10%; font-size: 24px; display: flex}
+.daoju >div{flex: 1;width: 100px;height: 160px}
+.daoju img{max-width: 86px; max-height: 86px; cursor:pointer}
 </style>
 </head>
 <body>
-	<div class="heading">
-		<img src="1-1.png">
-		<span class="span2">返回</span>
-		<h1 class="span1">魔镜</h1>
-		<div class="dian">
-			<img src="1-2.png" >
-			<img src="1-2.png" >
-			<img src="1-2.png" >
-		</div>		
-	</div>
+    <h1 class="top">魔镜</h1>
+    <div class="top-left">
+        <span class="top-l-1"><</span>
+        <span class="top-l-2">返回</span>
+    </div>
+    <div class="top-right">
+        <span class="top-point"></span><span class="top-point"></span><span class="top-point"></span>
+    </div>
 	<div class="body">
 		<div class="back"><img src="2-1.png"></div>
 		<div class="logo1"><img src="3-1.png"></div>
 		<div class="text">葡萄藤轻游戏专注于桌游领域，提供在线杀人游戏，捉鬼，炸狼堡等多种聚会游戏，一下线下聚会桌游道具。</div>
 		<div class="daoju">
 			<div class="daoju-left">
-			<img src="4-1.png">
-			<p>290560933</p>
+                <img src="4-1.png">
+                <p>290560933</p>
+            </div>
+            <div class="daoju-right">
+                <img src="4-2.png">
+                <p>BJPTTeng</p>
+            </div>
 		</div>
-		<div class="daoju-right">
-			<img src="4-2.png">
-				<p>BJPTTeng</p>
-		</div>
-		</div>
-		
-				
-		
 	</div>
-	<div class="foot"></div>
-
-
 </body>
 </html>
